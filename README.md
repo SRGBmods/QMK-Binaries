@@ -2,7 +2,7 @@
 QMK + VIA Firmware that is supported by SignalRGB (includes protocol information for direct ARGB mode).
 	
 **This may include different "playground" QMK releases..**
-* 0.14.29 is Keychron's bluetooth_playground so at least when charging a K2 to K8 Pro the ARGB is controllable. (Bluetooth is not supported by SignalRGB currently)
+* 0.14.29 is Keychron's bluetooth_playground so at least when charging a K2 Pro to K8 Pro the ARGB is controllable. (Bluetooth is not supported by SignalRGB currently)
 * 0.19.11 is the [QMK Mainline github](https://github.com/qmk/qmk_firmware).
 	
 
