@@ -1,7 +1,10 @@
 # QMK-Binaries
-QMK Firmware + VIA that is supported by SignalRGB.
+QMK + VIA Firmware that is supported by SignalRGB (includes protocol information for direct ARGB mode).
+	
+This may include different "playground" QMK releases..
+		0.14.29 is Keychron's bluetooth_playground so at least when charging a K2 to K8 Pro the ARGB is controllable.
+	
 
-If you notice something missing or have any issues with these binaries please contact <@226599759379431424> on Discord.
-	This may include different "playground" QMK releases.. either way poke <@226599759379431424> on Discord for additional support, they will be happy to help.
+See https://discord.gg/J5dwtcNhqC for support.
 
-See https://discord.gg/signalrgb for <@226599759379431424>
+If you notice something missing (keyboard or variation of a keyboard) or have any issues with these binaries please contact Naitoshedo on the above Discord server.
