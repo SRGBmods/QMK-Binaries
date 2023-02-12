@@ -1,2 +1,2 @@
 # QMK-Binaries
-QMK Firmware that is supported by SignalRGB.
+QMK Firmware + VIA that is supported by SignalRGB.
