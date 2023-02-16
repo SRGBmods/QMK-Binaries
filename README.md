@@ -1,6 +1,6 @@
 ![SRGBmods.net](https://srgbmods.net/img/srgbmods-banner.png?v=2022)
 
-# QMK-Binaries
+![QMK-Binaries](https://qmk.fm/qmk_icon_48.png)
 QMK + VIA Firmware that is supported by SignalRGB (includes protocol information for direct ARGB mode).
 	
 **This may include different "playground" QMK releases..**
