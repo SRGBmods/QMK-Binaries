@@ -1,4 +1,4 @@
-![QMK-Binaries](https://qmk.fm/qmk_icon_48.png)
+![QMK](https://qmk.fm/qmk_icon_48.png) ![Sonix-QMK](https://avatars.githubusercontent.com/u/79227208?s=48&v=4)
 # QMK Binaries
 QMK + VIA Firmware that is supported by SignalRGB (includes protocol information for direct ARGB mode).
 	
