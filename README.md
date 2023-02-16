@@ -5,7 +5,7 @@ QMK + VIA Firmware that is supported by SignalRGB (includes protocol information
 * 0.14.29 is Keychron's bluetooth_playground so at least when charging a K2 Pro to K8 Pro the ARGB is controllable. (Bluetooth is not supported by SignalRGB currently) - This also includes q1 version two firmware now as well.
 * 0.15.12-sonix is for Sonix based keyboards _only_ and comes from [Sonix_QMKRelease_1.0](https://gitlab.com/signalrgb/qmk_firmware/-/tree/Sonix_QMKRelease_1.0/keyboards).
 * 0.19.11 is the old [QMK Mainline github](https://github.com/qmk/qmk_firmware).
-* 0.19.12 is the new [QMK Mainline github](https://github.com/qmk/qmk_firmware).
+* 0.19.12 is the new [QMK Mainline github](https://github.com/qmk/qmk_firmware), currently being pulled and fixes to boards are applied and uploaded.
 
 **PLEASE NOTE On Febuary 25th, 2023: I will be pausing all updates as Breaking Changes for QMK occur the next day, after reviewing new code binary firmware updates will start back up.**
 
