@@ -15,7 +15,7 @@ QMK Firmware that is supported by SignalRGB (includes protocol information for d
 
 ## PLEASE NOTE On Febuary 25th, 2023: I will be pausing all updates as Breaking Changes for QMK occur the next day, after reviewing new code binary firmware updates will start back up. ##
 
-#### Directions ####
+### Directions ###
 To use these files you may find QMK Toolbox helpful:
 https://github.com/qmk/qmk_toolbox/releases/
 
@@ -25,7 +25,7 @@ https://sonixqmk.github.io//SonixDocs/install/#4-flashing-the-firmware
 You will also need to follow the directions from your Keyboard manufacturer to put it bootloader mode in order to use QMK Toolbox.
 (Check their website for directions, you should honestly check there anyways for firmware in case you to need to factory restore as well.)
 
-### Help with these binaries ###
+**Help with these binaries**
 
 See the [SignalRGB Plugin Testing Discord Server](https://discord.gg/J5dwtcNhqC) for support.
 
