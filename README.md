@@ -1,4 +1,4 @@
-![QMK](https://qmk.fm/qmk_icon_48.png) ![Sonix-QMK](https://avatars.githubusercontent.com/u/79227208?s=48&v=4) ![SignalRGB](https://raw.githubusercontent.com/Legion2/CorsairLightingProtocol/dev/extra/images/SignalRGBBadge.png)
+![QMK](https://qmk.fm/qmk_icon_48.png) ![Sonix-QMK](https://avatars.githubusercontent.com/u/79227208?s=48&v=4)
 # QMK Binaries
 QMK Firmware that is supported by [SignalRGB](https://www.signalrgb.com) (includes protocol information for direct ARGB mode), compiled for your convenience and ready to install!
 If you wish to do this yourself the directions can be found [here](https://docs.signalrgb.com/qmk/building-firmware-from-source).
