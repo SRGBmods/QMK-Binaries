@@ -22,7 +22,7 @@ Or if a Sonix based firmware [these directions](https://sonixqmk.github.io//Soni
 You will also need to follow the directions from your Keyboard manufacturer to put it bootloader mode in order to use QMK Toolbox.
 (Check their website for directions, you should honestly check there anyways for firmware in case you to need to factory restore as well.)
 
-**Help with these binaries**
+### Help with these binaries ###
 
 See the [SignalRGB Plugin Testing Discord Server](https://discord.gg/J5dwtcNhqC) for support.
 
