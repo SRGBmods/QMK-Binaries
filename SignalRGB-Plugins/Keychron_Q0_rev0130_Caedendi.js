@@ -24,9 +24,9 @@ export function ControllableParameters()
 
 const vKeys =
 [
-	0,  1,  2,  3,
-	4,  5,  6,  7,
-	8,  9, 10,
+	 0,  1,  2,  3,
+	 4,  5,  6,  7,
+	 8,  9, 10,
 	11, 12, 13, 14,
 	15, 16, 17,
 	18,     19, 20,
@@ -34,11 +34,11 @@ const vKeys =
 const vKeyNames =
 [
 	"Circle", "Triangle", "Square",     "Cross",
-	"NumLock",    "Num /",  "Num *",     "Num -",
-	"Num 7",    "Num 8",  "Num 9",
-	"Num 4",    "Num 5",  "Num 6",     "Num +",
-	"Num 1",    "Num 2",  "Num 3",
-	"Num 0",              "Num .", "Num Enter"
+	"NumLock",   "Num /",  "Num *",     "Num -",
+	"Num 7",     "Num 8",  "Num 9",
+	"Num 4",     "Num 5",  "Num 6",     "Num +",
+	"Num 1",     "Num 2",  "Num 3",
+	"Num 0",               "Num .", "Num Enter"
 ];
 
 const vKeyPositions =
