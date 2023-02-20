@@ -216,16 +216,23 @@ function returnFirmwareType(data)
 {
     let FirmwareTypeByte = data[2];
 
-    if(FirmwareTypeByte !== MainlineQMKFirmware || FirmwareTypeByte !== VIAFirmware)
+    if(!(FirmwareTypeByte === MainlineQMKFirmware || FirmwareTypeByte === VIAFirmware))
     {
-        device.notify("Unsupported Firmware: ", "Click Show Console, and then click on troubleshooting for your keyboard to find out more.", 0)
+        device.notify("Unsupported Firmware: ", "Click Show Console, and then click on troubleshooting for your keyboard to find out more.", 0);
     }
 
-    if(FirmwareTypeByte == VIAFirmware){
+    if(FirmwareTypeByte === MainlineQMKFirmware)
+    {
+        IsViaKeyboard = false;
+        device.log("Firmware Type: Mainline");
+    }
+
+    if(FirmwareTypeByte === VIAFirmware)
+    {
         IsViaKeyboard = true;
+        device.log("Firmware Type: VIA");
     }
 
-    device.log("Firmware Type: " + FirmwareTypeByte);
     device.pause(30);
 }
 
