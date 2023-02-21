@@ -16,11 +16,9 @@ If you wish to do this yourself the directions can be found [here](https://docs.
 ### Older Builds - AKA Archived QMK + SignalRGB builds ###
 * **[0.19.11](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BVIA-Firmware/_Archived)** Archived 0.19.11.zip (Old QMK Mainline VIA+SignalRGB Support).
 
-### QMK+Default-Firmware: ###
+### QMK+Default-Firmware: [^1] ###
 * **[0.15.12-sonix](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BDefault-Firmware/0.15.12-sonix)** is for **Sonix based keyboards _only_** and comes from [Sonix_QMKRelease_1.0](https://gitlab.com/signalrgb/qmk_firmware/-/tree/Sonix_QMKRelease_1.0/keyboards).
 * **[0.19.12](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BDefault-Firmware/0.19.12)** is the new [QMK Mainline github](https://github.com/qmk/qmk_firmware), currently being pulled and fixes to boards are applied and uploaded.
-
-## Please note this is the last build of __default__ I will do as the VIA builds can happily replace all builds before them. They work the same but you can remap keys with software instead of having to compile a custom keymap (negating these binary builds). Simply put I will not provide any new builds even upon request, unless they include VIA. ##
 
 ### Directions ###
 To use these files you may find [QMK Toolbox](https://github.com/qmk/qmk_toolbox/releases/) helpful.
@@ -37,3 +35,5 @@ See the [SignalRGB Plugin Testing Discord Server](https://discord.gg/J5dwtcNhqC)
 If you notice something missing (keyboard or variation of a keyboard) or have any issues with these binaries please contact Naitoshedo on the above Discord server.
 
 ## PLEASE NOTE On Febuary 25th, 2023: I will be pausing all updates as Breaking Changes for QMK occur the next day, after reviewing new code binary firmware updates will start back up. ##
+
+[^1] Please note this is the last build of __default__ I will do as the VIA builds can happily replace all builds before them. They work the same but you can remap keys with software instead of having to compile a custom keymap (negating these binary builds). Simply put I will not provide any new builds even upon request, unless they include VIA.
