@@ -32,8 +32,6 @@ If you notice something missing (keyboard or variation of a keyboard) or have an
 
 # PLEASE NOTE On Febuary 25th, 2023: I will be pausing all updates as Breaking Changes for QMK occur the next day, after reviewing new code binary firmware updates will start back up. #
 
-## Deprecated Builds ##
-
 ### Older Builds - AKA Archived QMK + SignalRGB builds ###
 * **[0.19.11](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BVIA-Firmware/_Archived)** Archived 0.19.11.zip (Old QMK Mainline VIA+SignalRGB Support).
 
