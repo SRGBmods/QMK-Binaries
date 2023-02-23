@@ -52,9 +52,9 @@ Thanks to the SonixQMK & QMK communities for providing source code, all original
 ## For [GPL Compliance (Source code)](https://github.com/SRGBmods/QMK-Binaries/tree/main/GPL): ##
 [QMK Mainline + SignalRGB Source](https://gitlab.com/signalrgb/qmk_firmware/-/tree/QMKRelease_1.0) & [SonixQMK + SignalRGB Source](https://gitlab.com/signalrgb/qmk_firmware/-/tree/Sonix_QMKRelease_1.0).
 
-[Code changes for Protocol 1.0.4 - SonixQMK](https://github.com/SRGBmods/QMK-Binaries/blob/main/GPL/SignalRGB-Changes_QMK-example-code-Sonix.patch)
+[Code changes for SignalRGB Protocol 1.0.4 + SonixQMK](https://github.com/SRGBmods/QMK-Binaries/blob/main/GPL/SignalRGB-Changes_QMK-example-code-Sonix.patch)
 
-[Code changes for Protocol 1.0.4 - QMK Master](https://github.com/SRGBmods/QMK-Binaries/blob/main/GPL/SignalRGB-Changes_QMK-example-code.patch)
+[Code changes for SignalRGB Protocol 1.0.4 + QMK Master](https://github.com/SRGBmods/QMK-Binaries/blob/main/GPL/SignalRGB-Changes_QMK-example-code.patch)
 
 [common_features.mk](https://github.com/SRGBmods/QMK-Binaries/blob/main/GPL/common_features.mk) & [signalrgb.c](https://github.com/SRGBmods/QMK-Binaries/blob/main/GPL/signalrgb.c) & [signalrgb.h](https://github.com/SRGBmods/QMK-Binaries/blob/main/GPL/signalrgb.h) additional code used by both SonixQMK & QMK Mainline.
 
