@@ -42,7 +42,16 @@ If you notice something missing (keyboard or variation of a keyboard) or have an
 
 ---
 
-# For GPL Compliance (Source code): #
+# Credits #
+Thanks to the SonixQMK & QMK communities for providing source code, all original code is completely theirs and credit is entirely theirs for providing the service for us and everyone else!
+
+[SonixQMK](https://github.com/SonixQMK/qmk_firmware)
+
+[QMK](https://github.com/qmk/qmk_firmware)
+
+---
+
+## For GPL Compliance (Source code): ##
 [QMK Mailine](https://gitlab.com/signalrgb/qmk_firmware/-/tree/QMKRelease_1.0), [SonixQMK](https://gitlab.com/signalrgb/qmk_firmware/-/tree/Sonix_QMKRelease_1.0).
 
 [Code changes for Protocol 1.0.4 - SonixQMK](https://github.com/SRGBmods/QMK-Binaries/blob/main/GPL/SignalRGB-Changes_QMK-example-code-Sonix.patch)
