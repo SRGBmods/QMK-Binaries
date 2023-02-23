@@ -1,5 +1,5 @@
 # Credits #
-Thanks to the SonixQMK & QMK communities for providing source code, all original code is completely theirs and thanks to them for providing the code for us and everyone else!
+Thanks to the [SonixQMK](https://github.com/SonixQMK/qmk_firmware) & [QMK](https://github.com/qmk/qmk_firmware) communities for providing source code, all original code is completely theirs and thanks to them for providing the code for us and everyone else!
 
 [SonixQMK](https://github.com/SonixQMK/qmk_firmware) & [QMK](https://github.com/qmk/qmk_firmware)
 
