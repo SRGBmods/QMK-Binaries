@@ -55,3 +55,5 @@ Thanks to the SonixQMK & QMK communities for providing source code, all original
 [Code changes for Protocol 1.0.4 - SonixQMK](https://github.com/SRGBmods/QMK-Binaries/blob/main/GPL/SignalRGB-Changes_QMK-example-code-Sonix.patch)
 
 [Code changes for Protocol 1.0.4 - QMK Master](https://github.com/SRGBmods/QMK-Binaries/blob/main/GPL/SignalRGB-Changes_QMK-example-code.patch)
+
+The above code changes have been applied to vanilla / playground repos for each fork(s) for the binaries provided.
