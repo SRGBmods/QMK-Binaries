@@ -1,0 +1,458 @@
+diff -urN qmkmain/quantum/quantum.h mainline/quantum/quantum.h
+--- qmkmain/quantum/quantum.h	2023-02-22 23:12:06.434405500 -0600
++++ mainline/quantum/quantum.h	2023-02-08 21:48:50.312619400 -0600
+@@ -149,6 +149,12 @@
+ #    include "process_joystick.h"
+ #endif
+ 
++#ifdef SIGNALRGB_SUPPORT_ENABLE
++#    ifndef VIA_ENABLE
++#    include "signalrgb.h"
++#    endif
++#endif
++
+ #ifdef PROGRAMMABLE_BUTTON_ENABLE
+ #    include "process_programmable_button.h"
+ #endif
+diff -urN qmkmain/quantum/rgb_matrix/animations/rgb_matrix_effects.inc mainline/quantum/rgb_matrix/animations/rgb_matrix_effects.inc
+--- qmkmain/quantum/rgb_matrix/animations/rgb_matrix_effects.inc	2023-02-22 23:12:06.460788900 -0600
++++ mainline/quantum/rgb_matrix/animations/rgb_matrix_effects.inc	2023-02-09 01:12:47.896377900 -0600
+@@ -38,3 +38,4 @@
+ #include "solid_reactive_nexus.h"
+ #include "splash_anim.h"
+ #include "solid_splash_anim.h"
++#include "signalrgb_anim.h"
+diff -urN qmkmain/quantum/rgb_matrix/animations/signalrgb_anim.h mainline/quantum/rgb_matrix/animations/signalrgb_anim.h
+--- qmkmain/quantum/rgb_matrix/animations/signalrgb_anim.h	1969-12-31 18:00:00.000000000 -0600
++++ mainline/quantum/rgb_matrix/animations/signalrgb_anim.h	2023-02-01 23:48:48.509000500 -0600
+@@ -0,0 +1,11 @@
++RGB_MATRIX_EFFECT(SIGNALRGB)
++#ifdef RGB_MATRIX_CUSTOM_EFFECT_IMPLS
++
++bool SIGNALRGB(effect_params_t* params) 
++{
++    RGB_MATRIX_USE_LIMITS(led_min, led_max);
++
++    return rgb_matrix_check_finished_leds(led_max);
++}
++
++#endif // RGB_MATRIX_CUSTOM_EFFECT_IMPLS
+diff -urN qmkmain/quantum/signalrgb.c mainline/quantum/signalrgb.c
+--- qmkmain/quantum/signalrgb.c	1969-12-31 18:00:00.000000000 -0600
++++ mainline/quantum/signalrgb.c	2023-02-09 01:12:52.401132000 -0600
+@@ -0,0 +1,144 @@
++#ifndef RAW_ENABLE
++#    error "RAW HID Communication is not enabled" //This should be impossible to run into afaik. Common_features ensures RAWHID is enabled.
++#endif
++
++#include "version.h"
++#include "quantum.h"
++#include "signalrgb.h"
++#include "color.h"
++#include "raw_hid.h"
++
++
++ uint8_t packet[32];
++
++void get_qmk_version(void) //Grab the QMK Version the board's firmware is built off of
++{
++        packet[0] = GET_QMK_VERSION;
++        packet[1] = QMK_VERSION_BYTE_1;
++        packet[2] = QMK_VERSION_BYTE_2;
++        packet[3] = QMK_VERSION_BYTE_3;
++
++        raw_hid_send(packet, 32);
++}
++
++void get_signalrgb_protocol_version(void) 
++{
++        packet[0] = GET_PROTOCOL_VERSION;
++        packet[1] = PROTOCOL_VERSION_BYTE_1;
++        packet[2] = PROTOCOL_VERSION_BYTE_2;
++        packet[3] = PROTOCOL_VERSION_BYTE_3;
++
++        raw_hid_send(packet, 32);
++}
++
++void get_unique_identifier(void) //Grab the unique identifier for each specific model of keyboard.
++{
++        packet[0] = GET_UNIQUE_IDENTIFIER;
++        packet[1] = DEVICE_UNIQUE_IDENTIFIER_BYTE_1;
++        packet[2] = DEVICE_UNIQUE_IDENTIFIER_BYTE_2;
++        packet[3] = DEVICE_UNIQUE_IDENTIFIER_BYTE_3;
++
++        raw_hid_send(packet, 32);
++}
++
++void led_streaming(uint8_t *data) //Stream data from HID Packets to Keyboard.
++{
++    uint8_t index = data[1];
++    uint8_t numberofleds = data[2]; 
++
++    if(numberofleds >= 10)
++    {
++        packet[1] = DEVICE_ERROR_LEDS;
++        raw_hid_send(packet,32);
++        return; 
++    } 
++    
++    for (uint8_t i = 0; i < numberofleds; i++)
++    {
++      uint8_t offset = (i * 3) + 3;
++      uint8_t  r = data[offset];
++      uint8_t  g = data[offset + 1];
++      uint8_t  b = data[offset + 2];
++    
++      rgb_matrix_set_color(index + i, r, g, b);
++     }
++}
++
++void signalrgb_mode_enable(void)
++{
++    rgb_matrix_mode_noeeprom(RGB_MATRIX_SIGNALRGB); //Set RGB Matrix to SignalRGB Compatible Mode
++}
++
++void signalrgb_mode_disable(void)
++{
++    rgb_matrix_reload_from_eeprom(); //Reloading last effect from eeprom
++}
++
++void get_total_leds(void)//Grab total number of leds that a board has.
++{
++    packet[0] = GET_TOTAL_LEDS;
++    packet[1] = RGB_MATRIX_LED_COUNT;
++
++    raw_hid_send(packet, 32);
++}
++
++void get_firmware_type(void) //Grab which fork of qmk a board is running.
++{
++    packet[0] = GET_FIRMWARE_TYPE;
++    packet[1] = FIRMWARE_TYPE_BYTE;
++
++    raw_hid_send(packet, 32);
++}
++
++void raw_hid_receive(uint8_t *data, uint8_t length) 
++{
++        switch (data[0]) {
++        case GET_QMK_VERSION:
++           
++        get_qmk_version();
++
++        break;
++        case GET_PROTOCOL_VERSION:
++
++        get_signalrgb_protocol_version();
++
++        break;
++        case GET_UNIQUE_IDENTIFIER:
++
++        get_unique_identifier();
++
++        break;
++        case STREAM_RGB_DATA: 
++
++        led_streaming(data);
++
++        break;
++
++        case SET_SIGNALRGB_MODE_ENABLE: 
++
++        signalrgb_mode_enable();
++
++        break;
++
++        case SET_SIGNALRGB_MODE_DISABLE: 
++
++        signalrgb_mode_disable();
++
++        break;
++
++        case GET_TOTAL_LEDS:
++
++        get_total_leds();
++
++        break;
++
++        case GET_FIRMWARE_TYPE:
++
++        get_firmware_type();
++
++        break;
++
++        default:
++        break;
++    }
++}
+\ No newline at end of file
+diff -urN qmkmain/quantum/signalrgb.h mainline/quantum/signalrgb.h
+--- qmkmain/quantum/signalrgb.h	1969-12-31 18:00:00.000000000 -0600
++++ mainline/quantum/signalrgb.h	2023-02-21 03:50:31.632238800 -0600
+@@ -0,0 +1,52 @@
++#pragma once
++
++enum signalrgb_commands
++{
++    GET_QMK_VERSION = 0x21,
++    GET_PROTOCOL_VERSION = 0x22,
++    GET_UNIQUE_IDENTIFIER = 0x23,
++    STREAM_RGB_DATA = 0x24,
++    SET_SIGNALRGB_MODE_ENABLE = 0x25,
++    SET_SIGNALRGB_MODE_DISABLE = 0x26,
++    GET_TOTAL_LEDS = 0x27,
++    GET_FIRMWARE_TYPE = 0x28,
++};
++
++enum signalrgb_responses //These are a bit clunky right now. Could use improvement.
++{
++    PROTOCOL_VERSION_BYTE_1 = 1,
++    PROTOCOL_VERSION_BYTE_2 = 0,
++    PROTOCOL_VERSION_BYTE_3 = 4,
++    QMK_VERSION_BYTE_1 = 0,
++    QMK_VERSION_BYTE_2 = 19,
++    QMK_VERSION_BYTE_3 = 12,
++    DEVICE_UNIQUE_IDENTIFIER_BYTE_1 = 0,
++    DEVICE_UNIQUE_IDENTIFIER_BYTE_2 = 0,
++    DEVICE_UNIQUE_IDENTIFIER_BYTE_3 = 0,
++    FIRMWARE_TYPE_BYTE = 1, 
++    DEVICE_ERROR_LEDS = 255, //Error code to show that there are more leds than a packet will allow.
++};
++
++void get_qmk_version(void);
++void get_signalrgb_protocol_version(void);
++void get_unique_identifier(void);
++void led_streaming(uint8_t *data);
++void signalrgb_mode_enable(void);
++void signalrgb_mode_disable(void);
++void get_total_leds(void);
++
++//Changelogs for Firmware Versions------------------------------------
++//V1.0.1 added detection for the total number of LEDs a board has. Plugins need a rewrite to make use of this change. Rewritten plugins will not function with older firmware.
++//V1.0.2 added another detection byte for which fork of SignalRGB firmware device is running. This means we can keep overlap Unique Identifiers between Sonix and Mainline.
++//V1.0.3 unifies the command IDs between Mainline, Sonix, and VIA. All commands have a 0x20 offset now.
++//V1.0.4 improves detection handling, and has a complete rewrite of the plugins. Also merges Mainline and VIA branches. VIA Branch is deprecated.
++
++/*
++DEVICE, DEVICE_UNIQUE_IDENTIFIER_BYTE_1,DEVICE_UNIQUE_IDENTIFIER_BYTE_2,DEVICE_UNIQUE_IDENTIFIER_BYTE_3
++gmmk/pro/rev2/ansi:default           0 0 5
++gmmk/pro/rev2/iso:default            0 0 6
++gmmk/gmmk2/p65/ansi:default               0 0 7
++gmmk/gmmk2/p65/iso:default                0 0 8
++gmmk/gmmk2/p96/ansi:default               0 0 9
++gmmk/gmmk2/p96/iso:default                0 0 10
++*/
+\ No newline at end of file
+diff -urN qmkmain/quantum/via.c mainline/quantum/via.c
+--- qmkmain/quantum/via.c	2023-02-22 23:12:06.523780200 -0600
++++ mainline/quantum/via.c	2023-02-09 01:13:48.892089700 -0600
+@@ -188,6 +188,85 @@
+     return true;
+ }
+ 
++uint8_t packet[32];
++
++ void get_qmk_version(void) //Grab the QMK Version
++{
++        packet[0] = id_signalrgb_qmk_version;
++        packet[1] = QMK_VERSION_BYTE_1;
++        packet[2] = QMK_VERSION_BYTE_2;
++        packet[3] = QMK_VERSION_BYTE_3;
++
++        raw_hid_send(packet, 32);
++}
++
++void get_signalrgb_protocol_version(void) //Grab what version of the SignalRGB protocol a keyboard is running
++{
++        packet[0] = id_signalrgb_protocol_version;
++        packet[1] = PROTOCOL_VERSION_BYTE_1;
++        packet[2] = PROTOCOL_VERSION_BYTE_2;
++        packet[3] = PROTOCOL_VERSION_BYTE_3;
++
++        raw_hid_send(packet, 32);
++}
++
++void get_unique_identifier(void) //Grab the unique identifier for each specific model of keyboard.
++{
++        packet[0] = id_signalrgb_unique_identifier;
++        packet[1] = DEVICE_UNIQUE_IDENTIFIER_BYTE_1;
++        packet[2] = DEVICE_UNIQUE_IDENTIFIER_BYTE_2;
++        packet[3] = DEVICE_UNIQUE_IDENTIFIER_BYTE_3;
++
++        raw_hid_send(packet, 32);
++}
++
++void led_streaming(uint8_t *data) //Stream data from HID Packets to Keyboard.
++{
++    uint8_t index = data[1];
++    uint8_t numberofleds = data[2]; 
++
++    if(numberofleds >= 10)
++    {
++        packet[1] = DEVICE_ERROR_LEDS;
++        raw_hid_send(packet,32);
++        return; 
++    } 
++    
++    for (uint8_t i = 0; i < numberofleds; i++)
++    {
++      uint8_t offset = (i * 3) + 3;
++      uint8_t  r = data[offset];
++      uint8_t  g = data[offset + 1];
++      uint8_t  b = data[offset + 2];
++    
++      rgb_matrix_set_color(index + i, r, g, b);
++     }
++}
++
++void signalrgb_mode_enable(void)
++{
++    rgb_matrix_mode_noeeprom(RGB_MATRIX_SIGNALRGB); //Set RGB Matrix to SignalRGB Compatible Mode
++}
++
++void signalrgb_mode_disable(void)
++{
++    rgb_matrix_reload_from_eeprom(); //Reloading last effect from eeprom
++}
++
++void signalrgb_total_leds(void)//Grab total number of leds that a board has.
++{
++    packet[0] = id_signalrgb_total_leds;
++    packet[1] = RGB_MATRIX_LED_COUNT;
++    raw_hid_send(packet,32);
++}
++
++void signalrgb_firmware_type(void) //Grab which fork of qmk a board is running.
++{
++    packet[0] = id_signalrgb_firmware_type;
++    packet[1] = FIRMWARE_TYPE_BYTE;
++    raw_hid_send(packet,32);
++}
++
+ //
+ // via_custom_value_command() has the default handling of custom values for Core modules.
+ // If a keyboard is using the default Core modules, it does not need to be overridden,
+@@ -279,6 +358,54 @@
+     }
+ 
+     switch (*command_id) {
++        
++        case id_signalrgb_qmk_version:
++        {
++            get_qmk_version();
++            break;
++        }
++
++        case id_signalrgb_protocol_version:
++        {
++            get_signalrgb_protocol_version();
++            break;
++        }
++
++        case id_signalrgb_unique_identifier:
++        {
++            get_unique_identifier();
++            break;
++        }
++
++        case id_signalrgb_stream_leds: 
++        {
++            led_streaming(data);
++            break;
++        }
++
++        case id_signalrgb_effect_enable: 
++        {
++            signalrgb_mode_enable();
++            break;
++        }
++
++        case id_signalrgb_effect_disable: 
++        {
++            signalrgb_mode_disable();
++            break;
++        }
++
++        case id_signalrgb_total_leds:
++        {
++            signalrgb_total_leds();
++            break;
++        }
++
++        case id_signalrgb_firmware_type:
++        {
++            signalrgb_firmware_type();
++            break;
++        }
+         case id_get_protocol_version: {
+             command_data[0] = VIA_PROTOCOL_VERSION >> 8;
+             command_data[1] = VIA_PROTOCOL_VERSION & 0xFF;
+diff -urN qmkmain/quantum/via.h mainline/quantum/via.h
+--- qmkmain/quantum/via.h	2023-02-22 23:12:06.524780700 -0600
++++ mainline/quantum/via.h	2023-02-22 18:07:51.678057400 -0600
+@@ -92,9 +92,47 @@
+     id_dynamic_keymap_set_buffer            = 0x13,
+     id_dynamic_keymap_get_encoder           = 0x14,
+     id_dynamic_keymap_set_encoder           = 0x15,
++    id_signalrgb_qmk_version                = 0x21,
++    id_signalrgb_protocol_version           = 0x22,
++    id_signalrgb_unique_identifier          = 0x23,
++    id_signalrgb_stream_leds                = 0x24,
++    id_signalrgb_effect_enable              = 0x25,
++    id_signalrgb_effect_disable             = 0x26,
++    id_signalrgb_total_leds                 = 0x27,
++    id_signalrgb_firmware_type              = 0x28,
+     id_unhandled                            = 0xFF,
+ };
+ 
++enum signalrgb_responses {
++    PROTOCOL_VERSION_BYTE_1 = 1,
++    PROTOCOL_VERSION_BYTE_2 = 0,
++    PROTOCOL_VERSION_BYTE_3 = 4,
++    QMK_VERSION_BYTE_1 = 0,
++    QMK_VERSION_BYTE_2 = 19,
++    QMK_VERSION_BYTE_3 = 12,
++    DEVICE_UNIQUE_IDENTIFIER_BYTE_1 = 0,
++    DEVICE_UNIQUE_IDENTIFIER_BYTE_2 = 0,
++    DEVICE_UNIQUE_IDENTIFIER_BYTE_3 = 0,
++    FIRMWARE_TYPE_BYTE = 2, 
++    DEVICE_ERROR_LEDS = 254,
++};
++
++//Changelogs for Firmware Versions------------------------------------
++//V1.0.1 added detection for the total number of LEDs a board has. Plugins need a rewrite to make use of this change. Rewritten plugins will not function with older firmware.
++//V1.0.2 added another detection byte for which fork of SignalRGB firmware device is running. This means we can keep overlap Unique Identifiers between Sonix and Mainline.
++//V1.0.3 unifies the command IDs between Mainline, Sonix, and VIA. All commands have a 0x20 offset now.
++//V1.0.4 improves detection handling, and has a complete rewrite of the plugins. Also merges Mainline and VIA branches. VIA Branch is deprecated.
++
++/*
++DEVICE, DEVICE_UNIQUE_IDENTIFIER_BYTE_1,DEVICE_UNIQUE_IDENTIFIER_BYTE_2,DEVICE_UNIQUE_IDENTIFIER_BYTE_3
++gmmk/pro/rev2/ansi           0 0 5
++gmmk/pro/rev2/iso            0 0 6
++gmmk2/p65/ansi               0 0 7
++gmmk2/p65/iso                0 0 8
++gmmk2/p96/ansi               0 0 9
++gmmk2/p96/iso                0 0 10
++*/
++
+ enum via_keyboard_value_id {
+     id_uptime              = 0x01,
+     id_layout_options      = 0x02,
+@@ -192,6 +230,17 @@
+ void     via_set_layout_options(uint32_t value);
+ void     via_set_layout_options_kb(uint32_t value);
+ 
++//Used to handle SignalRGB Compatibility
++
++void get_qmk_version(void);
++void get_signalrgb_protocol_version(void);
++void get_unique_identifier(void);
++void led_streaming(uint8_t *data);
++void signalrgb_mode_enable(void);
++void signalrgb_mode_disable(void);
++void signalrgb_total_leds(void);
++void signalrgb_firmware_type(void);
++
+ // Used by VIA to tell a device to flash LEDs (or do something else) when that
+ // device becomes the active device being configured, on startup or switching
+ // between devices.
