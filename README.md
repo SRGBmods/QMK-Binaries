@@ -50,7 +50,7 @@ Thanks to the SonixQMK & QMK communities for providing source code, all original
 ---
 
 ## For GPL Compliance (Source code): ##
-[QMK Mailine](https://gitlab.com/signalrgb/qmk_firmware/-/tree/QMKRelease_1.0), [SonixQMK](https://gitlab.com/signalrgb/qmk_firmware/-/tree/Sonix_QMKRelease_1.0).
+[QMK Mailine + SignalRGB Source](https://gitlab.com/signalrgb/qmk_firmware/-/tree/QMKRelease_1.0) & [SonixQMK + SignalRGB Source](https://gitlab.com/signalrgb/qmk_firmware/-/tree/Sonix_QMKRelease_1.0).
 
 [Code changes for Protocol 1.0.4 - SonixQMK](https://github.com/SRGBmods/QMK-Binaries/blob/main/GPL/SignalRGB-Changes_QMK-example-code-Sonix.patch)
 
