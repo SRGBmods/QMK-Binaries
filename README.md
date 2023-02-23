@@ -43,7 +43,7 @@ If you notice something missing (keyboard or variation of a keyboard) or have an
 ---
 
 # Credits #
-Thanks to the SonixQMK & QMK communities for providing source code, all original code is completely theirs and credit is entirely theirs for providing the service for us and everyone else!
+Thanks to the SonixQMK & QMK communities for providing source code, all original code is completely theirs and thanks to them for providing the code for us and everyone else!
 
 [SonixQMK](https://github.com/SonixQMK/qmk_firmware)
 
