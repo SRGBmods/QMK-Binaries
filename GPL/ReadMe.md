@@ -8,9 +8,9 @@ Thanks to the SonixQMK & QMK communities for providing source code, all original
 ## For GPL Compliance (Source code): ##
 [QMK Mainline + SignalRGB Source](https://gitlab.com/signalrgb/qmk_firmware/-/tree/QMKRelease_1.0) & [SonixQMK + SignalRGB Source](https://gitlab.com/signalrgb/qmk_firmware/-/tree/Sonix_QMKRelease_1.0).
 
-Code changes for Protocol 1.0.4 - SonixQMK = SignalRGB-Changes_QMK-example-code-Sonix.patch
+Code changes for SignalRGB Protocol 1.0.4 + SonixQMK = SignalRGB-Changes_QMK-example-code-Sonix.patch
 
-Code changes for Protocol 1.0.4 - QMK Master = SignalRGB-Changes_QMK-example-code.patch
+Code changes for SignalRGB Protocol 1.0.4 + QMK Master = SignalRGB-Changes_QMK-example-code.patch
 
 common_features.mk & signalrgb.c & signalrgb.h additional code used by both SonixQMK & QMK Mainline.
 
