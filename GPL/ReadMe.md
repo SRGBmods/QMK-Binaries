@@ -1,7 +1,7 @@
 # Credits #
 Thanks to the [SonixQMK](https://github.com/SonixQMK/qmk_firmware) & [QMK](https://github.com/qmk/qmk_firmware) communities for providing source code, all original code is completely theirs and thanks to them for providing the code for us and everyone else!
 
-[SonixQMK](https://github.com/SonixQMK/qmk_firmware) & [QMK](https://github.com/qmk/qmk_firmware)
+[SonixQMK](https://github.com/SonixQMK/qmk_firmware/blob/sn32_master/LICENSE) & [QMK](https://github.com/qmk/qmk_firmware/blob/master/LICENSE) Licenses.
 
 ---
 
