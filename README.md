@@ -44,3 +44,5 @@ If you notice something missing (keyboard or variation of a keyboard) or have an
 
 For GPL Compliance (Source code):
 [QMK Mailine](https://gitlab.com/signalrgb/qmk_firmware/-/tree/QMKRelease_1.0), [SonixQMK](https://gitlab.com/signalrgb/qmk_firmware/-/tree/Sonix_QMKRelease_1.0).
+
+[Example Code changes for Protocol 1.0.4](https://github.com/SRGBmods/QMK-Binaries/blob/main/GPL/SignalRGB-Changes_QMK-example-code.patch)
