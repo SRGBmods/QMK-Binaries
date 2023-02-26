@@ -2,6 +2,7 @@ export function Name() { return "Keychron Q2 QMK Keyboard"; }
 export function VendorId() { return 0x3434; }
 export function ProductId() { return 0x0111; }
 export function Publisher() { return "Chodiengrody"; }
+export function Documentation(){ return "/qmk/building-firmware-from-source"; }
 export function Size() { return [21, 6]; }
 export function DefaultPosition(){return [10, 100]; }
 export function DefaultScale(){return 8.0;}
@@ -20,7 +21,7 @@ export function ControllableParameters()
 }
 
 
-//Plugin Version: Built for Protocol V1.0.3
+//Plugin Version: Built for Protocol V1.0.4
 
 const vKeys =
 [
@@ -188,7 +189,12 @@ function returnUniqueIdentifier(data)
 	let UniqueIdentifierByte1 = data[2];
 	let UniqueIdentifierByte2 = data[3];
 	let UniqueIdentifierByte3 = data[4];
-	device.log("Unique Device Identifier: " + UniqueIdentifierByte1 + UniqueIdentifierByte2 + UniqueIdentifierByte3);
+
+	if(!(UniqueIdentifierByte1 === 0 && UniqueIdentifierByte2 === 0 && UniqueIdentifierByte3 === 0))
+	{
+		device.log("Unique Device Identifier: " + UniqueIdentifierByte1 + UniqueIdentifierByte2 + UniqueIdentifierByte3);
+	}
+
 	device.pause(30);
 }
 
