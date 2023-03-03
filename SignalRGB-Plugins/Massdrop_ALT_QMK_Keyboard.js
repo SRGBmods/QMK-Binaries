@@ -1,7 +1,7 @@
 export function Name() { return "massdrop_alt_default"; }
 export function VendorId() { return 0x04d8; }
 export function ProductId() { return 0xeed3; }
-export function Publisher() { return "WhirlwindFX"; }
+export function Publisher() { return "TechNa狼"; }
 export function Size() { return [15, 8]; }
 export function DefaultPosition(){return [10, 100]; }
 export function DefaultScale(){return 8.0;}
