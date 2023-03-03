@@ -1,7 +1,7 @@
 export function Name() { return "Keychron K8 Pro"; }
 export function VendorId() { return 0x3434; }
 export function ProductId() { return 0x0280; }
-export function Publisher() { return "WhirlwindFX"; }
+export function Publisher() { return "NotACardboardBox"; }
 export function Documentation() { return "/qmk/building-firmware-from-source"; }
 export function Size() { return [17, 6]; }
 export function DefaultPosition() { return [10, 100]; }
