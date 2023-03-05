@@ -32,6 +32,8 @@ You will also need to follow the directions from your Keyboard manufacturer to p
 
 See the [SignalRGB Plugin Testing Discord Server](https://discord.gg/J5dwtcNhqC) for support.
 
+** One thing of note if you are attempting to use VIA or Vial to configure your keyboard you _must_ quit SignalRGB before running either software **
+
 If you notice something missing (keyboard or variation of a keyboard) or have any issues with these binaries please contact Naitoshedo on the above Discord server.
 
 
