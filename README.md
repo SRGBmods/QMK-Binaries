@@ -50,9 +50,9 @@ If you notice something missing (keyboard or variation of a keyboard) or have an
 ---
 
 # Credits #
-Thanks to the SonixQMK, QMK, VIA, and Vial communities for providing source code, all original code is completely theirs and thanks to them for providing the code for us and everyone else to use!
+Thanks to the SonixQMK, QMK, VIA, GloriousThrall, and Vial communities for providing source code, all original code is completely theirs and thanks to them for providing the code for us and everyone else to use!
 
-[SonixQMK](https://github.com/SonixQMK/qmk_firmware) , [QMK](https://github.com/qmk/qmk_firmware) , [VIA](https://www.caniusevia.com/) , and [Vial](https://github.com/vial-kb/vial-qmk)
+[SonixQMK](https://github.com/SonixQMK/qmk_firmware) , [QMK](https://github.com/qmk/qmk_firmware) , [VIA](https://www.caniusevia.com/) , [GloriousThrall](https://github.com/GloriousThrall/qmk_firmware/), and [Vial](https://github.com/vial-kb/vial-qmk)
 
 ---
 
