@@ -1,5 +1,5 @@
-#Sonix Chipset QMK Based#
-##It is recommended to use the most recent version of QMK + VIA builds if a version exists for your keyboard:##
+# Sonix Chipset QMK Based #
+## It is recommended to use the most recent version of QMK + VIA builds if a version exists for your keyboard: ##
 
 Ajazz AK33 Rev2
 Akko Neon 3061 RGB
