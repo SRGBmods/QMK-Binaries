@@ -2,10 +2,15 @@
 ## It is recommended to use the most recent version of QMK + VIA builds if a version exists for your keyboard: ##
 
 Ajazz AK33 Rev2
+
 Akko Neon 3061 RGB
+
 Aukey KMG12
+
 FFC 61
+
 Flashquark Horizon Z
+
 GMMK TKL Rev2
 GMMK TKL Rev3
 GMMK Compact Rev2
