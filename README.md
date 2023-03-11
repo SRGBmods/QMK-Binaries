@@ -5,8 +5,6 @@ If you wish to do this yourself the directions can be found [here](https://docs.
 	
 **These binaries may include releases from different "playground(s)" and QMK repositories. stability is not guaranteed..**
 
-# Sinowealth MCUs are NOT supported at all so please do not ask! #
-
 ### QMK+VIA-Firmware (We recommend these): ###
 **One thing of note if you are attempting to use VIA or Vial to configure your keyboard you _must_ quit SignalRGB before running either software**
 * **[0.20.1](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BVIA-Firmware/0.20.1)** is the new [QMK Mainline github](https://github.com/qmk/qmk_firmware), currently being pulled and fixes to boards are applied and uploaded.
