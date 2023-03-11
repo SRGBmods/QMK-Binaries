@@ -1,3 +1,5 @@
+**One thing of note if you are attempting to use Vial to configure your keyboard you _must_ quit SignalRGB before running either software**
+
 To use these files you may find QMK Toolbox helpful:
 https://github.com/qmk/qmk_toolbox/releases/
 
