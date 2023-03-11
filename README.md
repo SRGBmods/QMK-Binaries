@@ -42,7 +42,9 @@ After flashing your firmware you will need a user plugin in SignalRGB in order f
 
 ### Help with these binaries / user plugin creation ###
 
-See the [SignalRGB Plugin Testing Discord Server](https://discord.gg/J5dwtcNhqC) for support.
+**This firmware is not officially supported by SignalRGB or QMK but by the moderator team of SignalRGB. Support can be provided either on the Github repository ( [**Issues**](https://github.com/SRGBmods/QMK-Binaries/issues) ) or the QMK channels of this** [**Discord**](https://discord.com/invite/J5dwtcNhqC) **(Discord will be faster in most cases).**
+
+**Please keep support requests to either of those locations only, thanks!**
 
 If you notice something missing (keyboard or variation of a keyboard) or have any issues with these binaries please contact Naitoshedo on the above Discord server.
 
