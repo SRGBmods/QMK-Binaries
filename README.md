@@ -7,7 +7,7 @@ If you wish to do this yourself the directions can be found [here](https://docs.
 
 ---
 
-### Help with these binaries / user plugin creation ###
+### Help with these binaries / [user plugin creation](https://docs.signalrgb.com/qmk/srgbmods-qmk-firmware) ###
 
 **This firmware is not officially supported by SignalRGB or QMK but by the moderator team of SignalRGB. Support can be provided either on the Github repository ([**Issues**](https://github.com/SRGBmods/QMK-Binaries/issues)) or the QMK channels of this** [**Discord**](https://discord.com/invite/J5dwtcNhqC) **(Discord will be faster in most cases).**
 
