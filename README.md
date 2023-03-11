@@ -5,6 +5,8 @@ If you wish to do this yourself the directions can be found [here](https://docs.
 	
 **These binaries may include releases from different "playground(s)" and QMK repositories. stability is not guaranteed..**
 
+---
+
 ### QMK+VIA-Firmware (We recommend these): ###
 **One thing of note if you are attempting to use VIA or Vial to configure your keyboard you _must_ quit SignalRGB before running either software**
 * **[0.20.1](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BVIA-Firmware/0.20.1)** is the new [QMK Mainline github](https://github.com/qmk/qmk_firmware), currently being pulled and fixes to boards are applied and uploaded.
@@ -16,9 +18,13 @@ If you wish to do this yourself the directions can be found [here](https://docs.
 **One thing of note if you are attempting to use VIA or Vial to configure your keyboard you _must_ quit SignalRGB before running either software**
 * **[0.18.6](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BVIA%2BVial-Firmware/0.18.6)** is the latest [Vial QMK Branch](https://github.com/vial-kb/vial-qmk), currently being pulled and fixes to boards are applied and uploaded.
 
+---
+
 ### QMK+Default-Firmware: ###
 * **[0.20.1](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BDefault-Firmware/0.20.1)** is the new [QMK Mainline github](https://github.com/qmk/qmk_firmware), currently being pulled and fixes to boards are applied and uploaded (This is default without VIA support).
 * **[0.15.12-sonix](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BDefault-Firmware/0.15.12-sonix)** is for **Sonix based keyboards _only_** and comes from [Sonix_QMKRelease_1.0](https://gitlab.com/signalrgb/qmk_firmware/-/tree/Sonix_QMKRelease_1.0/keyboards).
+
+---
 
 ### Directions ###
 To use these files you may find [QMK Toolbox](https://github.com/qmk/qmk_toolbox/releases/) helpful.
