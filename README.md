@@ -7,6 +7,16 @@ If you wish to do this yourself the directions can be found [here](https://docs.
 
 ---
 
+### Help with these binaries / user plugin creation ###
+
+**This firmware is not officially supported by SignalRGB or QMK but by the moderator team of SignalRGB. Support can be provided either on the Github repository ( [**Issues**](https://github.com/SRGBmods/QMK-Binaries/issues) ) or the QMK channels of this** [**Discord**](https://discord.com/invite/J5dwtcNhqC) **(Discord will be faster in most cases).**
+
+**Please keep support requests to either of those locations only, thanks!**
+
+If you notice something missing (keyboard or variation of a keyboard) or have any issues with these binaries please contact Naitoshedo on the above Discord server.
+
+---
+
 ### QMK+VIA-Firmware (_We recommend these_): ###
 **One thing of note if you are attempting to use VIA or Vial to configure your keyboard you _must_ quit SignalRGB before running either software**
 * **[0.20.1](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BVIA-Firmware/0.20.1)** is the new [QMK Mainline github](https://github.com/qmk/qmk_firmware), currently being pulled and fixes to boards are applied and uploaded.
@@ -40,14 +50,7 @@ You will also need to follow the directions from your Keyboard manufacturer to p
 
 After flashing your firmware you will need a user plugin in SignalRGB in order for SignalRGB to talk to your keyboard. First see if your keyboard works immediately on launching SignalRGB, if that fails check our [user submitted plugins](https://github.com/SRGBmods/QMK-Binaries/tree/main/SignalRGB-Plugins), and finally [here are the directions](https://docs.signalrgb.com/qmk/srgbmods-qmk-firmware) for creating your own user plugin.
 
-### Help with these binaries / user plugin creation ###
-
-**This firmware is not officially supported by SignalRGB or QMK but by the moderator team of SignalRGB. Support can be provided either on the Github repository ( [**Issues**](https://github.com/SRGBmods/QMK-Binaries/issues) ) or the QMK channels of this** [**Discord**](https://discord.com/invite/J5dwtcNhqC) **(Discord will be faster in most cases).**
-
-**Please keep support requests to either of those locations only, thanks!**
-
-If you notice something missing (keyboard or variation of a keyboard) or have any issues with these binaries please contact Naitoshedo on the above Discord server.
-
+---
 
 ### Older Builds - AKA Archived QMK + SignalRGB builds ###
 * **[0.20.0](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BDefault-Firmware/_Archived)** Archived 0.20.0.zip (Old QMK Mainline Default+SignalRGB Support)
