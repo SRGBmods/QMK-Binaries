@@ -36,7 +36,9 @@ Or if a Sonix based firmware [these directions](https://sonixqmk.github.io//Soni
 You will also need to follow the directions from your Keyboard manufacturer to put your device in bootloader mode in order to use QMK Toolbox / Sonix Flasher. (Google is your friend!)
 (Check their website for directions, you should honestly check there anyways for firmware in case you to need to factory restore as well.)
 
-### Help with these binaries ###
+After flashing your firmware you will need a user plugin in SignalRGB in order for SignalRGB to talk to your keyboard. First see if your keyboard works immediately on launching SignalRGB, if that fails check our [user submitted plugins](https://github.com/SRGBmods/QMK-Binaries/tree/main/SignalRGB-Plugins), and finally [here are the directions](https://docs.signalrgb.com/qmk/srgbmods-qmk-firmware) for creating your own user plugin.
+
+### Help with these binaries / user plugin creation ###
 
 See the [SignalRGB Plugin Testing Discord Server](https://discord.gg/J5dwtcNhqC) for support.
 
