@@ -42,7 +42,7 @@ If you notice something missing (keyboard or variation of a keyboard) or have an
 ---
 
 ### Directions ###
-**If you are using VIA or Vial currently, you should save your current mappings (layout) e.g. back it up with before flashing that way you can restore it once the flash is complete!**
+**If you are using VIA or Vial currently, you should save your current mappings (layout) e.g. back it up before flashing that way you can restore it once the flash is complete!**
 
 To use these files you may find [QMK Toolbox](https://github.com/qmk/qmk_toolbox/releases/) helpful.
 
