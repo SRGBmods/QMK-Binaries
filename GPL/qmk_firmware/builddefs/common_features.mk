@@ -1,3 +1,10 @@
+#
+# We put this right after
+# ifeq ($(strip $(CIE1931_CURVE)), yes)
+#    OPT_DEFS += -DUSE_CIE1931_CURVE
+#    LED_TABLES := yes
+# endif
+#
 
 ifeq ($(strip $(SIGNALRGB_SUPPORT_ENABLE)), yes)
     ifneq ($(strip $(VIA_ENABLE)), yes)
