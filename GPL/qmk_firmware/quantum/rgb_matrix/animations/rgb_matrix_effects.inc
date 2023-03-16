@@ -1,2 +1,2 @@
-// Add your new core rgb matrix effect here, order determines enum order
+// We put this at the end of the file.
 #include "signalrgb_anim.h"

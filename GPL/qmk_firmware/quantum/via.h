@@ -1,4 +1,6 @@
-
+/* 
+Part of enum via_command_id {
+*/
 enum via_command_id {
     id_signalrgb_qmk_version                = 0x21,
     id_signalrgb_protocol_version           = 0x22,
@@ -10,6 +12,8 @@ enum via_command_id {
     id_signalrgb_firmware_type              = 0x28,
     id_unhandled                            = 0xFF,
 };
+
+/* This follows directly after via_command_id */
 
 enum signalrgb_responses {
     PROTOCOL_VERSION_BYTE_1 = 1,
@@ -41,6 +45,13 @@ gmmk/gmmk2/p96/ansi               0 0 9
 gmmk/gmmk2/p96/iso                0 0 10
 */
 
+
+/*
+
+This is placed directory after:
+// Used by VIA to store and retrieve the layout options.
+
+*/
 
 //Used to handle SignalRGB Compatibility
 

@@ -1,3 +1,9 @@
+/*
+This goes below
+switch (keycode) {
+        case FN_MO13:
+
+*/
 uint8_t packet[32];
 
  void get_qmk_version(void) //Grab the QMK Version
@@ -78,7 +84,12 @@ void signalrgb_firmware_type(void) //Grab which fork of qmk a board is running.
 }
 
 
-    switch (*command_id) {
+/*
+Part of void raw_hid_receive(uint8_t *data, uint8_t length) {
+specifically in (*command_id)
+right before protocol version
+
+*/
         
         case id_signalrgb_qmk_version:
         {
@@ -127,9 +138,3 @@ void signalrgb_firmware_type(void) //Grab which fork of qmk a board is running.
             signalrgb_firmware_type();
             break;
         }
-        case id_get_protocol_version: {
-            command_data[0] = VIA_PROTOCOL_VERSION >> 8;
-            command_data[1] = VIA_PROTOCOL_VERSION & 0xFF;
-            break;
-        }
-        
