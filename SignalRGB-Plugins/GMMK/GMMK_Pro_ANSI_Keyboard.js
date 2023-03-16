@@ -2,6 +2,7 @@ export function Name() { return "GMMK Pro"; }
 export function VendorId() { return 0x320F; }
 export function ProductId() { return 0x5044; }
 export function Publisher() { return "WhirlwindFX"; }
+export function Documentation(){ return "qmk/supported-keyboards"; }
 export function Size() { return [21, 7]; }
 export function DefaultPosition() {return [75, 70]; }
 export function DefaultScale(){return 8.0;}
