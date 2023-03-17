@@ -1,0 +1,880 @@
+diff -urN royalkludge/common_features.mk royalkludge-srgb/common_features.mk
+--- royalkludge/common_features.mk	2023-03-17 00:30:21.873264680 -0500
++++ royalkludge-srgb/common_features.mk	2023-03-16 15:20:37.377996597 -0500
+@@ -376,6 +376,14 @@
+     LED_TABLES := yes
+ endif
+ 
++ifeq ($(strip $(SIGNALRGB_SUPPORT_ENABLE)), yes)
++    ifneq ($(strip $(VIA_ENABLE)), yes)
++    RAW_ENABLE := yes
++    SRC += $(QUANTUM_DIR)/signalrgb.c
++    OPT_DEFS += -DSIGNALRGB_SUPPORT_ENABLE
++    endif
++endif
++
+ ifeq ($(strip $(LED_TABLES)), yes)
+     SRC += $(QUANTUM_DIR)/led_tables.c
+ endif
+Binary files royalkludge/.git/index and royalkludge-srgb/.git/index differ
+diff -urN royalkludge/.git/logs/HEAD royalkludge-srgb/.git/logs/HEAD
+--- royalkludge/.git/logs/HEAD	2023-03-17 00:30:21.833264509 -0500
++++ royalkludge-srgb/.git/logs/HEAD	2023-03-16 13:14:08.900120007 -0500
+@@ -1 +1 @@
+-0000000000000000000000000000000000000000 278f3c219d2cc4ae4c675cae50ccddc864ae6129 Stephen Jakubiec <stephenj@SteamHost.fluentnudge.com> 1679031021 -0500	clone: from https://github.com/ab00a/qmk_firmware.git
++0000000000000000000000000000000000000000 278f3c219d2cc4ae4c675cae50ccddc864ae6129 Stephen Jakubiec <stephenj@SteamHost.fluentnudge.com> 1678990448 -0500	clone: from https://github.com/ab00a/qmk_firmware.git
+diff -urN royalkludge/.git/logs/refs/heads/sn32 royalkludge-srgb/.git/logs/refs/heads/sn32
+--- royalkludge/.git/logs/refs/heads/sn32	2023-03-17 00:30:21.833264509 -0500
++++ royalkludge-srgb/.git/logs/refs/heads/sn32	2023-03-16 13:14:08.900120007 -0500
+@@ -1 +1 @@
+-0000000000000000000000000000000000000000 278f3c219d2cc4ae4c675cae50ccddc864ae6129 Stephen Jakubiec <stephenj@SteamHost.fluentnudge.com> 1679031021 -0500	clone: from https://github.com/ab00a/qmk_firmware.git
++0000000000000000000000000000000000000000 278f3c219d2cc4ae4c675cae50ccddc864ae6129 Stephen Jakubiec <stephenj@SteamHost.fluentnudge.com> 1678990448 -0500	clone: from https://github.com/ab00a/qmk_firmware.git
+diff -urN royalkludge/.git/logs/refs/remotes/origin/HEAD royalkludge-srgb/.git/logs/refs/remotes/origin/HEAD
+--- royalkludge/.git/logs/refs/remotes/origin/HEAD	2023-03-17 00:30:21.829264492 -0500
++++ royalkludge-srgb/.git/logs/refs/remotes/origin/HEAD	2023-03-16 13:14:08.900120007 -0500
+@@ -1 +1 @@
+-0000000000000000000000000000000000000000 278f3c219d2cc4ae4c675cae50ccddc864ae6129 Stephen Jakubiec <stephenj@SteamHost.fluentnudge.com> 1679031021 -0500	clone: from https://github.com/ab00a/qmk_firmware.git
++0000000000000000000000000000000000000000 278f3c219d2cc4ae4c675cae50ccddc864ae6129 Stephen Jakubiec <stephenj@SteamHost.fluentnudge.com> 1678990448 -0500	clone: from https://github.com/ab00a/qmk_firmware.git
+Binary files royalkludge/.git/modules/lib/chibios/index and royalkludge-srgb/.git/modules/lib/chibios/index differ
+diff -urN royalkludge/.git/modules/lib/chibios/logs/HEAD royalkludge-srgb/.git/modules/lib/chibios/logs/HEAD
+--- royalkludge/.git/modules/lib/chibios/logs/HEAD	2023-03-17 00:31:45.761618736 -0500
++++ royalkludge-srgb/.git/modules/lib/chibios/logs/HEAD	2023-03-16 13:15:37.584414898 -0500
+@@ -1,2 +1,2 @@
+-0000000000000000000000000000000000000000 0062927e3058a8b5ef587234bbd98d42fb4e595e Stephen Jakubiec <stephenj@SteamHost.fluentnudge.com> 1679031086 -0500	clone: from https://github.com/qmk/ChibiOS
+-0062927e3058a8b5ef587234bbd98d42fb4e595e 313416b8fda90d9973a749a0a35970956852c286 Stephen Jakubiec <stephenj@SteamHost.fluentnudge.com> 1679031105 -0500	checkout: moving from qmk-master to 313416b8fda90d9973a749a0a35970956852c286
++0000000000000000000000000000000000000000 0062927e3058a8b5ef587234bbd98d42fb4e595e Stephen Jakubiec <stephenj@SteamHost.fluentnudge.com> 1678990523 -0500	clone: from https://github.com/qmk/ChibiOS
++0062927e3058a8b5ef587234bbd98d42fb4e595e 313416b8fda90d9973a749a0a35970956852c286 Stephen Jakubiec <stephenj@SteamHost.fluentnudge.com> 1678990537 -0500	checkout: moving from qmk-master to 313416b8fda90d9973a749a0a35970956852c286
+diff -urN royalkludge/.git/modules/lib/chibios/logs/refs/heads/qmk-master royalkludge-srgb/.git/modules/lib/chibios/logs/refs/heads/qmk-master
+--- royalkludge/.git/modules/lib/chibios/logs/refs/heads/qmk-master	2023-03-17 00:31:26.877539834 -0500
++++ royalkludge-srgb/.git/modules/lib/chibios/logs/refs/heads/qmk-master	2023-03-16 13:15:23.136366912 -0500
+@@ -1 +1 @@
+-0000000000000000000000000000000000000000 0062927e3058a8b5ef587234bbd98d42fb4e595e Stephen Jakubiec <stephenj@SteamHost.fluentnudge.com> 1679031086 -0500	clone: from https://github.com/qmk/ChibiOS
++0000000000000000000000000000000000000000 0062927e3058a8b5ef587234bbd98d42fb4e595e Stephen Jakubiec <stephenj@SteamHost.fluentnudge.com> 1678990523 -0500	clone: from https://github.com/qmk/ChibiOS
+diff -urN royalkludge/.git/modules/lib/chibios/logs/refs/remotes/origin/HEAD royalkludge-srgb/.git/modules/lib/chibios/logs/refs/remotes/origin/HEAD
+--- royalkludge/.git/modules/lib/chibios/logs/refs/remotes/origin/HEAD	2023-03-17 00:31:26.873539817 -0500
++++ royalkludge-srgb/.git/modules/lib/chibios/logs/refs/remotes/origin/HEAD	2023-03-16 13:15:23.136366912 -0500
+@@ -1 +1 @@
+-0000000000000000000000000000000000000000 0062927e3058a8b5ef587234bbd98d42fb4e595e Stephen Jakubiec <stephenj@SteamHost.fluentnudge.com> 1679031086 -0500	clone: from https://github.com/qmk/ChibiOS
++0000000000000000000000000000000000000000 0062927e3058a8b5ef587234bbd98d42fb4e595e Stephen Jakubiec <stephenj@SteamHost.fluentnudge.com> 1678990523 -0500	clone: from https://github.com/qmk/ChibiOS
+Binary files royalkludge/.git/modules/lib/chibios/objects/pack/pack-2411d3760a9f76a5104b8769555ea9582535b38e.idx and royalkludge-srgb/.git/modules/lib/chibios/objects/pack/pack-2411d3760a9f76a5104b8769555ea9582535b38e.idx differ
+Binary files royalkludge/.git/modules/lib/chibios/objects/pack/pack-2411d3760a9f76a5104b8769555ea9582535b38e.pack and royalkludge-srgb/.git/modules/lib/chibios/objects/pack/pack-2411d3760a9f76a5104b8769555ea9582535b38e.pack differ
+Binary files royalkludge/.git/modules/lib/chibios/objects/pack/pack-fce98a413074dc9455623bc7417c78a38063a46f.idx and royalkludge-srgb/.git/modules/lib/chibios/objects/pack/pack-fce98a413074dc9455623bc7417c78a38063a46f.idx differ
+Binary files royalkludge/.git/modules/lib/chibios/objects/pack/pack-fce98a413074dc9455623bc7417c78a38063a46f.pack and royalkludge-srgb/.git/modules/lib/chibios/objects/pack/pack-fce98a413074dc9455623bc7417c78a38063a46f.pack differ
+Binary files royalkludge/.git/modules/lib/chibios-contrib/index and royalkludge-srgb/.git/modules/lib/chibios-contrib/index differ
+diff -urN royalkludge/.git/modules/lib/chibios-contrib/logs/HEAD royalkludge-srgb/.git/modules/lib/chibios-contrib/logs/HEAD
+--- royalkludge/.git/modules/lib/chibios-contrib/logs/HEAD	2023-03-17 00:31:45.913619370 -0500
++++ royalkludge-srgb/.git/modules/lib/chibios-contrib/logs/HEAD	2023-03-16 13:15:37.748415443 -0500
+@@ -1,2 +1,2 @@
+-0000000000000000000000000000000000000000 3892325c2edf9f34a3671b8f9284d3e18b12f54c Stephen Jakubiec <stephenj@SteamHost.fluentnudge.com> 1679031092 -0500	clone: from https://github.com/SonixQMK/ChibiOS-Contrib
+-3892325c2edf9f34a3671b8f9284d3e18b12f54c d1131a1cc7d08c7f0dfb74238ac34a8dd36426ce Stephen Jakubiec <stephenj@SteamHost.fluentnudge.com> 1679031105 -0500	checkout: moving from sn32 to d1131a1cc7d08c7f0dfb74238ac34a8dd36426ce
++0000000000000000000000000000000000000000 3892325c2edf9f34a3671b8f9284d3e18b12f54c Stephen Jakubiec <stephenj@SteamHost.fluentnudge.com> 1678990526 -0500	clone: from https://github.com/SonixQMK/ChibiOS-Contrib
++3892325c2edf9f34a3671b8f9284d3e18b12f54c d1131a1cc7d08c7f0dfb74238ac34a8dd36426ce Stephen Jakubiec <stephenj@SteamHost.fluentnudge.com> 1678990537 -0500	checkout: moving from sn32 to d1131a1cc7d08c7f0dfb74238ac34a8dd36426ce
+diff -urN royalkludge/.git/modules/lib/chibios-contrib/logs/refs/heads/sn32 royalkludge-srgb/.git/modules/lib/chibios-contrib/logs/refs/heads/sn32
+--- royalkludge/.git/modules/lib/chibios-contrib/logs/refs/heads/sn32	2023-03-17 00:31:32.241562291 -0500
++++ royalkludge-srgb/.git/modules/lib/chibios-contrib/logs/refs/heads/sn32	2023-03-16 13:15:26.344377569 -0500
+@@ -1 +1 @@
+-0000000000000000000000000000000000000000 3892325c2edf9f34a3671b8f9284d3e18b12f54c Stephen Jakubiec <stephenj@SteamHost.fluentnudge.com> 1679031092 -0500	clone: from https://github.com/SonixQMK/ChibiOS-Contrib
++0000000000000000000000000000000000000000 3892325c2edf9f34a3671b8f9284d3e18b12f54c Stephen Jakubiec <stephenj@SteamHost.fluentnudge.com> 1678990526 -0500	clone: from https://github.com/SonixQMK/ChibiOS-Contrib
+diff -urN royalkludge/.git/modules/lib/chibios-contrib/logs/refs/remotes/origin/HEAD royalkludge-srgb/.git/modules/lib/chibios-contrib/logs/refs/remotes/origin/HEAD
+--- royalkludge/.git/modules/lib/chibios-contrib/logs/refs/remotes/origin/HEAD	2023-03-17 00:31:32.241562291 -0500
++++ royalkludge-srgb/.git/modules/lib/chibios-contrib/logs/refs/remotes/origin/HEAD	2023-03-16 13:15:26.344377569 -0500
+@@ -1 +1 @@
+-0000000000000000000000000000000000000000 3892325c2edf9f34a3671b8f9284d3e18b12f54c Stephen Jakubiec <stephenj@SteamHost.fluentnudge.com> 1679031092 -0500	clone: from https://github.com/SonixQMK/ChibiOS-Contrib
++0000000000000000000000000000000000000000 3892325c2edf9f34a3671b8f9284d3e18b12f54c Stephen Jakubiec <stephenj@SteamHost.fluentnudge.com> 1678990526 -0500	clone: from https://github.com/SonixQMK/ChibiOS-Contrib
+Binary files royalkludge/.git/modules/lib/chibios-contrib/objects/pack/pack-345430ca8e7bd9a84bd4f412f79e18b06e6a011a.idx and royalkludge-srgb/.git/modules/lib/chibios-contrib/objects/pack/pack-345430ca8e7bd9a84bd4f412f79e18b06e6a011a.idx differ
+Binary files royalkludge/.git/modules/lib/chibios-contrib/objects/pack/pack-345430ca8e7bd9a84bd4f412f79e18b06e6a011a.pack and royalkludge-srgb/.git/modules/lib/chibios-contrib/objects/pack/pack-345430ca8e7bd9a84bd4f412f79e18b06e6a011a.pack differ
+Binary files royalkludge/.git/modules/lib/chibios-contrib/objects/pack/pack-3fe38a2d78c21fa048f66438cf30b8c7363af78e.idx and royalkludge-srgb/.git/modules/lib/chibios-contrib/objects/pack/pack-3fe38a2d78c21fa048f66438cf30b8c7363af78e.idx differ
+Binary files royalkludge/.git/modules/lib/chibios-contrib/objects/pack/pack-3fe38a2d78c21fa048f66438cf30b8c7363af78e.pack and royalkludge-srgb/.git/modules/lib/chibios-contrib/objects/pack/pack-3fe38a2d78c21fa048f66438cf30b8c7363af78e.pack differ
+Binary files royalkludge/.git/modules/lib/googletest/index and royalkludge-srgb/.git/modules/lib/googletest/index differ
+diff -urN royalkludge/.git/modules/lib/googletest/logs/HEAD royalkludge-srgb/.git/modules/lib/googletest/logs/HEAD
+--- royalkludge/.git/modules/lib/googletest/logs/HEAD	2023-03-17 00:31:45.981619653 -0500
++++ royalkludge-srgb/.git/modules/lib/googletest/logs/HEAD	2023-03-16 13:15:37.828415708 -0500
+@@ -1,2 +1,2 @@
+-0000000000000000000000000000000000000000 e2239ee6043f73722e7aa812a459f54a28552929 Stephen Jakubiec <stephenj@SteamHost.fluentnudge.com> 1679031094 -0500	clone: from https://github.com/qmk/googletest
+-e2239ee6043f73722e7aa812a459f54a28552929 ec44c6c1675c25b9827aacd08c02433cccde7780 Stephen Jakubiec <stephenj@SteamHost.fluentnudge.com> 1679031105 -0500	checkout: moving from qmk-master to ec44c6c1675c25b9827aacd08c02433cccde7780
++0000000000000000000000000000000000000000 e2239ee6043f73722e7aa812a459f54a28552929 Stephen Jakubiec <stephenj@SteamHost.fluentnudge.com> 1678990529 -0500	clone: from https://github.com/qmk/googletest
++e2239ee6043f73722e7aa812a459f54a28552929 ec44c6c1675c25b9827aacd08c02433cccde7780 Stephen Jakubiec <stephenj@SteamHost.fluentnudge.com> 1678990537 -0500	checkout: moving from qmk-master to ec44c6c1675c25b9827aacd08c02433cccde7780
+diff -urN royalkludge/.git/modules/lib/googletest/logs/refs/heads/qmk-master royalkludge-srgb/.git/modules/lib/googletest/logs/refs/heads/qmk-master
+--- royalkludge/.git/modules/lib/googletest/logs/refs/heads/qmk-master	2023-03-17 00:31:34.949573615 -0500
++++ royalkludge-srgb/.git/modules/lib/googletest/logs/refs/heads/qmk-master	2023-03-16 13:15:29.288387347 -0500
+@@ -1 +1 @@
+-0000000000000000000000000000000000000000 e2239ee6043f73722e7aa812a459f54a28552929 Stephen Jakubiec <stephenj@SteamHost.fluentnudge.com> 1679031094 -0500	clone: from https://github.com/qmk/googletest
++0000000000000000000000000000000000000000 e2239ee6043f73722e7aa812a459f54a28552929 Stephen Jakubiec <stephenj@SteamHost.fluentnudge.com> 1678990529 -0500	clone: from https://github.com/qmk/googletest
+diff -urN royalkludge/.git/modules/lib/googletest/logs/refs/remotes/origin/HEAD royalkludge-srgb/.git/modules/lib/googletest/logs/refs/remotes/origin/HEAD
+--- royalkludge/.git/modules/lib/googletest/logs/refs/remotes/origin/HEAD	2023-03-17 00:31:34.949573615 -0500
++++ royalkludge-srgb/.git/modules/lib/googletest/logs/refs/remotes/origin/HEAD	2023-03-16 13:15:29.288387347 -0500
+@@ -1 +1 @@
+-0000000000000000000000000000000000000000 e2239ee6043f73722e7aa812a459f54a28552929 Stephen Jakubiec <stephenj@SteamHost.fluentnudge.com> 1679031094 -0500	clone: from https://github.com/qmk/googletest
++0000000000000000000000000000000000000000 e2239ee6043f73722e7aa812a459f54a28552929 Stephen Jakubiec <stephenj@SteamHost.fluentnudge.com> 1678990529 -0500	clone: from https://github.com/qmk/googletest
+Binary files royalkludge/.git/modules/lib/googletest/objects/pack/pack-4d87dc8cfdf5c5dff222200114b57e4f4809ed13.idx and royalkludge-srgb/.git/modules/lib/googletest/objects/pack/pack-4d87dc8cfdf5c5dff222200114b57e4f4809ed13.idx differ
+Binary files royalkludge/.git/modules/lib/googletest/objects/pack/pack-4d87dc8cfdf5c5dff222200114b57e4f4809ed13.pack and royalkludge-srgb/.git/modules/lib/googletest/objects/pack/pack-4d87dc8cfdf5c5dff222200114b57e4f4809ed13.pack differ
+Binary files royalkludge/.git/modules/lib/googletest/objects/pack/pack-bd5a657a1879b999f4faeb273140abaeafb05a87.idx and royalkludge-srgb/.git/modules/lib/googletest/objects/pack/pack-bd5a657a1879b999f4faeb273140abaeafb05a87.idx differ
+Binary files royalkludge/.git/modules/lib/googletest/objects/pack/pack-bd5a657a1879b999f4faeb273140abaeafb05a87.pack and royalkludge-srgb/.git/modules/lib/googletest/objects/pack/pack-bd5a657a1879b999f4faeb273140abaeafb05a87.pack differ
+Binary files royalkludge/.git/modules/lib/lufa/index and royalkludge-srgb/.git/modules/lib/lufa/index differ
+diff -urN royalkludge/.git/modules/lib/lufa/logs/HEAD royalkludge-srgb/.git/modules/lib/lufa/logs/HEAD
+--- royalkludge/.git/modules/lib/lufa/logs/HEAD	2023-03-17 00:31:46.109620186 -0500
++++ royalkludge-srgb/.git/modules/lib/lufa/logs/HEAD	2023-03-16 13:15:37.968416173 -0500
+@@ -1,2 +1,2 @@
+-0000000000000000000000000000000000000000 549b97320d515bfca2f95c145a67bd13be968faa Stephen Jakubiec <stephenj@SteamHost.fluentnudge.com> 1679031100 -0500	clone: from https://github.com/qmk/lufa
+-549b97320d515bfca2f95c145a67bd13be968faa ce10f7642b0459e409839b23cc91498945119b4d Stephen Jakubiec <stephenj@SteamHost.fluentnudge.com> 1679031106 -0500	checkout: moving from qmk-master to ce10f7642b0459e409839b23cc91498945119b4d
++0000000000000000000000000000000000000000 549b97320d515bfca2f95c145a67bd13be968faa Stephen Jakubiec <stephenj@SteamHost.fluentnudge.com> 1678990532 -0500	clone: from https://github.com/qmk/lufa
++549b97320d515bfca2f95c145a67bd13be968faa ce10f7642b0459e409839b23cc91498945119b4d Stephen Jakubiec <stephenj@SteamHost.fluentnudge.com> 1678990537 -0500	checkout: moving from qmk-master to ce10f7642b0459e409839b23cc91498945119b4d
+diff -urN royalkludge/.git/modules/lib/lufa/logs/refs/heads/qmk-master royalkludge-srgb/.git/modules/lib/lufa/logs/refs/heads/qmk-master
+--- royalkludge/.git/modules/lib/lufa/logs/refs/heads/qmk-master	2023-03-17 00:31:40.069595000 -0500
++++ royalkludge-srgb/.git/modules/lib/lufa/logs/refs/heads/qmk-master	2023-03-16 13:15:32.628398440 -0500
+@@ -1 +1 @@
+-0000000000000000000000000000000000000000 549b97320d515bfca2f95c145a67bd13be968faa Stephen Jakubiec <stephenj@SteamHost.fluentnudge.com> 1679031100 -0500	clone: from https://github.com/qmk/lufa
++0000000000000000000000000000000000000000 549b97320d515bfca2f95c145a67bd13be968faa Stephen Jakubiec <stephenj@SteamHost.fluentnudge.com> 1678990532 -0500	clone: from https://github.com/qmk/lufa
+diff -urN royalkludge/.git/modules/lib/lufa/logs/refs/remotes/origin/HEAD royalkludge-srgb/.git/modules/lib/lufa/logs/refs/remotes/origin/HEAD
+--- royalkludge/.git/modules/lib/lufa/logs/refs/remotes/origin/HEAD	2023-03-17 00:31:40.065594983 -0500
++++ royalkludge-srgb/.git/modules/lib/lufa/logs/refs/remotes/origin/HEAD	2023-03-16 13:15:32.628398440 -0500
+@@ -1 +1 @@
+-0000000000000000000000000000000000000000 549b97320d515bfca2f95c145a67bd13be968faa Stephen Jakubiec <stephenj@SteamHost.fluentnudge.com> 1679031100 -0500	clone: from https://github.com/qmk/lufa
++0000000000000000000000000000000000000000 549b97320d515bfca2f95c145a67bd13be968faa Stephen Jakubiec <stephenj@SteamHost.fluentnudge.com> 1678990532 -0500	clone: from https://github.com/qmk/lufa
+Binary files royalkludge/.git/modules/lib/lufa/objects/pack/pack-5df1e942f37917662466b6731c3d52eaaa6c4c5a.idx and royalkludge-srgb/.git/modules/lib/lufa/objects/pack/pack-5df1e942f37917662466b6731c3d52eaaa6c4c5a.idx differ
+Binary files royalkludge/.git/modules/lib/lufa/objects/pack/pack-5df1e942f37917662466b6731c3d52eaaa6c4c5a.pack and royalkludge-srgb/.git/modules/lib/lufa/objects/pack/pack-5df1e942f37917662466b6731c3d52eaaa6c4c5a.pack differ
+Binary files royalkludge/.git/modules/lib/lufa/objects/pack/pack-9192c06b1b947e18181084e3f964d50b633dba89.idx and royalkludge-srgb/.git/modules/lib/lufa/objects/pack/pack-9192c06b1b947e18181084e3f964d50b633dba89.idx differ
+Binary files royalkludge/.git/modules/lib/lufa/objects/pack/pack-9192c06b1b947e18181084e3f964d50b633dba89.pack and royalkludge-srgb/.git/modules/lib/lufa/objects/pack/pack-9192c06b1b947e18181084e3f964d50b633dba89.pack differ
+Binary files royalkludge/.git/modules/lib/printf/index and royalkludge-srgb/.git/modules/lib/printf/index differ
+diff -urN royalkludge/.git/modules/lib/printf/logs/HEAD royalkludge-srgb/.git/modules/lib/printf/logs/HEAD
+--- royalkludge/.git/modules/lib/printf/logs/HEAD	2023-03-17 00:31:46.149620353 -0500
++++ royalkludge-srgb/.git/modules/lib/printf/logs/HEAD	2023-03-16 13:15:38.008416306 -0500
+@@ -1,2 +1,2 @@
+-0000000000000000000000000000000000000000 c2e3b4e10d281e7f0f694d3ecbd9f320977288cc Stephen Jakubiec <stephenj@SteamHost.fluentnudge.com> 1679031101 -0500	clone: from https://github.com/qmk/printf
+-c2e3b4e10d281e7f0f694d3ecbd9f320977288cc d3b984684bb8a8bdc48cc7a1abecb93ce59bbe3e Stephen Jakubiec <stephenj@SteamHost.fluentnudge.com> 1679031106 -0500	checkout: moving from qmk-master to d3b984684bb8a8bdc48cc7a1abecb93ce59bbe3e
++0000000000000000000000000000000000000000 c2e3b4e10d281e7f0f694d3ecbd9f320977288cc Stephen Jakubiec <stephenj@SteamHost.fluentnudge.com> 1678990533 -0500	clone: from https://github.com/qmk/printf
++c2e3b4e10d281e7f0f694d3ecbd9f320977288cc d3b984684bb8a8bdc48cc7a1abecb93ce59bbe3e Stephen Jakubiec <stephenj@SteamHost.fluentnudge.com> 1678990538 -0500	checkout: moving from qmk-master to d3b984684bb8a8bdc48cc7a1abecb93ce59bbe3e
+diff -urN royalkludge/.git/modules/lib/printf/logs/refs/heads/qmk-master royalkludge-srgb/.git/modules/lib/printf/logs/refs/heads/qmk-master
+--- royalkludge/.git/modules/lib/printf/logs/refs/heads/qmk-master	2023-03-17 00:31:41.141599473 -0500
++++ royalkludge-srgb/.git/modules/lib/printf/logs/refs/heads/qmk-master	2023-03-16 13:15:33.628401761 -0500
+@@ -1 +1 @@
+-0000000000000000000000000000000000000000 c2e3b4e10d281e7f0f694d3ecbd9f320977288cc Stephen Jakubiec <stephenj@SteamHost.fluentnudge.com> 1679031101 -0500	clone: from https://github.com/qmk/printf
++0000000000000000000000000000000000000000 c2e3b4e10d281e7f0f694d3ecbd9f320977288cc Stephen Jakubiec <stephenj@SteamHost.fluentnudge.com> 1678990533 -0500	clone: from https://github.com/qmk/printf
+diff -urN royalkludge/.git/modules/lib/printf/logs/refs/remotes/origin/HEAD royalkludge-srgb/.git/modules/lib/printf/logs/refs/remotes/origin/HEAD
+--- royalkludge/.git/modules/lib/printf/logs/refs/remotes/origin/HEAD	2023-03-17 00:31:41.141599473 -0500
++++ royalkludge-srgb/.git/modules/lib/printf/logs/refs/remotes/origin/HEAD	2023-03-16 13:15:33.624401748 -0500
+@@ -1 +1 @@
+-0000000000000000000000000000000000000000 c2e3b4e10d281e7f0f694d3ecbd9f320977288cc Stephen Jakubiec <stephenj@SteamHost.fluentnudge.com> 1679031101 -0500	clone: from https://github.com/qmk/printf
++0000000000000000000000000000000000000000 c2e3b4e10d281e7f0f694d3ecbd9f320977288cc Stephen Jakubiec <stephenj@SteamHost.fluentnudge.com> 1678990533 -0500	clone: from https://github.com/qmk/printf
+Binary files royalkludge/.git/modules/lib/printf/objects/pack/pack-10b884e4aa92542ddb86fb82035346e79301409b.idx and royalkludge-srgb/.git/modules/lib/printf/objects/pack/pack-10b884e4aa92542ddb86fb82035346e79301409b.idx differ
+Binary files royalkludge/.git/modules/lib/printf/objects/pack/pack-10b884e4aa92542ddb86fb82035346e79301409b.pack and royalkludge-srgb/.git/modules/lib/printf/objects/pack/pack-10b884e4aa92542ddb86fb82035346e79301409b.pack differ
+Binary files royalkludge/.git/modules/lib/printf/objects/pack/pack-b952f1c9a68c27bdadd7bc28e0fc44b91e1dd591.idx and royalkludge-srgb/.git/modules/lib/printf/objects/pack/pack-b952f1c9a68c27bdadd7bc28e0fc44b91e1dd591.idx differ
+Binary files royalkludge/.git/modules/lib/printf/objects/pack/pack-b952f1c9a68c27bdadd7bc28e0fc44b91e1dd591.pack and royalkludge-srgb/.git/modules/lib/printf/objects/pack/pack-b952f1c9a68c27bdadd7bc28e0fc44b91e1dd591.pack differ
+Binary files royalkludge/.git/modules/lib/ugfx/index and royalkludge-srgb/.git/modules/lib/ugfx/index differ
+diff -urN royalkludge/.git/modules/lib/ugfx/logs/HEAD royalkludge-srgb/.git/modules/lib/ugfx/logs/HEAD
+--- royalkludge/.git/modules/lib/ugfx/logs/HEAD	2023-03-17 00:31:46.345621169 -0500
++++ royalkludge-srgb/.git/modules/lib/ugfx/logs/HEAD	2023-03-16 13:15:38.228417037 -0500
+@@ -1,2 +1,2 @@
+-0000000000000000000000000000000000000000 40b48f470addad6a4fb1177de1a69a181158739b Stephen Jakubiec <stephenj@SteamHost.fluentnudge.com> 1679031104 -0500	clone: from https://github.com/qmk/uGFX
+-40b48f470addad6a4fb1177de1a69a181158739b 40b48f470addad6a4fb1177de1a69a181158739b Stephen Jakubiec <stephenj@SteamHost.fluentnudge.com> 1679031106 -0500	checkout: moving from master to 40b48f470addad6a4fb1177de1a69a181158739b
++0000000000000000000000000000000000000000 40b48f470addad6a4fb1177de1a69a181158739b Stephen Jakubiec <stephenj@SteamHost.fluentnudge.com> 1678990536 -0500	clone: from https://github.com/qmk/uGFX
++40b48f470addad6a4fb1177de1a69a181158739b 40b48f470addad6a4fb1177de1a69a181158739b Stephen Jakubiec <stephenj@SteamHost.fluentnudge.com> 1678990538 -0500	checkout: moving from master to 40b48f470addad6a4fb1177de1a69a181158739b
+diff -urN royalkludge/.git/modules/lib/ugfx/logs/refs/heads/master royalkludge-srgb/.git/modules/lib/ugfx/logs/refs/heads/master
+--- royalkludge/.git/modules/lib/ugfx/logs/refs/heads/master	2023-03-17 00:31:44.073611701 -0500
++++ royalkludge-srgb/.git/modules/lib/ugfx/logs/refs/heads/master	2023-03-16 13:15:36.120410037 -0500
+@@ -1 +1 @@
+-0000000000000000000000000000000000000000 40b48f470addad6a4fb1177de1a69a181158739b Stephen Jakubiec <stephenj@SteamHost.fluentnudge.com> 1679031104 -0500	clone: from https://github.com/qmk/uGFX
++0000000000000000000000000000000000000000 40b48f470addad6a4fb1177de1a69a181158739b Stephen Jakubiec <stephenj@SteamHost.fluentnudge.com> 1678990536 -0500	clone: from https://github.com/qmk/uGFX
+diff -urN royalkludge/.git/modules/lib/ugfx/logs/refs/remotes/origin/HEAD royalkludge-srgb/.git/modules/lib/ugfx/logs/refs/remotes/origin/HEAD
+--- royalkludge/.git/modules/lib/ugfx/logs/refs/remotes/origin/HEAD	2023-03-17 00:31:44.069611685 -0500
++++ royalkludge-srgb/.git/modules/lib/ugfx/logs/refs/remotes/origin/HEAD	2023-03-16 13:15:36.120410037 -0500
+@@ -1 +1 @@
+-0000000000000000000000000000000000000000 40b48f470addad6a4fb1177de1a69a181158739b Stephen Jakubiec <stephenj@SteamHost.fluentnudge.com> 1679031104 -0500	clone: from https://github.com/qmk/uGFX
++0000000000000000000000000000000000000000 40b48f470addad6a4fb1177de1a69a181158739b Stephen Jakubiec <stephenj@SteamHost.fluentnudge.com> 1678990536 -0500	clone: from https://github.com/qmk/uGFX
+Binary files royalkludge/.git/modules/lib/vusb/index and royalkludge-srgb/.git/modules/lib/vusb/index differ
+diff -urN royalkludge/.git/modules/lib/vusb/logs/HEAD royalkludge-srgb/.git/modules/lib/vusb/logs/HEAD
+--- royalkludge/.git/modules/lib/vusb/logs/HEAD	2023-03-17 00:31:46.385621336 -0500
++++ royalkludge-srgb/.git/modules/lib/vusb/logs/HEAD	2023-03-16 13:15:38.264417156 -0500
+@@ -1,2 +1,2 @@
+-0000000000000000000000000000000000000000 819dbc1e5d5926b17e27e00ca6d3d2988adae04e Stephen Jakubiec <stephenj@SteamHost.fluentnudge.com> 1679031105 -0500	clone: from https://github.com/qmk/v-usb
+-819dbc1e5d5926b17e27e00ca6d3d2988adae04e bdb53e4c043d089279d9891b68bea77614cb97ee Stephen Jakubiec <stephenj@SteamHost.fluentnudge.com> 1679031106 -0500	checkout: moving from qmk-master to bdb53e4c043d089279d9891b68bea77614cb97ee
++0000000000000000000000000000000000000000 819dbc1e5d5926b17e27e00ca6d3d2988adae04e Stephen Jakubiec <stephenj@SteamHost.fluentnudge.com> 1678990537 -0500	clone: from https://github.com/qmk/v-usb
++819dbc1e5d5926b17e27e00ca6d3d2988adae04e bdb53e4c043d089279d9891b68bea77614cb97ee Stephen Jakubiec <stephenj@SteamHost.fluentnudge.com> 1678990538 -0500	checkout: moving from qmk-master to bdb53e4c043d089279d9891b68bea77614cb97ee
+diff -urN royalkludge/.git/modules/lib/vusb/logs/refs/heads/qmk-master royalkludge-srgb/.git/modules/lib/vusb/logs/refs/heads/qmk-master
+--- royalkludge/.git/modules/lib/vusb/logs/refs/heads/qmk-master	2023-03-17 00:31:45.149616186 -0500
++++ royalkludge-srgb/.git/modules/lib/vusb/logs/refs/heads/qmk-master	2023-03-16 13:15:37.044413105 -0500
+@@ -1 +1 @@
+-0000000000000000000000000000000000000000 819dbc1e5d5926b17e27e00ca6d3d2988adae04e Stephen Jakubiec <stephenj@SteamHost.fluentnudge.com> 1679031105 -0500	clone: from https://github.com/qmk/v-usb
++0000000000000000000000000000000000000000 819dbc1e5d5926b17e27e00ca6d3d2988adae04e Stephen Jakubiec <stephenj@SteamHost.fluentnudge.com> 1678990537 -0500	clone: from https://github.com/qmk/v-usb
+diff -urN royalkludge/.git/modules/lib/vusb/logs/refs/remotes/origin/HEAD royalkludge-srgb/.git/modules/lib/vusb/logs/refs/remotes/origin/HEAD
+--- royalkludge/.git/modules/lib/vusb/logs/refs/remotes/origin/HEAD	2023-03-17 00:31:45.145616169 -0500
++++ royalkludge-srgb/.git/modules/lib/vusb/logs/refs/remotes/origin/HEAD	2023-03-16 13:15:37.044413105 -0500
+@@ -1 +1 @@
+-0000000000000000000000000000000000000000 819dbc1e5d5926b17e27e00ca6d3d2988adae04e Stephen Jakubiec <stephenj@SteamHost.fluentnudge.com> 1679031105 -0500	clone: from https://github.com/qmk/v-usb
++0000000000000000000000000000000000000000 819dbc1e5d5926b17e27e00ca6d3d2988adae04e Stephen Jakubiec <stephenj@SteamHost.fluentnudge.com> 1678990537 -0500	clone: from https://github.com/qmk/v-usb
+Binary files royalkludge/.git/objects/pack/pack-7e15dc7620a8a575c34d614a913250e34e01d8b6.idx and royalkludge-srgb/.git/objects/pack/pack-7e15dc7620a8a575c34d614a913250e34e01d8b6.idx differ
+Binary files royalkludge/.git/objects/pack/pack-7e15dc7620a8a575c34d614a913250e34e01d8b6.pack and royalkludge-srgb/.git/objects/pack/pack-7e15dc7620a8a575c34d614a913250e34e01d8b6.pack differ
+Binary files royalkludge/.git/objects/pack/pack-8280f7cbbb8d09c90a1fadc80e01c8b24f40f8b5.idx and royalkludge-srgb/.git/objects/pack/pack-8280f7cbbb8d09c90a1fadc80e01c8b24f40f8b5.idx differ
+Binary files royalkludge/.git/objects/pack/pack-8280f7cbbb8d09c90a1fadc80e01c8b24f40f8b5.pack and royalkludge-srgb/.git/objects/pack/pack-8280f7cbbb8d09c90a1fadc80e01c8b24f40f8b5.pack differ
+diff -urN royalkludge/keyboards/royal_kludge/rk61_rgb/config_led.h royalkludge-srgb/keyboards/royal_kludge/rk61_rgb/config_led.h
+--- royalkludge/keyboards/royal_kludge/rk61_rgb/config_led.h	2023-03-17 00:30:22.577267691 -0500
++++ royalkludge-srgb/keyboards/royal_kludge/rk61_rgb/config_led.h	2023-03-16 13:19:49.253247916 -0500
+@@ -84,3 +84,4 @@
+ #define LED_MATRIX_COL_PINS { A8, A9, A10, A11, A12, A13, A14, A15, B0, B1, B2, B3, B4, B5 }
+ 
+ #define DRIVER_LED_TOTAL (70)
++#define RGB_MATRIX_LED_COUNT 70
+\ No newline at end of file
+diff -urN royalkludge/keyboards/royal_kludge/rk61_rgb/keymaps/iso_via/keymap.c royalkludge-srgb/keyboards/royal_kludge/rk61_rgb/keymaps/iso_via/keymap.c
+--- royalkludge/keyboards/royal_kludge/rk61_rgb/keymaps/iso_via/keymap.c	1969-12-31 18:00:00.000000000 -0600
++++ royalkludge-srgb/keyboards/royal_kludge/rk61_rgb/keymaps/iso_via/keymap.c	2023-03-16 13:14:09.744122818 -0500
+@@ -0,0 +1,31 @@
++#include QMK_KEYBOARD_H
++
++// Each layer gets a name for readability, which is then used in the keymap matrix below.
++// The underscores don't mean anything - you can have a layer called STUFF or any other name.
++// Layer names don't all need to be of the same length, obviously, and you can also skip them
++// entirely and just use numbers.
++
++// If failure to compile, replace KC_SLCK with KC_SCROLLLOCK
++
++enum layer_names {
++    _BASE,
++    _FN,
++};
++
++const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
++	/*  Row:    		0           1           2           3           4           5           6           7           8           9           10          11          12          13          */
++	[_BASE] = {
++				{	KC_ESC, 	KC_1, 		KC_2, 		KC_3, 		KC_4, 		KC_5, 		KC_6, 		KC_7, 		KC_8, 		KC_9, 		KC_0, 		KC_MINS, 	KC_EQL, 	KC_BSPC,	},
++				{	KC_TAB, 	KC_Q, 		KC_W, 		KC_E, 		KC_R, 		KC_T, 		KC_Y, 		KC_U, 		KC_I, 		KC_O, 		KC_P, 		KC_LBRC, 	KC_RBRC,	KC_NO,		},
++				{	KC_CAPS, 	KC_A, 		KC_S, 		KC_D, 		KC_F, 		KC_G, 		KC_H, 		KC_J, 		KC_K, 		KC_L, 		KC_SCLN, 	KC_QUOT, 	KC_NUHS, 	KC_ENT,		},
++				{	KC_LSFT, 	KC_NUBS, 	KC_Z, 		KC_X, 		KC_C, 		KC_V, 		KC_B, 		KC_N, 		KC_M, 		KC_COMM, 	KC_DOT, 	KC_UP, 	    KC_RSFT,	KC_NO,		},
++				{	KC_LCTL, 	KC_LGUI, 	KC_LALT, 	KC_NO,		KC_NO,		KC_NO,		KC_SPC, 	KC_NO,		KC_NO,		KC_LEFT, 	KC_DOWN, 	KC_RGHT, 	KC_NO,		MO(_FN),	}
++	},
++	[_FN] = {
++				{	KC_GRV, 	KC_F1, 		KC_F2, 		KC_F3, 		KC_F4, 		KC_F5, 		KC_F6, 		KC_F7, 		KC_F8, 		KC_F9, 		KC_F10, 	KC_F11, 	KC_F12, 	KC_DEL,		},
++				{	KC_TRNS,    KC_BRID, 	KC_BRIU, 	KC_P7, 		KC_P8, 		KC_P9, 		KC_PSCR, 	KC_SLCK, 	KC_PAUS, 	RGB_HUD, 	RGB_HUI, 	RGB_VAD, 	RGB_VAI,	KC_TRNS,	},
++				{	RESET, 		KC_TRNS, 	KC_TRNS, 	KC_P4, 		KC_P5, 		KC_P6, 		KC_INS, 	KC_HOME, 	KC_PGUP, 	RGB_SAI, 	RGB_SPD, 	RGB_SPI, 	RGB_MOD, 	RGB_TOG,	},
++				{	KC_TRNS, 	KC_MUTE, 	KC_VOLD, 	KC_VOLU, 	KC_P1, 		KC_P2, 		KC_P3, 		KC_DEL, 	KC_END, 	KC_PGDN, 	RGB_SAD, 	KC_SLSH, 	KC_TRNS, 	KC_TRNS,	},
++				{	KC_TRNS, 	LAG_SWP,	KC_TRNS,	KC_TRNS,	KC_TRNS,	KC_TRNS, 	KC_P0, 		KC_TRNS,	KC_TRNS,	KC_RALT, 	KC_APP, 	KC_RCTL, 	KC_TRNS,	KC_TRNS,	}
++	}
++};
+diff -urN royalkludge/keyboards/royal_kludge/rk61_rgb/keymaps/iso_via/rules.mk royalkludge-srgb/keyboards/royal_kludge/rk61_rgb/keymaps/iso_via/rules.mk
+--- royalkludge/keyboards/royal_kludge/rk61_rgb/keymaps/iso_via/rules.mk	1969-12-31 18:00:00.000000000 -0600
++++ royalkludge-srgb/keyboards/royal_kludge/rk61_rgb/keymaps/iso_via/rules.mk	2023-03-16 15:25:00.782207657 -0500
+@@ -0,0 +1 @@
++VIA_ENABLE = yes
+diff -urN royalkludge/keyboards/royal_kludge/rk61_rgb/keymaps/via/keymap.c royalkludge-srgb/keyboards/royal_kludge/rk61_rgb/keymaps/via/keymap.c
+--- royalkludge/keyboards/royal_kludge/rk61_rgb/keymaps/via/keymap.c	1969-12-31 18:00:00.000000000 -0600
++++ royalkludge-srgb/keyboards/royal_kludge/rk61_rgb/keymaps/via/keymap.c	2023-03-16 13:14:09.744122818 -0500
+@@ -0,0 +1,44 @@
++/*
++Copyright 2019 euwbah <euwbah@gmail.com>
++
++This program is free software: you can redistribute it and/or modify
++it under the terms of the GNU General Public License as published by
++the Free Software Foundation, either version 2 of the License, or
++(at your option) any later version.
++
++This program is distributed in the hope that it will be useful,
++but WITHOUT ANY WARRANTY; without even the implied warranty of
++MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++GNU General Public License for more details.
++
++You should have received a copy of the GNU General Public License
++along with this program.  If not, see <http://www.gnu.org/licenses/>.
++*/
++#include QMK_KEYBOARD_H
++
++// Each layer gets a name for readability, which is then used in the keymap matrix below.
++// The underscores don't mean anything - you can have a layer called STUFF or any other name.
++// Layer names don't all need to be of the same length, obviously, and you can also skip them
++// entirely and just use numbers.
++enum layer_names {
++    _BASE,
++    _FN,
++};
++
++const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
++    /*  Row:    0           1           2           3           4           5           6           7           8           9           10          11          12          13          */
++    [_BASE] = {
++        {   KC_ESC,     KC_1,       KC_2,       KC_3,       KC_4,       KC_5,       KC_6,       KC_7,       KC_8,       KC_9,       KC_0,       KC_MINS,    KC_EQL,     KC_BSPC, },
++        {   KC_TAB,     KC_Q,       KC_W,       KC_E,       KC_R,       KC_T,       KC_Y,       KC_U,       KC_I,       KC_O,       KC_P,       KC_LBRC,    KC_RBRC,    KC_BSLS, },
++        {   KC_CAPS,    KC_A,       KC_S,       KC_D,       KC_F,       KC_G,       KC_H,       KC_J,       KC_K,       KC_L,       KC_SCLN,    KC_QUOT,    KC_NO,      KC_ENT,  },
++        {   KC_LSFT,    KC_NO,      KC_Z,       KC_X,       KC_C,       KC_V,       KC_B,       KC_N,       KC_M,       KC_COMM,    KC_DOT,     KC_UP,      KC_RSFT,    KC_NO,   },
++        {   KC_LCTL,    KC_LGUI,    KC_LALT,    KC_NO,      KC_NO,      KC_NO,      KC_SPC,     KC_NO,      KC_NO,      KC_LEFT,    KC_DOWN,    KC_RIGHT,   KC_NO,      MO(_FN), }
++    },
++    [_FN] = {
++        {   KC_GRV,     KC_F1,      KC_F2,      KC_F3,      KC_F4,      KC_F5,      KC_F6,      KC_F7,      KC_F8,      KC_F9,      KC_F10,     KC_F11,     KC_F12,     KC_DEL,  },
++        {   KC_TRNS,    KC_F13,     KC_F14,     KC_F15,     KC_F16,     KC_F17,     KC_PSCR,    KC_SLCK,    KC_PAUS,    KC_TRNS,    RGB_HUI,    RGB_SAI,    RGB_VAI,    RGB_MOD, },
++        {   RESET,      KC_VOLU,    KC_BRIU,    KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_INS,     KC_HOME,    KC_PGUP,    KC_TRNS,    RGB_SPD,    RGB_SPI,    KC_TRNS,    KC_TRNS, },
++        {   KC_TRNS,    KC_TRNS,    KC_VOLD,    KC_BRID,    KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_DEL,     KC_END,     KC_PGDN,    KC_TRNS,    KC_SLSH,    KC_TRNS,    KC_TRNS, },
++        {   KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_RALT,    KC_APP,     KC_RCTL,    KC_TRNS,    KC_TRNS, }
++    }
++};
+\ No newline at end of file
+diff -urN royalkludge/keyboards/royal_kludge/rk61_rgb/keymaps/via/rules.mk royalkludge-srgb/keyboards/royal_kludge/rk61_rgb/keymaps/via/rules.mk
+--- royalkludge/keyboards/royal_kludge/rk61_rgb/keymaps/via/rules.mk	1969-12-31 18:00:00.000000000 -0600
++++ royalkludge-srgb/keyboards/royal_kludge/rk61_rgb/keymaps/via/rules.mk	2023-03-16 15:21:21.746038668 -0500
+@@ -0,0 +1 @@
++VIA_ENABLE = yes
+Binary files royalkludge/lib/python/__pycache__/kle2xy.cpython-39.pyc and royalkludge-srgb/lib/python/__pycache__/kle2xy.cpython-39.pyc differ
+Binary files royalkludge/lib/python/qmk/cli/chibios/__pycache__/confmigrate.cpython-39.pyc and royalkludge-srgb/lib/python/qmk/cli/chibios/__pycache__/confmigrate.cpython-39.pyc differ
+Binary files royalkludge/lib/python/qmk/cli/chibios/__pycache__/__init__.cpython-39.pyc and royalkludge-srgb/lib/python/qmk/cli/chibios/__pycache__/__init__.cpython-39.pyc differ
+Binary files royalkludge/lib/python/qmk/cli/generate/__pycache__/api.cpython-39.pyc and royalkludge-srgb/lib/python/qmk/cli/generate/__pycache__/api.cpython-39.pyc differ
+Binary files royalkludge/lib/python/qmk/cli/generate/__pycache__/docs.cpython-39.pyc and royalkludge-srgb/lib/python/qmk/cli/generate/__pycache__/docs.cpython-39.pyc differ
+Binary files royalkludge/lib/python/qmk/cli/generate/__pycache__/__init__.cpython-39.pyc and royalkludge-srgb/lib/python/qmk/cli/generate/__pycache__/__init__.cpython-39.pyc differ
+Binary files royalkludge/lib/python/qmk/cli/generate/__pycache__/rgb_breathe_table.cpython-39.pyc and royalkludge-srgb/lib/python/qmk/cli/generate/__pycache__/rgb_breathe_table.cpython-39.pyc differ
+Binary files royalkludge/lib/python/qmk/cli/json/__pycache__/__init__.cpython-39.pyc and royalkludge-srgb/lib/python/qmk/cli/json/__pycache__/__init__.cpython-39.pyc differ
+Binary files royalkludge/lib/python/qmk/cli/json/__pycache__/keymap.cpython-39.pyc and royalkludge-srgb/lib/python/qmk/cli/json/__pycache__/keymap.cpython-39.pyc differ
+Binary files royalkludge/lib/python/qmk/cli/list/__pycache__/__init__.cpython-39.pyc and royalkludge-srgb/lib/python/qmk/cli/list/__pycache__/__init__.cpython-39.pyc differ
+Binary files royalkludge/lib/python/qmk/cli/list/__pycache__/keyboards.cpython-39.pyc and royalkludge-srgb/lib/python/qmk/cli/list/__pycache__/keyboards.cpython-39.pyc differ
+Binary files royalkludge/lib/python/qmk/cli/list/__pycache__/keymaps.cpython-39.pyc and royalkludge-srgb/lib/python/qmk/cli/list/__pycache__/keymaps.cpython-39.pyc differ
+Binary files royalkludge/lib/python/qmk/cli/new/__pycache__/__init__.cpython-39.pyc and royalkludge-srgb/lib/python/qmk/cli/new/__pycache__/__init__.cpython-39.pyc differ
+Binary files royalkludge/lib/python/qmk/cli/new/__pycache__/keymap.cpython-39.pyc and royalkludge-srgb/lib/python/qmk/cli/new/__pycache__/keymap.cpython-39.pyc differ
+Binary files royalkludge/lib/python/qmk/cli/__pycache__/c2json.cpython-39.pyc and royalkludge-srgb/lib/python/qmk/cli/__pycache__/c2json.cpython-39.pyc differ
+Binary files royalkludge/lib/python/qmk/cli/__pycache__/cformat.cpython-39.pyc and royalkludge-srgb/lib/python/qmk/cli/__pycache__/cformat.cpython-39.pyc differ
+Binary files royalkludge/lib/python/qmk/cli/__pycache__/clean.cpython-39.pyc and royalkludge-srgb/lib/python/qmk/cli/__pycache__/clean.cpython-39.pyc differ
+Binary files royalkludge/lib/python/qmk/cli/__pycache__/compile.cpython-39.pyc and royalkludge-srgb/lib/python/qmk/cli/__pycache__/compile.cpython-39.pyc differ
+Binary files royalkludge/lib/python/qmk/cli/__pycache__/config.cpython-39.pyc and royalkludge-srgb/lib/python/qmk/cli/__pycache__/config.cpython-39.pyc differ
+Binary files royalkludge/lib/python/qmk/cli/__pycache__/docs.cpython-39.pyc and royalkludge-srgb/lib/python/qmk/cli/__pycache__/docs.cpython-39.pyc differ
+Binary files royalkludge/lib/python/qmk/cli/__pycache__/doctor.cpython-39.pyc and royalkludge-srgb/lib/python/qmk/cli/__pycache__/doctor.cpython-39.pyc differ
+Binary files royalkludge/lib/python/qmk/cli/__pycache__/fileformat.cpython-39.pyc and royalkludge-srgb/lib/python/qmk/cli/__pycache__/fileformat.cpython-39.pyc differ
+Binary files royalkludge/lib/python/qmk/cli/__pycache__/flash.cpython-39.pyc and royalkludge-srgb/lib/python/qmk/cli/__pycache__/flash.cpython-39.pyc differ
+Binary files royalkludge/lib/python/qmk/cli/__pycache__/hello.cpython-39.pyc and royalkludge-srgb/lib/python/qmk/cli/__pycache__/hello.cpython-39.pyc differ
+Binary files royalkludge/lib/python/qmk/cli/__pycache__/info.cpython-39.pyc and royalkludge-srgb/lib/python/qmk/cli/__pycache__/info.cpython-39.pyc differ
+Binary files royalkludge/lib/python/qmk/cli/__pycache__/__init__.cpython-39.pyc and royalkludge-srgb/lib/python/qmk/cli/__pycache__/__init__.cpython-39.pyc differ
+Binary files royalkludge/lib/python/qmk/cli/__pycache__/json2c.cpython-39.pyc and royalkludge-srgb/lib/python/qmk/cli/__pycache__/json2c.cpython-39.pyc differ
+Binary files royalkludge/lib/python/qmk/cli/__pycache__/kle2json.cpython-39.pyc and royalkludge-srgb/lib/python/qmk/cli/__pycache__/kle2json.cpython-39.pyc differ
+Binary files royalkludge/lib/python/qmk/cli/__pycache__/lint.cpython-39.pyc and royalkludge-srgb/lib/python/qmk/cli/__pycache__/lint.cpython-39.pyc differ
+Binary files royalkludge/lib/python/qmk/cli/__pycache__/pyformat.cpython-39.pyc and royalkludge-srgb/lib/python/qmk/cli/__pycache__/pyformat.cpython-39.pyc differ
+Binary files royalkludge/lib/python/qmk/cli/__pycache__/pytest.cpython-39.pyc and royalkludge-srgb/lib/python/qmk/cli/__pycache__/pytest.cpython-39.pyc differ
+Binary files royalkludge/lib/python/qmk/os_helpers/__pycache__/__init__.cpython-39.pyc and royalkludge-srgb/lib/python/qmk/os_helpers/__pycache__/__init__.cpython-39.pyc differ
+Binary files royalkludge/lib/python/qmk/__pycache__/commands.cpython-39.pyc and royalkludge-srgb/lib/python/qmk/__pycache__/commands.cpython-39.pyc differ
+Binary files royalkludge/lib/python/qmk/__pycache__/comment_remover.cpython-39.pyc and royalkludge-srgb/lib/python/qmk/__pycache__/comment_remover.cpython-39.pyc differ
+Binary files royalkludge/lib/python/qmk/__pycache__/constants.cpython-39.pyc and royalkludge-srgb/lib/python/qmk/__pycache__/constants.cpython-39.pyc differ
+Binary files royalkludge/lib/python/qmk/__pycache__/converter.cpython-39.pyc and royalkludge-srgb/lib/python/qmk/__pycache__/converter.cpython-39.pyc differ
+Binary files royalkludge/lib/python/qmk/__pycache__/c_parse.cpython-39.pyc and royalkludge-srgb/lib/python/qmk/__pycache__/c_parse.cpython-39.pyc differ
+Binary files royalkludge/lib/python/qmk/__pycache__/datetime.cpython-39.pyc and royalkludge-srgb/lib/python/qmk/__pycache__/datetime.cpython-39.pyc differ
+Binary files royalkludge/lib/python/qmk/__pycache__/decorators.cpython-39.pyc and royalkludge-srgb/lib/python/qmk/__pycache__/decorators.cpython-39.pyc differ
+Binary files royalkludge/lib/python/qmk/__pycache__/errors.cpython-39.pyc and royalkludge-srgb/lib/python/qmk/__pycache__/errors.cpython-39.pyc differ
+Binary files royalkludge/lib/python/qmk/__pycache__/info.cpython-39.pyc and royalkludge-srgb/lib/python/qmk/__pycache__/info.cpython-39.pyc differ
+Binary files royalkludge/lib/python/qmk/__pycache__/__init__.cpython-39.pyc and royalkludge-srgb/lib/python/qmk/__pycache__/__init__.cpython-39.pyc differ
+Binary files royalkludge/lib/python/qmk/__pycache__/keyboard.cpython-39.pyc and royalkludge-srgb/lib/python/qmk/__pycache__/keyboard.cpython-39.pyc differ
+Binary files royalkludge/lib/python/qmk/__pycache__/keymap.cpython-39.pyc and royalkludge-srgb/lib/python/qmk/__pycache__/keymap.cpython-39.pyc differ
+Binary files royalkludge/lib/python/qmk/__pycache__/makefile.cpython-39.pyc and royalkludge-srgb/lib/python/qmk/__pycache__/makefile.cpython-39.pyc differ
+Binary files royalkludge/lib/python/qmk/__pycache__/math.cpython-39.pyc and royalkludge-srgb/lib/python/qmk/__pycache__/math.cpython-39.pyc differ
+Binary files royalkludge/lib/python/qmk/__pycache__/path.cpython-39.pyc and royalkludge-srgb/lib/python/qmk/__pycache__/path.cpython-39.pyc differ
+Binary files royalkludge/lib/python/qmk/__pycache__/submodules.cpython-39.pyc and royalkludge-srgb/lib/python/qmk/__pycache__/submodules.cpython-39.pyc differ
+diff -urN royalkludge/quantum/quantum.h royalkludge-srgb/quantum/quantum.h
+--- royalkludge/quantum/quantum.h	2023-03-17 00:30:22.793268615 -0500
++++ royalkludge-srgb/quantum/quantum.h	2023-03-16 13:17:45.460838777 -0500
+@@ -154,6 +154,12 @@
+ #    include "process_joystick.h"
+ #endif
+ 
++#ifdef SIGNALRGB_SUPPORT_ENABLE
++#    ifndef VIA_ENABLE
++#    include "signalrgb.h"
++#    endif
++#endif
++
+ #ifdef GRAVE_ESC_ENABLE
+ #    include "process_grave_esc.h"
+ #endif
+diff -urN royalkludge/quantum/rgb_matrix_animations/rgb_matrix_effects.inc royalkludge-srgb/quantum/rgb_matrix_animations/rgb_matrix_effects.inc
+--- royalkludge/quantum/rgb_matrix_animations/rgb_matrix_effects.inc	2023-03-17 00:30:22.793268615 -0500
++++ royalkludge-srgb/quantum/rgb_matrix_animations/rgb_matrix_effects.inc	2023-03-16 13:20:31.705387997 -0500
+@@ -32,3 +32,4 @@
+ #include "rgb_matrix_animations/solid_reactive_nexus.h"
+ #include "rgb_matrix_animations/splash_anim.h"
+ #include "rgb_matrix_animations/solid_splash_anim.h"
++#include "rgb_matrix_animations/signalrgb_anim.h"
+diff -urN royalkludge/quantum/rgb_matrix_animations/signalrgb_anim.h royalkludge-srgb/quantum/rgb_matrix_animations/signalrgb_anim.h
+--- royalkludge/quantum/rgb_matrix_animations/signalrgb_anim.h	1969-12-31 18:00:00.000000000 -0600
++++ royalkludge-srgb/quantum/rgb_matrix_animations/signalrgb_anim.h	2023-03-16 15:07:23.604728141 -0500
+@@ -0,0 +1,11 @@
++RGB_MATRIX_EFFECT(SIGNALRGB)
++#ifdef RGB_MATRIX_CUSTOM_EFFECT_IMPLS
++
++bool SIGNALRGB(effect_params_t* params) 
++{
++    RGB_MATRIX_USE_LIMITS(led_min, led_max);
++
++    return rgb_matrix_check_finished_leds(led_max);
++}
++
++#endif // RGB_MATRIX_CUSTOM_EFFECT_IMPLS
+diff -urN royalkludge/quantum/rgb_matrix.c royalkludge-srgb/quantum/rgb_matrix.c
+--- royalkludge/quantum/rgb_matrix.c	2023-03-17 00:30:22.793268615 -0500
++++ royalkludge-srgb/quantum/rgb_matrix.c	2023-03-16 15:18:40.085806615 -0500
+@@ -166,6 +166,17 @@
+     dprintf("rgb_matrix_config.speed = %d\n", rgb_matrix_config.speed);
+ }
+ 
++void rgb_matrix_reload_from_eeprom(void) {
++    rgb_matrix_disable_noeeprom();
++    /* Reset back to what we have in eeprom */
++    eeconfig_init();
++    eeconfig_update_rgb_matrix_default();
++    eeconfig_debug_rgb_matrix(); // display current eeprom values
++    if (rgb_matrix_config.enable) {
++        rgb_matrix_mode_noeeprom(rgb_matrix_config.mode);
++    }
++}
++
+ __attribute__((weak)) uint8_t rgb_matrix_map_row_column_to_led_kb(uint8_t row, uint8_t column, uint8_t *led_i) { return 0; }
+ 
+ uint8_t rgb_matrix_map_row_column_to_led(uint8_t row, uint8_t column, uint8_t *led_i) {
+diff -urN royalkludge/quantum/rgb_matrix.h royalkludge-srgb/quantum/rgb_matrix.h
+--- royalkludge/quantum/rgb_matrix.h	2023-03-17 00:30:22.793268615 -0500
++++ royalkludge-srgb/quantum/rgb_matrix.h	2023-03-16 15:09:47.464953815 -0500
+@@ -114,6 +114,8 @@
+ 
+ void rgb_matrix_init(void);
+ 
++void rgb_matrix_reload_from_eeprom(void);
++
+ void        rgb_matrix_set_suspend_state(bool state);
+ bool        rgb_matrix_get_suspend_state(void);
+ void        rgb_matrix_toggle(void);
+@@ -212,6 +214,18 @@
+     void (*flush)(void);
+ } rgb_matrix_driver_t;
+ 
++static inline bool rgb_matrix_check_finished_leds(uint8_t led_idx) {
++#if defined(RGB_MATRIX_SPLIT)
++    if (is_keyboard_left()) {
++        uint8_t k_rgb_matrix_split[2] = RGB_MATRIX_SPLIT;
++        return led_idx < k_rgb_matrix_split[0];
++    } else
++        return led_idx < RGB_MATRIX_LED_COUNT;
++#else
++    return led_idx < RGB_MATRIX_LED_COUNT;
++#endif
++}
++
+ extern const rgb_matrix_driver_t rgb_matrix_driver;
+ 
+ extern rgb_config_t rgb_matrix_config;
+diff -urN royalkludge/quantum/signalrgb.c royalkludge-srgb/quantum/signalrgb.c
+--- royalkludge/quantum/signalrgb.c	1969-12-31 18:00:00.000000000 -0600
++++ royalkludge-srgb/quantum/signalrgb.c	2023-03-16 13:17:21.800760454 -0500
+@@ -0,0 +1,144 @@
++#ifndef RAW_ENABLE
++#    error "RAW HID Communication is not enabled" //This should be impossible to run into afaik. Common_features ensures RAWHID is enabled.
++#endif
++
++#include "version.h"
++#include "quantum.h"
++#include "signalrgb.h"
++#include "color.h"
++#include "raw_hid.h"
++
++
++ uint8_t packet[32];
++
++void get_qmk_version(void) //Grab the QMK Version the board's firmware is built off of
++{
++        packet[0] = GET_QMK_VERSION;
++        packet[1] = QMK_VERSION_BYTE_1;
++        packet[2] = QMK_VERSION_BYTE_2;
++        packet[3] = QMK_VERSION_BYTE_3;
++
++        raw_hid_send(packet, 32);
++}
++
++void get_signalrgb_protocol_version(void) 
++{
++        packet[0] = GET_PROTOCOL_VERSION;
++        packet[1] = PROTOCOL_VERSION_BYTE_1;
++        packet[2] = PROTOCOL_VERSION_BYTE_2;
++        packet[3] = PROTOCOL_VERSION_BYTE_3;
++
++        raw_hid_send(packet, 32);
++}
++
++void get_unique_identifier(void) //Grab the unique identifier for each specific model of keyboard.
++{
++        packet[0] = GET_UNIQUE_IDENTIFIER;
++        packet[1] = DEVICE_UNIQUE_IDENTIFIER_BYTE_1;
++        packet[2] = DEVICE_UNIQUE_IDENTIFIER_BYTE_2;
++        packet[3] = DEVICE_UNIQUE_IDENTIFIER_BYTE_3;
++
++        raw_hid_send(packet, 32);
++}
++
++void led_streaming(uint8_t *data) //Stream data from HID Packets to Keyboard.
++{
++    uint8_t index = data[1];
++    uint8_t numberofleds = data[2]; 
++
++    if(numberofleds >= 10)
++    {
++        packet[1] = DEVICE_ERROR_LEDS;
++        raw_hid_send(packet,32);
++        return; 
++    } 
++    
++    for (uint8_t i = 0; i < numberofleds; i++)
++    {
++      uint8_t offset = (i * 3) + 3;
++      uint8_t  r = data[offset];
++      uint8_t  g = data[offset + 1];
++      uint8_t  b = data[offset + 2];
++    
++      rgb_matrix_set_color(index + i, r, g, b);
++     }
++}
++
++void signalrgb_mode_enable(void)
++{
++    rgb_matrix_mode_noeeprom(RGB_MATRIX_SIGNALRGB); //Set RGB Matrix to SignalRGB Compatible Mode
++}
++
++void signalrgb_mode_disable(void)
++{
++    rgb_matrix_reload_from_eeprom(); //Reloading last effect from eeprom
++}
++
++void get_total_leds(void)//Grab total number of leds that a board has.
++{
++    packet[0] = GET_TOTAL_LEDS;
++    packet[1] = RGB_MATRIX_LED_COUNT;
++
++    raw_hid_send(packet, 32);
++}
++
++void get_firmware_type(void) //Grab which fork of qmk a board is running.
++{
++    packet[0] = GET_FIRMWARE_TYPE;
++    packet[1] = FIRMWARE_TYPE_BYTE;
++
++    raw_hid_send(packet, 32);
++}
++
++void raw_hid_receive(uint8_t *data, uint8_t length) 
++{
++        switch (data[0]) {
++        case GET_QMK_VERSION:
++           
++        get_qmk_version();
++
++        break;
++        case GET_PROTOCOL_VERSION:
++
++        get_signalrgb_protocol_version();
++
++        break;
++        case GET_UNIQUE_IDENTIFIER:
++
++        get_unique_identifier();
++
++        break;
++        case STREAM_RGB_DATA: 
++
++        led_streaming(data);
++
++        break;
++
++        case SET_SIGNALRGB_MODE_ENABLE: 
++
++        signalrgb_mode_enable();
++
++        break;
++
++        case SET_SIGNALRGB_MODE_DISABLE: 
++
++        signalrgb_mode_disable();
++
++        break;
++
++        case GET_TOTAL_LEDS:
++
++        get_total_leds();
++
++        break;
++
++        case GET_FIRMWARE_TYPE:
++
++        get_firmware_type();
++
++        break;
++
++        default:
++        break;
++    }
++}
+\ No newline at end of file
+diff -urN royalkludge/quantum/signalrgb.h royalkludge-srgb/quantum/signalrgb.h
+--- royalkludge/quantum/signalrgb.h	1969-12-31 18:00:00.000000000 -0600
++++ royalkludge-srgb/quantum/signalrgb.h	2023-03-16 13:17:21.812760494 -0500
+@@ -0,0 +1,52 @@
++#pragma once
++
++enum signalrgb_commands
++{
++    GET_QMK_VERSION = 0x21,
++    GET_PROTOCOL_VERSION = 0x22,
++    GET_UNIQUE_IDENTIFIER = 0x23,
++    STREAM_RGB_DATA = 0x24,
++    SET_SIGNALRGB_MODE_ENABLE = 0x25,
++    SET_SIGNALRGB_MODE_DISABLE = 0x26,
++    GET_TOTAL_LEDS = 0x27,
++    GET_FIRMWARE_TYPE = 0x28,
++};
++
++enum signalrgb_responses //These are a bit clunky right now. Could use improvement.
++{
++    PROTOCOL_VERSION_BYTE_1 = 1,
++    PROTOCOL_VERSION_BYTE_2 = 0,
++    PROTOCOL_VERSION_BYTE_3 = 4,
++    QMK_VERSION_BYTE_1 = 0,
++    QMK_VERSION_BYTE_2 = 19,
++    QMK_VERSION_BYTE_3 = 12,
++    DEVICE_UNIQUE_IDENTIFIER_BYTE_1 = 0,
++    DEVICE_UNIQUE_IDENTIFIER_BYTE_2 = 0,
++    DEVICE_UNIQUE_IDENTIFIER_BYTE_3 = 0,
++    FIRMWARE_TYPE_BYTE = 1, 
++    DEVICE_ERROR_LEDS = 255, //Error code to show that there are more leds than a packet will allow.
++};
++
++void get_qmk_version(void);
++void get_signalrgb_protocol_version(void);
++void get_unique_identifier(void);
++void led_streaming(uint8_t *data);
++void signalrgb_mode_enable(void);
++void signalrgb_mode_disable(void);
++void get_total_leds(void);
++
++//Changelogs for Firmware Versions------------------------------------
++//V1.0.1 added detection for the total number of LEDs a board has. Plugins need a rewrite to make use of this change. Rewritten plugins will not function with older firmware.
++//V1.0.2 added another detection byte for which fork of SignalRGB firmware device is running. This means we can keep overlap Unique Identifiers between Sonix and Mainline.
++//V1.0.3 unifies the command IDs between Mainline, Sonix, and VIA. All commands have a 0x20 offset now.
++//V1.0.4 improves detection handling, and has a complete rewrite of the plugins. Also merges Mainline and VIA branches. VIA Branch is deprecated.
++
++/*
++DEVICE, DEVICE_UNIQUE_IDENTIFIER_BYTE_1,DEVICE_UNIQUE_IDENTIFIER_BYTE_2,DEVICE_UNIQUE_IDENTIFIER_BYTE_3
++gmmk/pro/rev2/ansi:default           0 0 5
++gmmk/pro/rev2/iso:default            0 0 6
++gmmk/gmmk2/p65/ansi:default               0 0 7
++gmmk/gmmk2/p65/iso:default                0 0 8
++gmmk/gmmk2/p96/ansi:default               0 0 9
++gmmk/gmmk2/p96/iso:default                0 0 10
++*/
+\ No newline at end of file
+diff -urN royalkludge/quantum/version.h royalkludge-srgb/quantum/version.h
+--- royalkludge/quantum/version.h	2023-03-17 00:30:59.161423209 -0500
++++ royalkludge-srgb/quantum/version.h	2023-03-17 00:30:02.049179596 -0500
+@@ -1,4 +1,4 @@
+-#define QMK_VERSION "278f3c"
+-#define QMK_BUILDDATE "2023-03-17-00:30:59"
+-#define CHIBIOS_VERSION "278f3c"
+-#define CHIBIOS_CONTRIB_VERSION "278f3c"
++#define QMK_VERSION "278f3c-dirty"
++#define QMK_BUILDDATE "2023-03-17-00:30:02"
++#define CHIBIOS_VERSION "breaking_2020_q1"
++#define CHIBIOS_CONTRIB_VERSION "breaking_2020_q1-58-gd1131a"
+diff -urN royalkludge/quantum/via.c royalkludge-srgb/quantum/via.c
+--- royalkludge/quantum/via.c	2023-03-17 00:30:22.797268632 -0500
++++ royalkludge-srgb/quantum/via.c	2023-03-16 15:24:14.238166511 -0500
+@@ -184,6 +184,85 @@
+     return true;
+ }
+ 
++uint8_t packet[32];
++
++ void get_qmk_version(void) //Grab the QMK Version
++{
++        packet[0] = id_signalrgb_qmk_version;
++        packet[1] = QMK_VERSION_BYTE_1;
++        packet[2] = QMK_VERSION_BYTE_2;
++        packet[3] = QMK_VERSION_BYTE_3;
++
++        raw_hid_send(packet, 32);
++}
++
++void get_signalrgb_protocol_version(void) //Grab what version of the SignalRGB protocol a keyboard is running
++{
++        packet[0] = id_signalrgb_protocol_version;
++        packet[1] = PROTOCOL_VERSION_BYTE_1;
++        packet[2] = PROTOCOL_VERSION_BYTE_2;
++        packet[3] = PROTOCOL_VERSION_BYTE_3;
++
++        raw_hid_send(packet, 32);
++}
++
++void get_unique_identifier(void) //Grab the unique identifier for each specific model of keyboard.
++{
++        packet[0] = id_signalrgb_unique_identifier;
++        packet[1] = DEVICE_UNIQUE_IDENTIFIER_BYTE_1;
++        packet[2] = DEVICE_UNIQUE_IDENTIFIER_BYTE_2;
++        packet[3] = DEVICE_UNIQUE_IDENTIFIER_BYTE_3;
++
++        raw_hid_send(packet, 32);
++}
++
++void led_streaming(uint8_t *data) //Stream data from HID Packets to Keyboard.
++{
++    uint8_t index = data[1];
++    uint8_t numberofleds = data[2]; 
++
++    if(numberofleds >= 10)
++    {
++        packet[1] = DEVICE_ERROR_LEDS;
++        raw_hid_send(packet,32);
++        return; 
++    } 
++    
++    for (uint8_t i = 0; i < numberofleds; i++)
++    {
++      uint8_t offset = (i * 3) + 3;
++      uint8_t  r = data[offset];
++      uint8_t  g = data[offset + 1];
++      uint8_t  b = data[offset + 2];
++    
++      rgb_matrix_set_color(index + i, r, g, b);
++     }
++}
++
++void signalrgb_mode_enable(void)
++{
++    rgb_matrix_mode_noeeprom(RGB_MATRIX_SIGNALRGB); //Set RGB Matrix to SignalRGB Compatible Mode
++}
++
++void signalrgb_mode_disable(void)
++{
++    rgb_matrix_reload_from_eeprom(); //Reloading last effect from eeprom
++}
++
++void signalrgb_total_leds(void)//Grab total number of leds that a board has.
++{
++    packet[0] = id_signalrgb_total_leds;
++    packet[1] = RGB_MATRIX_LED_COUNT;
++    raw_hid_send(packet,32);
++}
++
++void signalrgb_firmware_type(void) //Grab which fork of qmk a board is running.
++{
++    packet[0] = id_signalrgb_firmware_type;
++    packet[1] = FIRMWARE_TYPE_BYTE;
++    raw_hid_send(packet,32);
++}
++
+ // Keyboard level code can override this to handle custom messages from VIA.
+ // See raw_hid_receive() implementation.
+ // DO NOT call raw_hid_send() in the override function.
+@@ -203,6 +282,53 @@
+     uint8_t *command_id   = &(data[0]);
+     uint8_t *command_data = &(data[1]);
+     switch (*command_id) {
++        case id_signalrgb_qmk_version:
++        {
++            get_qmk_version();
++            break;
++        }
++
++        case id_signalrgb_protocol_version:
++        {
++            get_signalrgb_protocol_version();
++            break;
++        }
++
++        case id_signalrgb_unique_identifier:
++        {
++            get_unique_identifier();
++            break;
++        }
++
++        case id_signalrgb_stream_leds: 
++        {
++            led_streaming(data);
++            break;
++        }
++
++        case id_signalrgb_effect_enable: 
++        {
++            signalrgb_mode_enable();
++            break;
++        }
++
++        case id_signalrgb_effect_disable: 
++        {
++            signalrgb_mode_disable();
++            break;
++        }
++
++        case id_signalrgb_total_leds:
++        {
++            signalrgb_total_leds();
++            break;
++        }
++
++        case id_signalrgb_firmware_type:
++        {
++            signalrgb_firmware_type();
++            break;
++        }
+         case id_get_protocol_version: {
+             command_data[0] = VIA_PROTOCOL_VERSION >> 8;
+             command_data[1] = VIA_PROTOCOL_VERSION & 0xFF;
+diff -urN royalkludge/quantum/via.h royalkludge-srgb/quantum/via.h
+--- royalkludge/quantum/via.h	2023-03-17 00:30:22.797268632 -0500
++++ royalkludge-srgb/quantum/via.h	2023-03-16 15:23:32.578131875 -0500
+@@ -78,9 +78,47 @@
+     id_dynamic_keymap_get_layer_count       = 0x11,
+     id_dynamic_keymap_get_buffer            = 0x12,
+     id_dynamic_keymap_set_buffer            = 0x13,
++    id_signalrgb_qmk_version                = 0x21,
++    id_signalrgb_protocol_version           = 0x22,
++    id_signalrgb_unique_identifier          = 0x23,
++    id_signalrgb_stream_leds                = 0x24,
++    id_signalrgb_effect_enable              = 0x25,
++    id_signalrgb_effect_disable             = 0x26,
++    id_signalrgb_total_leds                 = 0x27,
++    id_signalrgb_firmware_type              = 0x28,
+     id_unhandled                            = 0xFF,
+ };
+ 
++enum signalrgb_responses {
++    PROTOCOL_VERSION_BYTE_1 = 1,
++    PROTOCOL_VERSION_BYTE_2 = 0,
++    PROTOCOL_VERSION_BYTE_3 = 4,
++    QMK_VERSION_BYTE_1 = 0,
++    QMK_VERSION_BYTE_2 = 19,
++    QMK_VERSION_BYTE_3 = 12,
++    DEVICE_UNIQUE_IDENTIFIER_BYTE_1 = 0,
++    DEVICE_UNIQUE_IDENTIFIER_BYTE_2 = 0,
++    DEVICE_UNIQUE_IDENTIFIER_BYTE_3 = 0,
++    FIRMWARE_TYPE_BYTE = 2, 
++    DEVICE_ERROR_LEDS = 254,
++};
++
++//Changelogs for Firmware Versions------------------------------------
++//V1.0.1 added detection for the total number of LEDs a board has. Plugins need a rewrite to make use of this change. Rewritten plugins will not function with older firmware.
++//V1.0.2 added another detection byte for which fork of SignalRGB firmware device is running. This means we can keep overlap Unique Identifiers between Sonix and Mainline.
++//V1.0.3 unifies the command IDs between Mainline, Sonix, and VIA. All commands have a 0x20 offset now.
++//V1.0.4 improves detection handling, and has a complete rewrite of the plugins. Also merges Mainline and VIA branches. VIA Branch is deprecated.
++
++/*
++DEVICE, DEVICE_UNIQUE_IDENTIFIER_BYTE_1,DEVICE_UNIQUE_IDENTIFIER_BYTE_2,DEVICE_UNIQUE_IDENTIFIER_BYTE_3
++gmmk/pro/rev2/ansi                0 0 5
++gmmk/pro/rev2/iso                 0 0 6
++gmmk/gmmk2/p65/ansi               0 0 7
++gmmk/gmmk2/p65/iso                0 0 8
++gmmk/gmmk2/p96/ansi               0 0 9
++gmmk/gmmk2/p96/iso                0 0 10
++*/
++
+ enum via_keyboard_value_id {
+     id_uptime              = 0x01,  //
+     id_layout_options      = 0x02,
+@@ -164,5 +202,17 @@
+ uint32_t via_get_layout_options(void);
+ void     via_set_layout_options(uint32_t value);
+ 
++//Used to handle SignalRGB Compatibility
++
++void get_qmk_version(void);
++void get_signalrgb_protocol_version(void);
++void get_unique_identifier(void);
++void led_streaming(uint8_t *data);
++void signalrgb_mode_enable(void);
++void signalrgb_mode_disable(void);
++void signalrgb_total_leds(void);
++void signalrgb_firmware_type(void);
++
++
+ // Called by QMK core to process VIA-specific keycodes.
+ bool process_record_via(uint16_t keycode, keyrecord_t *record);
