@@ -32,3 +32,7 @@ You will also need to follow the directions from your Keyboard manufacturer to p
 **Please keep support requests to either of those locations only, thanks!**
 
 If you notice something missing (keyboard or variation of a keyboard) or have any issues with these binaries please contact Naitoshedo on the above Discord server.
+
+---
+
+Patch file should be applied against <https://github.com/ab00a/qmk_firmware> rk61 fork.
