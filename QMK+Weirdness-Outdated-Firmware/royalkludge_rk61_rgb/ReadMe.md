@@ -1,5 +1,12 @@
 ## WARNING: These firmware files are massively unsupported / outdated use at your own risk ##
 
+Source back port from <https://github.com/ab00a/qmk_firmware> + SignalRGB Protocol + some rgb_matrix.c / rgb_matrix.h back ports (from qmk mainline) for this keyboard.
+As you can see it is rather old but this repo & what it is based on is the most recent for rk61 keyboard support.
+
+Try the VIA build for your keyboard of course (as even said below!)
+
+---
+
 The reason being as they are based upon very old releases of QMK for specific keyboards and may have been abandoned by the original developer.
 
 It is highly recommended that you have an original firmware for your keyboard + understand how to recover your keyboard from a possible brick (not working) state.
