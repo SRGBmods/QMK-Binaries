@@ -15,7 +15,7 @@ _(The above may include backporting RGB_Matrix to that specific board and the so
 
 [Code changes for SignalRGB Protocol 1.0.4 + QMK Master](https://github.com/SRGBmods/QMK-Binaries/blob/main/GPL/SignalRGB-Changes_QMK-example-code.patch)
 
-[common_features.mk](https://github.com/SRGBmods/QMK-Binaries/blob/main/GPL/common_features.mk) & [signalrgb.c](https://github.com/SRGBmods/QMK-Binaries/blob/main/GPL/signalrgb.c) & [signalrgb.h](https://github.com/SRGBmods/QMK-Binaries/blob/main/GPL/signalrgb.h) & [quantum.h](https://github.com/SRGBmods/QMK-Binaries/blob/main/GPL/quantum.h) additional code used by both SonixQMK & QMK Mainline.
+To manually add the SignalRGB Protocol 1.0.4 to almost any qmk fork please see the [following files](https://github.com/SRGBmods/QMK-Binaries/tree/main/GPL/qmk_firmware).
 
 The above code changes have been applied to vanilla / playground repos for each fork(s) for the binaries provided.
 
