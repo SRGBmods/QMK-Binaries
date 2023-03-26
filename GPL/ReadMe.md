@@ -16,14 +16,17 @@ To manually add the SignalRGB Protocol 1.0.4 to almost any qmk fork please see t
 
 The above code changes have been applied to vanilla / playground repos for each fork(s) for the binaries provided.
 
+---
+
 **If and when possible specific forks for supporting specific keyboards will be merged to QMK mainline release (cp -rp specificfork/keyboards/<keyboard_brand/maybe_a_child> ~/qmk/mainline/keyboards) and compiled against it.**
+
 _(The above may include backporting RGB_Matrix to that specific board and the source is available in the QMK mainline and can be provided upon request keeping track of all these gets a bit tricky but I will definitely **try**.)_
 
 ---
 
 ## Help with these binaries / user plugin creation ##
 
-[First please read directions below](https://github.com/SRGBmods/QMK-Binaries/#directions).
+[First please read directions](https://github.com/SRGBmods/QMK-Binaries/#directions).
 
 **This firmware is not officially supported by SignalRGB, QMK or any other software development team but by the moderator team of SignalRGB. Support can be provided either on the Github repository ([**Issues**](https://github.com/SRGBmods/QMK-Binaries/issues)) here or the QMK channels of this** [**Discord**](https://discord.com/invite/J5dwtcNhqC) **(Discord will be faster in most cases).**
 
