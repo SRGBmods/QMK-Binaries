@@ -1,4 +1,4 @@
-# For [GPL Compliance (Full Source code)](https://github.com/SRGBmods/QMK-Binaries/tree/main/GPL): #
+# For GPL Compliance (Full Source code): #
 [QMK Mainline + SignalRGB Merged Source](https://gitlab.com/signalrgb/qmk_firmware/-/tree/QMKRelease_1.0) & [SonixQMK + SignalRGB Merged Source](https://gitlab.com/signalrgb/qmk_firmware/-/tree/Sonix_QMKRelease_1.0).
 
 ---
