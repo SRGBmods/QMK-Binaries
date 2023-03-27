@@ -215,6 +215,13 @@ function returnSignalRGBProtocolVersion(data)
 	device.pause(30);
 }
 
+function requestUniqueIdentifier() //Grab the unique identifier for this keyboard model
+{
+	device.write([0x00, 0x23], 32);
+	device.pause(30);
+	commandHandler();
+}
+
 function returnUniqueIdentifier(data)
 {
 	const UniqueIdentifierByte1 = data[2];
