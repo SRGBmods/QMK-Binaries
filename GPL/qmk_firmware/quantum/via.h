@@ -54,7 +54,6 @@ This is placed directory after:
 */
 
 //Used to handle SignalRGB Compatibility
-
 void get_qmk_version(void);
 void get_signalrgb_protocol_version(void);
 void get_unique_identifier(void);
