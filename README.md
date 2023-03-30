@@ -9,7 +9,7 @@ If you wish to compile your own yourself the directions can be found [here](http
 ---
 
 # For GPL Compliance (Full Source code): #
-[QMK Mainline + SignalRGB Merged Source](https://gitlab.com/signalrgb/qmk_firmware/-/tree/QMKRelease_1.0) & [SonixQMK + SignalRGB Merged Source](https://gitlab.com/signalrgb/qmk_firmware/-/tree/Sonix_QMKRelease_1.0).
+[QMK Mainline + SignalRGB Merged Source](https://gitlab.com/signalrgb/qmk_firmware/) & [SonixQMK + SignalRGB Merged Source](https://gitlab.com/signalrgb/qmk_firmware/-/tree/Sonix_QMKRelease_1.0).
 
 ---
 
