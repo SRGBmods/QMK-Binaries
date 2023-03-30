@@ -71,6 +71,8 @@ After flashing your firmware you will need a user plugin in SignalRGB in order f
 # For GPL Compliance (Full Source code): #
 [QMK Mainline + SignalRGB Merged Source](https://gitlab.com/signalrgb/qmk_firmware/) & [SonixQMK + SignalRGB Merged Source](https://gitlab.com/signalrgb/qmk_firmware/-/tree/Sonix_QMKRelease_1.0).
 
+Additionally see the following [directory](https://github.com/SRGBmods/QMK-Binaries/tree/main/GPL).
+
 ---
 
 # Credits #
