@@ -32,7 +32,6 @@ If you notice something missing (keyboard or variation of a keyboard) or have an
 ### QMK+VIA-Vial-Firmware: ###
 **One thing of note if you are attempting to use VIA or Vial to configure your keyboard you _must_ quit SignalRGB before running either software**
 * **[0.20.2](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BVIA%2BVial-Firmware/0.20.2)** is the latest dev [Vial QMK Branch](https://github.com/vial-kb/vial-qmk), currently being pulled and fixes to boards are applied and uploaded.
-* **[0.18.6](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BVIA%2BVial-Firmware/0.18.6)** is the latest [Vial QMK Branch](https://github.com/vial-kb/vial-qmk), currently being pulled and fixes to boards are applied and uploaded.
 
 ---
 
@@ -58,6 +57,7 @@ After flashing your firmware you will need a user plugin in SignalRGB in order f
 
 ### Older Builds - Archived builds ###
 * **[VIA](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BVIA-Firmware/_Archived)** Archived VIA builds (Old QMK Mainline VIA+SignalRGB Support).
+* **[Vial](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BVIA%2BVial-Firmware/_Archived)** Archived Vial builds (Old QMK Mainline VIA+Vial+SignalRGB Support).
 * **[Default](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BDefault-Firmware/_Archived)** Archived Default builds (Old QMK Mainline Default+SignalRGB Support)
 
 ---
