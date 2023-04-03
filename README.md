@@ -55,18 +55,9 @@ After flashing your firmware you will need a user plugin in SignalRGB in order f
 
 ---
 
-### Older Builds - AKA Archived QMK + SignalRGB builds ###
-* **[0.20.3](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BVIA-Firmware/0.20.3)** Archived 0.20.1.zip (Old QMK Mainline Default+SignalRGB Support)
-* **[0.20.1](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BVIA-Firmware/0.20.1)** Archived 0.20.1.zip (Old QMK Mainline Default+SignalRGB Support)
-* **[0.20.0](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BDefault-Firmware/_Archived)** Archived 0.20.0.zip (Old QMK Mainline Default+SignalRGB Support)
-* **[0.19.12](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BDefault-Firmware/_Archived)** Archived 0.19.12.zip (Old QMK Mainline Default+SignalRGB Support)
-
----
-
-* **[0.20.1](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BVIA-Firmware/_Archived)** Archived 0.20.1.zip (Old QMK Mainline VIA+SignalRGB Support).
-* **[0.20.0](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BVIA-Firmware/_Archived)** Archived 0.20.0.zip (Old QMK Mainline VIA+SignalRGB Support).
-* **[0.19.12](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BVIA-Firmware/_Archived)** Archived 0.19.12.zip (Old QMK Mainline VIA+SignalRGB Support).
-* **[0.19.11](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BVIA-Firmware/_Archived)** Archived 0.19.11.zip (Old QMK Mainline VIA+SignalRGB Support).
+### Older Builds - Archived builds ###
+* **[VIA](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BVIA-Firmware/_Archived)** Archived VIA builds (Old QMK Mainline VIA+SignalRGB Support).
+* **[Default](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BDefault-Firmware/_Archived)** Archived Default builds (Old QMK Mainline Default+SignalRGB Support)
 
 ---
 
