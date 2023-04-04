@@ -4,13 +4,14 @@ export function ProductId() { return 0xeed3; }
 export function Publisher() { return "TechNaOkami"; }
 export function Size() { return [15, 8]; }
 export function DefaultPosition(){return [10, 100]; }
-export function DefaultScale(){return 8.0}
+export function DefaultScale(){return 8.0;}
 /* global
 shutdownColor:readonly
 LightingMode:readonly
 forcedColor:readonly
 */
-export function ControllableParameters() {
+export function ControllableParameters()
+{
 	return [
 		{"property":"shutdownColor", "group":"lighting", "label":"Shutdown Color", "min":"0", "max":"360", "type":"color", "default":"009bde"},
 		{"property":"LightingMode", "group":"lighting", "label":"Lighting Mode", "type":"combobox", "values":["Canvas", "Forced"], "default":"Canvas"},
@@ -20,40 +21,40 @@ export function ControllableParameters() {
 
 //Plugin Version: Built for Protocol V1.0.4
 
-const vKeys = 
+const vKeys =
 [
-	0 ,1 ,2 ,3 ,4 ,5 ,6 ,7 ,8 ,9 ,10 ,11 ,12 ,13 ,14 
-	,15 ,16 ,17 ,18 ,19 ,20 ,21 ,22 ,23 ,24 ,25 ,26 ,27 ,28 ,29 
-	,30 ,31 ,32 ,33 ,34 ,35 ,36 ,37 ,38 ,39 ,40 ,41 ,42 ,43 
-	,44 ,45 ,46 ,47 ,48 ,49 ,50 ,51 ,52 ,53 ,54 ,55 ,56 ,57 
-	,58 ,59 ,60 ,61 ,62 ,63 ,64 ,65 ,66
+	0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14
+	, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29
+	, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43
+	, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57
+	, 58, 59, 60, 61, 62, 63, 64, 65, 66
 	// For the Underglow to propergate from left to right vKeys must alternate and count backwards, reverse the oder for right to left. May be the same for all MassDrop keyboards
-	,103, 102 ,104, 101 ,67 ,100 ,68 ,98 ,69 ,97 ,70 ,96 ,71 ,96 ,72 ,95 ,73 ,94 ,74 ,93 ,75 ,92 ,76 ,91 ,77 ,90 ,78 ,89 ,79 ,88 ,80 ,87 ,81 ,86 ,82 ,85 ,83 ,84 
+	, 103, 102, 104, 101, 67, 100, 68, 98, 69, 97, 70, 96, 71, 96, 72, 95, 73, 94, 74, 93, 75, 92, 76, 91, 77, 90, 78, 89, 79, 88, 80, 87, 81, 86, 82, 85, 83, 84
 	// If you want it to proporgate counter clockwise then use the order below, and reverse for clockwise.
 	// ,67 ,68 ,69 ,70 ,71 ,72 ,73 ,74 ,75 ,76 ,77 ,78 ,79 ,80 ,81 ,82 ,83 ,84 ,85 ,86 ,87 ,88 ,89 ,90 ,91 ,92 ,93 ,94 ,95 ,96 ,97 ,98 ,99 ,100 ,101 ,102 ,103 ,104
-	    
+
 ];
-const vKeyNames = 
+const vKeyNames =
 [
-	"Esc", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "+", "Backspace", "Del", //15        
-	"Tab","Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P", "[", "]", "\\", "Home", //15			   
-	"CapsLock", "A", "S", "D", "F", "G", "H", "J", "k", "L", ";", "'", "Enter", "Page Up",  //14     
-	"LeftShift","Z", "X", "C", "V", "B", "N", "M", ",", ".","/", "Right Shift", "Up Arrow", "Page Down", //14 	
-	"Left Control","Meta","Left Alt", "Space", "Right Alt", "FN", "Left Arrow", "Down Arrow", "Right Arrow", //9
+	"Esc", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "+", "Backspace", "Del", //15
+	"Tab", "Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P", "[", "]", "\\", "Home", //15
+	"CapsLock", "A", "S", "D", "F", "G", "H", "J", "k", "L", ";", "'", "Enter", "Page Up",  //14
+	"LeftShift", "Z", "X", "C", "V", "B", "N", "M", ",", ".", "/", "Right Shift", "Up Arrow", "Page Down", //14
+	"Left Control", "Meta", "Left Alt", "Space", "Right Alt", "FN", "Left Arrow", "Down Arrow", "Right Arrow", //9
 
-	"UnderGlow1","UnderGlow2","UnderGlow3","UnderGlow4","UnderGlow5","UnderGlow6","UnderGlow7","UnderGlow8","UnderGlow9","UnderGlow10","UnderGlow11","UnderGlow12","UnderGlow13","UnderGlow14","UnderGlow15", "UnderGlow16", "UnderGlow17", "UnderGlow18", "UnderGlow19", "UnderGlow20", "UnderGlow21", "UnderGlow22", "UnderGlow23", "UnderGlow24", "UnderGlow25","UnderGlow26","UnderGlow27","UnderGlow28","UnderGlow29","UnderGlow30","UnderGlow31","UnderGlow32","UnderGlow33","UnderGlow34","UnderGlow35","UnderGlow36", "UnderGlow38", "UnderGlow37"
+	"UnderGlow1", "UnderGlow2", "UnderGlow3", "UnderGlow4", "UnderGlow5", "UnderGlow6", "UnderGlow7", "UnderGlow8", "UnderGlow9", "UnderGlow10", "UnderGlow11", "UnderGlow12", "UnderGlow13", "UnderGlow14", "UnderGlow15", "UnderGlow16", "UnderGlow17", "UnderGlow18", "UnderGlow19", "UnderGlow20", "UnderGlow21", "UnderGlow22", "UnderGlow23", "UnderGlow24", "UnderGlow25", "UnderGlow26", "UnderGlow27", "UnderGlow28", "UnderGlow29", "UnderGlow30", "UnderGlow31", "UnderGlow32", "UnderGlow33", "UnderGlow34", "UnderGlow35", "UnderGlow36", "UnderGlow38", "UnderGlow37"
 ];
 
-const vKeyPositions = 
+const vKeyPositions =
 [
-	[0,0],[1,0],[2,0],[3,0],[4,0],[5,0],[6,0],[7,0],[8,0],[9,0],[10,0],[11,0],[12,0],[13,0],[14,0],
-	[0,1],[1,1],[2,1],[3,1],[4,1],[5,1],[6,1],[7,1],[8,1],[9,1],[10,1],[11,1],[12,1],[13,1],[14,1],         
-	[0,2],[1,2],[2,2],[3,2],[4,2],[5,2],[6,2],[7,2],[8,2],[9,2],[10,2],[11,2],[12,2],[13,2],	   
-	[0,3],[1,3],[2,3],[3,3],[4,3],[5,3],[6,3],[7,3],[8,3],[9,3],[10,3],[11,3],[12,3],[13,3],	      
-	[0,4],[1,4],[2,4],[3,4],[4,4],[5,4],[6,4],[7,4],[8,4],
+	[0, 0], [1, 0], [2, 0], [3, 0], [4, 0], [5, 0], [6, 0], [7, 0], [8, 0], [9, 0], [10, 0], [11, 0], [12, 0], [13, 0], [14, 0],
+	[0, 1], [1, 1], [2, 1], [3, 1], [4, 1], [5, 1], [6, 1], [7, 1], [8, 1], [9, 1], [10, 1], [11, 1], [12, 1], [13, 1], [14, 1],
+	[0, 2], [1, 2], [2, 2], [3, 2], [4, 2], [5, 2], [6, 2], [7, 2], [8, 2], [9, 2], [10, 2], [11, 2], [12, 2], [13, 2],
+	[0, 3], [1, 3], [2, 3], [3, 3], [4, 3], [5, 3], [6, 3], [7, 3], [8, 3], [9, 3], [10, 3], [11, 3], [12, 3], [13, 3],
+	[0, 4], [1, 4], [2, 4], [3, 4], [4, 4], [5, 4], [6, 4], [7, 4], [8, 4],
 
-	[0,5],[1,5],[2,5],[3,5],[4,5],[5,5],[6,5],[7,5],[8,5],[9,5],[10,5],[11,5],[12,5],[0,6],[1,6],[2,6],[3,6],[4,6],[5,6],[6,6],[7,6],[8,6],[9,6],[10,6],[11,6],[12,6],[0,7],[1,7],[2,7],[3,7],[4,7],[5,7],[6,7],[7,7],[8,7],[9,7],[10,7],[11,7],
-                	     
+	[0, 5], [1, 5], [2, 5], [3, 5], [4, 5], [5, 5], [6, 5], [7, 5], [8, 5], [9, 5], [10, 5], [11, 5], [12, 5], [0, 6], [1, 6], [2, 6], [3, 6], [4, 6], [5, 6], [6, 6], [7, 6], [8, 6], [9, 6], [10, 6], [11, 6], [12, 6], [0, 7], [1, 7], [2, 7], [3, 7], [4, 7], [5, 7], [6, 7], [7, 7], [8, 7], [9, 7], [10, 7], [11, 7],
+
 ];
 
 let LEDCount = 0;
@@ -61,6 +62,7 @@ let IsViaKeyboard = false;
 const MainlineQMKFirmware = 1;
 const VIAFirmware = 2;
 const PluginProtocolVersion = "1.0.4";
+const QMKPluginVersion = "1.1";
 
 export function LedNames()
 {
@@ -171,6 +173,7 @@ function returnSignalRGBProtocolVersion(data)
 
 	let SignalRGBProtocolVersion = ProtocolVersionByte1 + "." + ProtocolVersionByte2 + "." + ProtocolVersionByte3;
 	device.log(`SignalRGB Protocol Version: ${SignalRGBProtocolVersion}`);
+	device.log(`SiganlRGB QMK Plugin Version: ${QMKPluginVersion}`);
 
 
 	if(PluginProtocolVersion !== SignalRGBProtocolVersion)

@@ -55,6 +55,7 @@ let IsViaKeyboard = false;
 const MainlineQMKFirmware = 1;
 const VIAFirmware = 2;
 const PluginProtocolVersion = "1.0.4";
+const QMKPluginVersion = "1.1";
 
 export function LedNames()
 {
@@ -84,7 +85,7 @@ export function Render()
 
 export function Shutdown()
 {
-	effectDisable();
+	sendColors(true);
 }
 
 function commandHandler()
@@ -165,6 +166,7 @@ function returnSignalRGBProtocolVersion(data)
 
 	let SignalRGBProtocolVersion = ProtocolVersionByte1 + "." + ProtocolVersionByte2 + "." + ProtocolVersionByte3;
 	device.log(`SignalRGB Protocol Version: ${SignalRGBProtocolVersion}`);
+	device.log(`SiganlRGB QMK Plugin Version: ${QMKPluginVersion}`);
 
 
 	if(PluginProtocolVersion !== SignalRGBProtocolVersion)
@@ -187,7 +189,12 @@ function returnUniqueIdentifier(data)
 	let UniqueIdentifierByte1 = data[2];
 	let UniqueIdentifierByte2 = data[3];
 	let UniqueIdentifierByte3 = data[4];
-	device.log("Unique Device Identifier: " + UniqueIdentifierByte1 + UniqueIdentifierByte2 + UniqueIdentifierByte3);
+
+	if(!(UniqueIdentifierByte1 === 0 && UniqueIdentifierByte2 === 0 && UniqueIdentifierByte3 === 0))
+	{
+		device.log("Unique Device Identifier: " + UniqueIdentifierByte1 + UniqueIdentifierByte2 + UniqueIdentifierByte3);
+	}
+
 	device.pause(30);
 }
 
@@ -280,9 +287,9 @@ function grabColors(shutdown = false)
 	return rgbdata;
 }
 
-function sendColors()
+function sendColors(shutdown = false)
 {
-	let rgbdata = grabColors();
+	let rgbdata = grabColors(shutdown);
 
 	const LedsPerPacket = 9;
 	let BytesSent = 0;

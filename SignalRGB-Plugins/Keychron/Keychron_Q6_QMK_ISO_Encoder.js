@@ -57,6 +57,7 @@ let IsViaKeyboard = false;
 const MainlineQMKFirmware = 1;
 const VIAFirmware = 2;
 const PluginProtocolVersion = "1.0.4";
+const QMKPluginVersion = "1.1";
 
 export function LedNames()
 {
@@ -167,6 +168,7 @@ function returnSignalRGBProtocolVersion(data)
 
 	let SignalRGBProtocolVersion = ProtocolVersionByte1 + "." + ProtocolVersionByte2 + "." + ProtocolVersionByte3;
 	device.log(`SignalRGB Protocol Version: ${SignalRGBProtocolVersion}`);
+	device.log(`SiganlRGB QMK Plugin Version: ${QMKPluginVersion}`);
 
 
 	if(PluginProtocolVersion !== SignalRGBProtocolVersion)
