@@ -95,6 +95,7 @@ let IsViaKeyboard = false;
 const MainlineQMKFirmware = 1;
 const VIAFirmware = 2;
 const PluginProtocolVersion = "1.0.4";
+const QMKPluginVersion = "1.1";
 
 export function LedNames()
 {
@@ -205,6 +206,7 @@ function returnSignalRGBProtocolVersion(data)
 
 	let SignalRGBProtocolVersion = ProtocolVersionByte1 + "." + ProtocolVersionByte2 + "." + ProtocolVersionByte3;
 	device.log(`SignalRGB Protocol Version: ${SignalRGBProtocolVersion}`);
+	device.log(`SiganlRGB QMK Plugin Version: ${QMKPluginVersion}`);
 
 
 	if(PluginProtocolVersion !== SignalRGBProtocolVersion)
@@ -243,7 +245,11 @@ function returnUniqueIdentifier(data)
 		vKeyPositions = vKeyPositionsProAnsi;
 	}
 
-	device.log("Unique Device Identifier: " + UniqueIdentifierByte1 + UniqueIdentifierByte2 + UniqueIdentifierByte3);
+	if(!(UniqueIdentifierByte1 === 0 && UniqueIdentifierByte2 === 0 && UniqueIdentifierByte3 === 0))
+	{
+		device.log("Unique Device Identifier: " + UniqueIdentifierByte1 + UniqueIdentifierByte2 + UniqueIdentifierByte3);
+	}
+
 	device.pause(30);
 }
 
