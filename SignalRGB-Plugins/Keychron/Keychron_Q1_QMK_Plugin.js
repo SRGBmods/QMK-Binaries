@@ -55,7 +55,7 @@ let IsViaKeyboard = false;
 const MainlineQMKFirmware = 1;
 const VIAFirmware = 2;
 const PluginProtocolVersion = "1.0.4";
-const QMKPluginVersion = "1.1";
+const QMKPluginVersion = "1.1.1";
 
 export function LedNames()
 {
@@ -90,11 +90,11 @@ export function Shutdown()
 
 function commandHandler()
 {
-	let readCounts = [];
+	const readCounts = [];
 
 	do
 	{
-		let returnpacket = device.read([0x00], 32, 10);
+		const returnpacket = device.read([0x00], 32, 10);
 		processCommands(returnpacket);
 
 		readCounts.push(device.getLastReadSize());
@@ -144,9 +144,9 @@ function requestQMKVersion() //Check the version of QMK Firmware that the keyboa
 
 function returnQMKVersion(data)
 {
-	let QMKVersionByte1 = data[2];
-	let QMKVersionByte2 = data[3];
-	let QMKVersionByte3 = data[4];
+	const QMKVersionByte1 = data[2];
+	const QMKVersionByte2 = data[3];
+	const QMKVersionByte3 = data[4];
 	device.log("QMK Version: " + QMKVersionByte1 + "." + QMKVersionByte2 + "." + QMKVersionByte3);
 	device.pause(30);
 }
@@ -160,11 +160,11 @@ function requestSignalRGBProtocolVersion() //Grab the version of the SignalRGB P
 
 function returnSignalRGBProtocolVersion(data)
 {
-	let ProtocolVersionByte1 = data[2];
-	let ProtocolVersionByte2 = data[3];
-	let ProtocolVersionByte3 = data[4];
+	const ProtocolVersionByte1 = data[2];
+	const ProtocolVersionByte2 = data[3];
+	const ProtocolVersionByte3 = data[4];
 
-	let SignalRGBProtocolVersion = ProtocolVersionByte1 + "." + ProtocolVersionByte2 + "." + ProtocolVersionByte3;
+	const SignalRGBProtocolVersion = ProtocolVersionByte1 + "." + ProtocolVersionByte2 + "." + ProtocolVersionByte3;
 	device.log(`SignalRGB Protocol Version: ${SignalRGBProtocolVersion}`);
 	device.log(`SiganlRGB QMK Plugin Version: ${QMKPluginVersion}`);
 
@@ -186,9 +186,9 @@ function requestUniqueIdentifier() //Grab the unique identifier for this keyboar
 
 function returnUniqueIdentifier(data)
 {
-	let UniqueIdentifierByte1 = data[2];
-	let UniqueIdentifierByte2 = data[3];
-	let UniqueIdentifierByte3 = data[4];
+	const UniqueIdentifierByte1 = data[2];
+	const UniqueIdentifierByte2 = data[3];
+	const UniqueIdentifierByte3 = data[4];
 
 	if(!(UniqueIdentifierByte1 === 0 && UniqueIdentifierByte2 === 0 && UniqueIdentifierByte3 === 0))
 	{
@@ -221,7 +221,7 @@ function requestFirmwareType()
 
 function returnFirmwareType(data)
 {
-	let FirmwareTypeByte = data[2];
+	const FirmwareTypeByte = data[2];
 
 	if(!(FirmwareTypeByte === MainlineQMKFirmware || FirmwareTypeByte === VIAFirmware))
 	{
@@ -257,12 +257,12 @@ function effectDisable() //Revert to Hardware Mode
 
 function grabColors(shutdown = false)
 {
-	let rgbdata = [];
+	const rgbdata = [];
 
 	for(let iIdx = 0; iIdx < vKeys.length; iIdx++)
 	{
-		let iPxX = vKeyPositions[iIdx][0];
-		let iPxY = vKeyPositions[iIdx][1];
+		const iPxX = vKeyPositions[iIdx][0];
+		const iPxY = vKeyPositions[iIdx][1];
 		let color;
 
 		if(shutdown)
@@ -278,7 +278,7 @@ function grabColors(shutdown = false)
 			color = device.color(iPxX, iPxY);
 		}
 
-		let iLedIdx = vKeys[iIdx] * 3;
+		const iLedIdx = vKeys[iIdx] * 3;
 		rgbdata[iLedIdx] = color[0];
 		rgbdata[iLedIdx+1] = color[1];
 		rgbdata[iLedIdx+2] = color[2];
@@ -307,7 +307,7 @@ function sendColors(shutdown = false)
 
 function StreamLightingData(StartLedIdx, RGBData)
 {
-	let packet = [0x00, 0x24, StartLedIdx, Math.floor(RGBData.length / 3)];
+	const packet = [0x00, 0x24, StartLedIdx, Math.floor(RGBData.length / 3)];
 
 	packet.push(...RGBData);
 	device.write(packet, 33);
@@ -315,8 +315,8 @@ function StreamLightingData(StartLedIdx, RGBData)
 
 function hexToRgb(hex)
 {
-	let result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
-	let colors = [];
+	const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+	const colors = [];
 	colors[0] = parseInt(result[1], 16);
 	colors[1] = parseInt(result[2], 16);
 	colors[2] = parseInt(result[3], 16);
