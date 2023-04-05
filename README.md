@@ -1,4 +1,4 @@
-![SRGBmods QMK Builds](https://srgbmods.net/img/srgbmods-qmk.png)
+![SRGBmods QMK Builds,100%](https://srgbmods.net/img/srgbmods-qmk.png)
 # QMK Binaries #
 [QMK Firmware](https://qmk.fm/) that is supported by [SignalRGB](https://www.signalrgb.com) (includes protocol information for direct ARGB mode), compiled for your convenience and ready to install!
 
