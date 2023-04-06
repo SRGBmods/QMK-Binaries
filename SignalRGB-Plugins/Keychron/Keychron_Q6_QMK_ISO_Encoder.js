@@ -1,6 +1,6 @@
 export function Name() { return "Keychron Q6 QMK Keyboard"; }
 export function VendorId() { return 0x3434; }
-export function ProductId() { return 0x0162; }
+export function ProductId() { return [0x0162, 0x0163]; }
 export function Publisher() { return "WhirlwindFX"; }
 export function Documentation(){ return "/qmk/building-firmware-from-source"; }
 export function Size() { return [21, 6]; }
