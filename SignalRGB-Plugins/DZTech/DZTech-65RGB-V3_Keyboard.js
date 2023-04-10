@@ -163,7 +163,7 @@ function returnSignalRGBProtocolVersion(data)
 
 	const SignalRGBProtocolVersion = ProtocolVersionByte1 + "." + ProtocolVersionByte2 + "." + ProtocolVersionByte3;
 	device.log(`SignalRGB Protocol Version: ${SignalRGBProtocolVersion}`);
-	device.log(`SiganlRGB QMK Plugin Version: ${QMKPluginVersion}`);
+	device.log(`SignalRGB QMK Plugin Version: ${QMKPluginVersion}`);
 
 
 	if(PluginProtocolVersion !== SignalRGBProtocolVersion)
