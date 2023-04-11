@@ -3,7 +3,7 @@ export function Version() { return "1.1.2"; }
 export function VendorId() { return 0x4b42; }
 export function ProductId() { return 0x1225; }
 export function Publisher() { return "WhirlwindFX"; }
-export function Documentation(){ return "/qmk/srgbmods-qmk-firmware"; }
+export function Documentation(){ return "qmk/srgbmods-qmk-firmware"; }
 export function Size() { return [15, 5]; }
 export function DefaultPosition(){return [10, 100]; }
 export function DefaultScale(){return 8.0;}
