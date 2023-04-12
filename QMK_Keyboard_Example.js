@@ -1,8 +1,9 @@
 export function Name() { return "QMK Keyboard"; }
+export function Version() { return "1.1.2"; }
 export function VendorId() { return 0x0000; }
 export function ProductId() { return 0x0000; }
 export function Publisher() { return "WhirlwindFX"; }
-export function Documentation(){ return "/qmk/building-firmware-from-source"; }
+export function Documentation(){ return "qmk/srgbmods-qmk-firmware"; }
 export function Size() { return [21, 6]; }
 export function DefaultPosition(){return [10, 100]; }
 export function DefaultScale(){return 8.0;}
@@ -56,7 +57,6 @@ let IsViaKeyboard = false;
 const MainlineQMKFirmware = 1;
 const VIAFirmware = 2;
 const PluginProtocolVersion = "1.0.4";
-const QMKPluginVersion = "1.1.1";
 
 export function LedNames()
 {
@@ -149,6 +149,7 @@ function returnQMKVersion(data)
 	const QMKVersionByte2 = data[3];
 	const QMKVersionByte3 = data[4];
 	device.log("QMK Version: " + QMKVersionByte1 + "." + QMKVersionByte2 + "." + QMKVersionByte3);
+	device.log("QMK SRGB Plugin Version: "+ Version() );
 	device.pause(30);
 }
 
@@ -167,8 +168,6 @@ function returnSignalRGBProtocolVersion(data)
 
 	const SignalRGBProtocolVersion = ProtocolVersionByte1 + "." + ProtocolVersionByte2 + "." + ProtocolVersionByte3;
 	device.log(`SignalRGB Protocol Version: ${SignalRGBProtocolVersion}`);
-	device.log(`SiganlRGB QMK Plugin Version: ${QMKPluginVersion}`);
-
 
 	if(PluginProtocolVersion !== SignalRGBProtocolVersion)
 	{
@@ -180,7 +179,10 @@ function returnSignalRGBProtocolVersion(data)
 
 function requestUniqueIdentifier() //Grab the unique identifier for this keyboard model
 {
-	device.write([0x00, 0x23], 32);
+	if(device.write([0x00, 0x23], 32) === -1)
+	{
+		device.notify("Unsupported Firmware: ", `This device is not running SignalRGB-compatible firmware. Click the Open Troubleshooting Docs button to learn more.`, 0);
+	}
 	device.pause(30);
 	commandHandler();
 }
