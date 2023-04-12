@@ -176,7 +176,10 @@ function returnSignalRGBProtocolVersion(data)
 
 function requestUniqueIdentifier() //Grab the unique identifier for this keyboard model
 {
-	device.write([0x00, 0x23], 32);
+	if(device.write([0x00, 0x23], 32) === -1)
+	{
+		device.notify("Unsupported Firmware: ", `This device is not running SignalRGB-compatible firmware. Click the Open Troubleshooting Docs button to learn more.`, 0);
+	}
 	device.pause(30);
 	commandHandler();
 }
