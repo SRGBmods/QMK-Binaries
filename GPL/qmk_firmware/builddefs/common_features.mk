@@ -13,3 +13,5 @@ ifeq ($(strip $(SIGNALRGB_SUPPORT_ENABLE)), yes)
     OPT_DEFS += -DSIGNALRGB_SUPPORT_ENABLE
     endif
 endif
+
+# Hint for a mass-compile / multibuild compile comment out lines 9, 10, 14, and 15 for a global :default keymap build :)
