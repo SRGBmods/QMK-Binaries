@@ -8,6 +8,20 @@ If you wish to compile your own yourself the directions can be found [here](http
 
 ---
 
+# For GPL Compliance (Full Source code): #
+[QMK Mainline + SignalRGB Merged Source](https://gitlab.com/signalrgb/qmk_firmware/) & [SonixQMK + SignalRGB Merged Source](https://gitlab.com/signalrgb/qmk_firmware/-/tree/Sonix_QMKRelease_1.0).
+
+Additionally see the following [directory](https://github.com/SRGBmods/QMK-Binaries/tree/main/GPL).
+
+---
+
+# Credits #
+Thanks to the [SonixQMK](https://github.com/SonixQMK/qmk_firmware) , [QMK](https://github.com/qmk/qmk_firmware) , [VIA](https://www.caniusevia.com/) , [GloriousThrall](https://github.com/GloriousThrall/qmk_firmware/) , [jonylee1986](https://github.com/jonylee1986/qmk_firmware_master) , [Keychron](https://github.com/Keychron/qmk_firmware) and [Vial](https://github.com/vial-kb/vial-qmk) communities for providing source code, all original code is completely theirs and thanks to them for providing the code for us and everyone else!
+
+Licenses include: [SonixQMK](https://github.com/SonixQMK/qmk_firmware/blob/sn32_master/LICENSE) , [QMK](https://github.com/qmk/qmk_firmware/blob/master/LICENSE) , [VIA](https://github.com/the-via/firmware/blob/master/LICENSE) , [GloriousThrall](https://github.com/GloriousThrall/qmk_firmware/blob/master/license_GPLv3.md) , [jonylee1986](https://github.com/jonylee1986/qmk_firmware_master/blob/master/LICENSE) , [Keychron](https://github.com/Keychron/qmk_firmware/blob/master/LICENSE) , and  [Vial](https://github.com/vial-kb/vial-qmk/blob/vial/LICENSE).
+
+---
+
 ### Help with these binaries / user plugin creation ###
 
 [First please read directions below](https://github.com/SRGBmods/QMK-Binaries/#directions).
@@ -59,20 +73,6 @@ After flashing your firmware you will need a user plugin in SignalRGB in order f
 * **[VIA](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BVIA-Firmware/_Archived)** Archived VIA builds (Old QMK Mainline VIA+SignalRGB Support).
 * **[Vial](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BVIA%2BVial-Firmware/_Archived)** Archived Vial builds (Old QMK Mainline VIA+Vial+SignalRGB Support).
 * **[Default](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BDefault-Firmware/_Archived)** Archived Default builds (Old QMK Mainline Default+SignalRGB Support)
-
----
-
-# For GPL Compliance (Full Source code): #
-[QMK Mainline + SignalRGB Merged Source](https://gitlab.com/signalrgb/qmk_firmware/) & [SonixQMK + SignalRGB Merged Source](https://gitlab.com/signalrgb/qmk_firmware/-/tree/Sonix_QMKRelease_1.0).
-
-Additionally see the following [directory](https://github.com/SRGBmods/QMK-Binaries/tree/main/GPL).
-
----
-
-# Credits #
-Thanks to the [SonixQMK](https://github.com/SonixQMK/qmk_firmware) , [QMK](https://github.com/qmk/qmk_firmware) , [VIA](https://www.caniusevia.com/) , [GloriousThrall](https://github.com/GloriousThrall/qmk_firmware/) , [jonylee1986](https://github.com/jonylee1986/qmk_firmware_master) , [Keychron](https://github.com/Keychron/qmk_firmware) and [Vial](https://github.com/vial-kb/vial-qmk) communities for providing source code, all original code is completely theirs and thanks to them for providing the code for us and everyone else!
-
-Licenses include: [SonixQMK](https://github.com/SonixQMK/qmk_firmware/blob/sn32_master/LICENSE) , [QMK](https://github.com/qmk/qmk_firmware/blob/master/LICENSE) , [VIA](https://github.com/the-via/firmware/blob/master/LICENSE) , [GloriousThrall](https://github.com/GloriousThrall/qmk_firmware/blob/master/license_GPLv3.md) , [jonylee1986](https://github.com/jonylee1986/qmk_firmware_master/blob/master/LICENSE) , [Keychron](https://github.com/Keychron/qmk_firmware/blob/master/LICENSE) , and  [Vial](https://github.com/vial-kb/vial-qmk/blob/vial/LICENSE).
 
 ---
 
