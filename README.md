@@ -22,7 +22,7 @@ Licenses include: [SonixQMK](https://github.com/SonixQMK/qmk_firmware/blob/sn32_
 
 ---
 
-### Help with these binaries / user plugin creation ###
+# Help with these binaries / user plugin creation #
 
 [First please read directions below](https://github.com/SRGBmods/QMK-Binaries/#directions).
 
