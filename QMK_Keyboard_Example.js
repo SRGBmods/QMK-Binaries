@@ -86,7 +86,8 @@ export function Render()
 
 export function Shutdown()
 {
-	sendColors(true);
+	//sendColors(true); // If you prefer SignalRGB to send the shutdown color when quitting.
+	effectDisable(); // By default we call the QMK packet to return to hardware mode
 }
 
 function commandHandler()
