@@ -86,7 +86,7 @@ export function Render()
 
 export function Shutdown()
 {
-	sendColors(true);
+	effectDisable();
 }
 
 function commandHandler()
