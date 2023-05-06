@@ -13,7 +13,7 @@ It is highly recommended that you have an original firmware for your keyboard + 
 
 If you accept this, feel free to try these firmware files. (Of course as always we recommend VIA builds first!)
 
-Feel free to review + use the patch in this directory against [ab00a](https://github.com/ab00a/qmk_firmware)
+Feel free to review + use the patch in [this directory](https://github.com/SRGBmods/QMK-Binaries/tree/main/GPL/qmk_firmware) against [ab00a](https://github.com/ab00a/qmk_firmware)
 
 ---
 
