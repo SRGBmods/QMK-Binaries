@@ -1,10 +1,10 @@
-## A bootloader for SN32F2x-based keyboards ##
+# A bootloader for SN32F2x-based keyboards #
 Pre-compiled jumploaders from [sonix-keyboard-bootloader](https://github.com/SonixQMK/sonix-keyboard-bootloader)
 Required for some Sonix based keyboards.
 
 ---
 
-# Help with these binaries / user plugin creation #
+### Help with these binaries / user plugin creation ###
 
 [First please read directions below](https://github.com/SRGBmods/QMK-Binaries/#directions).
 
