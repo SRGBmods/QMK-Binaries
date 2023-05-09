@@ -1,6 +1,7 @@
 # A bootloader for SN32F2x-based keyboards #
 Pre-compiled jumploaders from [sonix-keyboard-bootloader](https://github.com/SonixQMK/sonix-keyboard-bootloader)
-Required for some Sonix based keyboards, these are only provided due to artifacts from SonixQMK jumploaders being expired.
+
+Required for some Sonix based keyboards, these are only provided due to [artifacts](https://github.com/SonixQMK/sonix-keyboard-bootloader/actions) from SonixQMK jumploaders being expired.
 
 ---
 
