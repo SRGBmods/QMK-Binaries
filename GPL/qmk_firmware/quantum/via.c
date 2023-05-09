@@ -1,8 +1,6 @@
 /*
 This goes below
-switch (keycode) {
-        case FN_MO13:
-
+// Called by QMK core to process VIA-specific keycodes.
 */
 uint8_t packet[32];
 
