@@ -1,5 +1,7 @@
 #pragma once
 
+#include "qmk_version.h"
+
 enum signalrgb_commands
 {
     GET_QMK_VERSION = 0x21,
@@ -17,9 +19,6 @@ enum signalrgb_responses //These are a bit clunky right now. Could use improveme
     PROTOCOL_VERSION_BYTE_1 = 1,
     PROTOCOL_VERSION_BYTE_2 = 0,
     PROTOCOL_VERSION_BYTE_3 = 4,
-    QMK_VERSION_BYTE_1 = 0,
-    QMK_VERSION_BYTE_2 = 20,
-    QMK_VERSION_BYTE_3 = 5,
     DEVICE_UNIQUE_IDENTIFIER_BYTE_1 = 0,
     DEVICE_UNIQUE_IDENTIFIER_BYTE_2 = 0,
     DEVICE_UNIQUE_IDENTIFIER_BYTE_3 = 0,
