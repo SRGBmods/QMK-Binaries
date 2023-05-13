@@ -1,5 +1,5 @@
 export function Name() { return "QMK Keyboard"; }
-export function Version() { return "1.1.2"; }
+export function Version() { return "1.1.4"; }
 export function VendorId() { return 0x0000; }
 export function ProductId() { return 0x0000; }
 export function Publisher() { return "WhirlwindFX"; }
@@ -8,6 +8,7 @@ export function Size() { return [21, 6]; }
 export function DefaultPosition(){return [10, 100]; }
 export function DefaultScale(){return 8.0;}
 /* global
+shutdownMode:readonly
 shutdownColor:readonly
 LightingMode:readonly
 forcedColor:readonly
@@ -15,6 +16,7 @@ forcedColor:readonly
 export function ControllableParameters()
 {
 	return [
+		{"property":"shutdownMode", "group":"lighting", "label":"Shutdown Mode", "type":"combobox", "values":["SignalRGB", "Hardware"], "default":"SignalRGB"},
 		{"property":"shutdownColor", "group":"lighting", "label":"Shutdown Color", "min":"0", "max":"360", "type":"color", "default":"009bde"},
 		{"property":"LightingMode", "group":"lighting", "label":"Lighting Mode", "type":"combobox", "values":["Canvas", "Forced"], "default":"Canvas"},
 		{"property":"forcedColor", "group":"lighting", "label":"Forced Color", "min":"0", "max":"360", "type":"color", "default":"009bde"},
@@ -86,8 +88,15 @@ export function Render()
 
 export function Shutdown()
 {
-	//sendColors(true); // If you prefer SignalRGB to send the shutdown color when quitting.
-	effectDisable(); // By default we call the QMK packet to return to hardware mode
+	if (shutdownMode === "SignalRGB")
+	{
+		sendColors(true);
+	}
+	else
+	{
+		effectDisable();
+	}
+
 }
 
 function commandHandler()
@@ -184,6 +193,7 @@ function requestUniqueIdentifier() //Grab the unique identifier for this keyboar
 	{
 		device.notify("Unsupported Firmware: ", `This device is not running SignalRGB-compatible firmware. Click the Open Troubleshooting Docs button to learn more.`, 0);
 	}
+
 	device.pause(30);
 	commandHandler();
 }
