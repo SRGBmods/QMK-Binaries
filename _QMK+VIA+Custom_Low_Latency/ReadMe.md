@@ -1,0 +1,1 @@
+The follow directories are provided to devices that I either personally own or can talk to owners on an almost daily basis to fix any issues + provide the lowest latency of inputs.
