@@ -1,5 +1,5 @@
 export function Name() { return "KBDFans KBD67"; }
-export function Version() { return "1.1.2"; }
+export function Version() { return "1.1.4"; }
 export function VendorId() { return 0x4b42; }
 export function ProductId() { return 0x1225; }
 export function Publisher() { return "WhirlwindFX"; }
@@ -7,14 +7,10 @@ export function Documentation(){ return "qmk/srgbmods-qmk-firmware"; }
 export function Size() { return [15, 5]; }
 export function DefaultPosition(){return [10, 100]; }
 export function DefaultScale(){return 8.0;}
-/* global
-shutdownColor:readonly
-LightingMode:readonly
-forcedColor:readonly
-*/
 export function ControllableParameters()
 {
 	return [
+		{"property":"shutdownMode", "group":"lighting", "label":"Shutdown Mode", "type":"combobox", "values":["SignalRGB", "Hardware"], "default":"SignalRGB"},
 		{"property":"shutdownColor", "group":"lighting", "label":"Shutdown Color", "min":"0", "max":"360", "type":"color", "default":"009bde"},
 		{"property":"LightingMode", "group":"lighting", "label":"Lighting Mode", "type":"combobox", "values":["Canvas", "Forced"], "default":"Canvas"},
 		{"property":"forcedColor", "group":"lighting", "label":"Forced Color", "min":"0", "max":"360", "type":"color", "default":"009bde"},
@@ -82,7 +78,15 @@ export function Render()
 
 export function Shutdown()
 {
-	sendColors(true);
+	if (shutdownMode === "SignalRGB")
+	{
+		sendColors(true);
+	}
+	else
+	{
+		effectDisable();
+	}
+
 }
 
 function commandHandler()
