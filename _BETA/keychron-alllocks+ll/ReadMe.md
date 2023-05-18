@@ -1,1 +1,0 @@
-Special Build of Keychon Q6 + VIA + Lowest Latency Scheduler and Debounces available + Capslock + Numlock + Scroll locks indictators enabled.
