@@ -1,1 +1,1 @@
-Special Build of Keychon Q6 + VIA + Lowest Latency Scheduler and Debounces available + Capslock indictator enabled.
+Special Build of Keychon Q6 + VIA + Lowest Latency Scheduler (asym_eager_defer_pk) and Debounces (2ms) available + Capslock indictator enabled.
