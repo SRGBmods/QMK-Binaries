@@ -3,6 +3,7 @@ export function Version() { return "1.1.4"; }
 export function VendorId() { return 0x0000; }
 export function ProductId() { return 0x0000; }
 export function Publisher() { return "WhirlwindFX"; }
+export function Documentation(){ return "qmk/srgbmods-qmk-firmware"; }
 export function Size() { return [17, 6]; }
 export function DefaultPosition(){return [10, 100]; }
 export function DefaultScale(){return 8.0;}
@@ -16,9 +17,9 @@ export function ControllableParameters()
 {
 	return [
 		{"property":"shutdownMode", "group":"lighting", "label":"Shutdown Mode", "type":"combobox", "values":["SignalRGB", "Hardware"], "default":"SignalRGB"},
-		{"property":"shutdownColor", "group":"lighting", "label":"Shutdown Color", "min":"0", "max":"360", "type":"color", "default":"000000"},
+		{"property":"shutdownColor", "group":"lighting", "label":"Shutdown Color", "min":"0", "max":"360", "type":"color", "default":"#009bde"},
 		{"property":"LightingMode", "group":"lighting", "label":"Lighting Mode", "type":"combobox", "values":["Canvas", "Forced"], "default":"Canvas"},
-		{"property":"forcedColor", "group":"lighting", "label":"Forced Color", "min":"0", "max":"360", "type":"color", "default":"009bde"},
+		{"property":"forcedColor", "group":"lighting", "label":"Forced Color", "min":"0", "max":"360", "type":"color", "default":"#009bde"},
 	];
 }
 
@@ -83,25 +84,24 @@ export function Render()
 	sendColors();
 }
 
-export function Shutdown()
-{
-	if (shutdownMode === "SignalRGB")
-	{
-		sendColors(true);
-	}
-	else
-	{
-		effectDisable();
+export function Shutdown(SystemSuspending) {
+
+	if(SystemSuspending) {
+		sendColors("#000000"); // Go Dark on System Sleep/Shutdown
+	} else {
+		if (shutdownMode === "SignalRGB") {
+			sendColors(shutdownColor);
+		} else {
+			effectDisable();
+		}
 	}
 
 }
 
-function commandHandler()
-{
+function commandHandler() {
 	const readCounts = [];
 
-	do
-	{
+	do {
 		const returnpacket = device.read([0x00], 32, 10);
 		processCommands(returnpacket);
 
@@ -109,8 +109,7 @@ function commandHandler()
 
 		// Extra Read to throw away empty packets from Via
 		// Via always sends a second packet with the same Command Id.
-		if(IsViaKeyboard)
-		{
+		if(IsViaKeyboard) {
 			device.read([0x00], 32, 10);
 		}
 	}
@@ -118,10 +117,8 @@ function commandHandler()
 
 }
 
-function processCommands(data)
-{
-	switch(data[1])
-	{
+function processCommands(data) {
+	switch(data[1]) {
 	case 0x21:
 		returnQMKVersion(data);
 		break;
@@ -150,13 +147,12 @@ function requestQMKVersion() //Check the version of QMK Firmware that the keyboa
 	commandHandler();
 }
 
-function returnQMKVersion(data)
-{
+function returnQMKVersion(data) {
 	const QMKVersionByte1 = data[2];
 	const QMKVersionByte2 = data[3];
 	const QMKVersionByte3 = data[4];
 	device.log("QMK Version: " + QMKVersionByte1 + "." + QMKVersionByte2 + "." + QMKVersionByte3);
-	device.log("QMK SRGB Plugin Version: "+ Version() );
+	device.log("QMK SRGB Plugin Version: "+ Version());
 	device.pause(30);
 }
 
@@ -167,8 +163,7 @@ function requestSignalRGBProtocolVersion() //Grab the version of the SignalRGB P
 	commandHandler();
 }
 
-function returnSignalRGBProtocolVersion(data)
-{
+function returnSignalRGBProtocolVersion(data) {
 	const ProtocolVersionByte1 = data[2];
 	const ProtocolVersionByte2 = data[3];
 	const ProtocolVersionByte3 = data[4];
@@ -176,9 +171,9 @@ function returnSignalRGBProtocolVersion(data)
 	const SignalRGBProtocolVersion = ProtocolVersionByte1 + "." + ProtocolVersionByte2 + "." + ProtocolVersionByte3;
 	device.log(`SignalRGB Protocol Version: ${SignalRGBProtocolVersion}`);
 
-	if(PluginProtocolVersion !== SignalRGBProtocolVersion)
-	{
-		device.notify("Unsupported Protocol Version: ", `This plugin is intended for SignalRGB Protocol version ${PluginProtocolVersion}. This device is version: ${SignalRGBProtocolVersion}`, 0);
+
+	if(PluginProtocolVersion !== SignalRGBProtocolVersion) {
+		device.notify("Unsupported Protocol Version: ", `This plugin is intended for SignalRGB Protocol version ${PluginProtocolVersion}. This device is version: ${SignalRGBProtocolVersion}`, 1, "Documentation");
 	}
 
 	device.pause(30);
@@ -186,23 +181,21 @@ function returnSignalRGBProtocolVersion(data)
 
 function requestUniqueIdentifier() //Grab the unique identifier for this keyboard model
 {
-	if(device.write([0x00, 0x23], 32) === -1)
-	{
-		device.notify("Unsupported Firmware: ", `This device is not running SignalRGB-compatible firmware. Click the Open Troubleshooting Docs button to learn more.`, 0);
+	if(device.write([0x00, 0x23], 32) === -1) {
+		device.notify("Unsupported Firmware: ", `This device is not running SignalRGB-compatible firmware. Click the Open Troubleshooting Docs button to learn more.`, 1, "Documentation");
 	}
 
 	device.pause(30);
 	commandHandler();
 }
 
-function returnUniqueIdentifier(data)
-{
+
+function returnUniqueIdentifier(data) {
 	const UniqueIdentifierByte1 = data[2];
 	const UniqueIdentifierByte2 = data[3];
 	const UniqueIdentifierByte3 = data[4];
 
-	if(!(UniqueIdentifierByte1 === 0 && UniqueIdentifierByte2 === 0 && UniqueIdentifierByte3 === 0))
-	{
+	if(!(UniqueIdentifierByte1 === 0 && UniqueIdentifierByte2 === 0 && UniqueIdentifierByte3 === 0)) {
 		device.log("Unique Device Identifier: " + UniqueIdentifierByte1 + UniqueIdentifierByte2 + UniqueIdentifierByte3);
 	}
 
@@ -216,37 +209,31 @@ function requestTotalLeds() //Calculate total number of LEDs
 	commandHandler();
 }
 
-function returnTotalLeds(data)
-{
+function returnTotalLeds(data) {
 	LEDCount = data[2];
 	device.log("Device Total LED Count: " + LEDCount);
 	device.pause(30);
 }
 
-function requestFirmwareType()
-{
+function requestFirmwareType() {
 	device.write([0x00, 0x28], 32);
 	device.pause(30);
 	commandHandler();
 }
 
-function returnFirmwareType(data)
-{
+function returnFirmwareType(data) {
 	const FirmwareTypeByte = data[2];
 
-	if(!(FirmwareTypeByte === MainlineQMKFirmware || FirmwareTypeByte === VIAFirmware))
-	{
-		device.notify("Unsupported Firmware: ", "Click Show Console, and then click on troubleshooting for your keyboard to find out more.", 0);
+	if(!(FirmwareTypeByte === MainlineQMKFirmware || FirmwareTypeByte === VIAFirmware)) {
+		device.notify("Unsupported Firmware: ", "Click Show Console, and then click on troubleshooting for your keyboard to find out more.", 1, "Documentation");
 	}
 
-	if(FirmwareTypeByte === MainlineQMKFirmware)
-	{
+	if(FirmwareTypeByte === MainlineQMKFirmware) {
 		IsViaKeyboard = false;
 		device.log("Firmware Type: Mainline");
 	}
 
-	if(FirmwareTypeByte === VIAFirmware)
-	{
+	if(FirmwareTypeByte === VIAFirmware) {
 		IsViaKeyboard = true;
 		device.log("Firmware Type: VIA");
 	}
@@ -266,26 +253,19 @@ function effectDisable() //Revert to Hardware Mode
 	device.pause(30);
 }
 
-function grabColors(shutdown = false)
-{
+function grabColors(overrideColor) {
 	const rgbdata = [];
 
-	for(let iIdx = 0; iIdx < vKeys.length; iIdx++)
-	{
+	for(let iIdx = 0; iIdx < vKeys.length; iIdx++) {
 		const iPxX = vKeyPositions[iIdx][0];
 		const iPxY = vKeyPositions[iIdx][1];
 		let color;
 
-		if(shutdown)
-		{
-			color = hexToRgb(shutdownColor);
-		}
-		else if (LightingMode === "Forced")
-		{
+		if(overrideColor) {
+			color = hexToRgb(overrideColor);
+		} else if (LightingMode === "Forced") {
 			color = hexToRgb(forcedColor);
-		}
-		else
-		{
+		} else {
 			color = device.color(iPxX, iPxY);
 		}
 
@@ -298,16 +278,14 @@ function grabColors(shutdown = false)
 	return rgbdata;
 }
 
-function sendColors(shutdown = false)
-{
-	let rgbdata = grabColors(shutdown);
+function sendColors(overrideColor) {
+	const rgbdata = grabColors(overrideColor);
 
 	const LedsPerPacket = 9;
 	let BytesSent = 0;
 	let BytesLeft = rgbdata.length;
 
-	while(BytesLeft > 0)
-	{
+	while(BytesLeft > 0) {
 		const BytesToSend = Math.min(LedsPerPacket * 3, BytesLeft);
 		StreamLightingData(Math.floor(BytesSent / 3), rgbdata.splice(0, BytesToSend));
 
@@ -316,16 +294,14 @@ function sendColors(shutdown = false)
 	}
 }
 
-function StreamLightingData(StartLedIdx, RGBData)
-{
+function StreamLightingData(StartLedIdx, RGBData) {
 	const packet = [0x00, 0x24, StartLedIdx, Math.floor(RGBData.length / 3)];
 
 	packet.push(...RGBData);
 	device.write(packet, 33);
 }
 
-function hexToRgb(hex)
-{
+function hexToRgb(hex) {
 	const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
 	const colors = [];
 	colors[0] = parseInt(result[1], 16);
@@ -335,12 +311,10 @@ function hexToRgb(hex)
 	return colors;
 }
 
-export function Validate(endpoint)
-{
+export function Validate(endpoint) {
 	return endpoint.interface === 1;
 }
 
-export function Image()
-{
+export function Image() {
 	return "";
 }
