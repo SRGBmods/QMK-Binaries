@@ -1,4 +1,3 @@
-/*jshint esversion: 6 */
 export function Name() { return "Keychron K2 Pro QMK Keyboard"; }
 export function Version() { return "1.1.4"; }
 export function VendorId() { return 0x3434; }
