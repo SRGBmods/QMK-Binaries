@@ -1,9 +1,8 @@
-#include "qmk_version.h"
-
 /* 
 Part of enum via_command_id {
+    goes after id_dynamic_keymap_set_encoder           = 0x15,
 */
-enum via_command_id {
+
     id_signalrgb_qmk_version                = 0x21,
     id_signalrgb_protocol_version           = 0x22,
     id_signalrgb_unique_identifier          = 0x23,
@@ -12,7 +11,7 @@ enum via_command_id {
     id_signalrgb_effect_disable             = 0x26,
     id_signalrgb_total_leds                 = 0x27,
     id_signalrgb_firmware_type              = 0x28,
-};
+
 
 /* This follows directly after via_command_id */
 

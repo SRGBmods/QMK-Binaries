@@ -1,7 +1,5 @@
 #pragma once
 
-#include "qmk_version.h"
-
 enum signalrgb_commands
 {
     GET_QMK_VERSION = 0x21,
