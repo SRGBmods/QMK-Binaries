@@ -11,7 +11,7 @@ If you wish to compile your own yourself the directions can be found [here](http
 # For GPL Compliance (Full Source code): #
 [QMK Mainline + SignalRGB Merged Source](https://gitlab.com/signalrgb/qmk_firmware/) & [SonixQMK + SignalRGB Merged Source](https://gitlab.com/signalrgb/qmk_firmware/-/tree/Sonix_QMKRelease_1.0).
 
-Additionally see the following [directory](https://github.com/SRGBmods/QMK-Binaries/tree/main/GPL).
+Additionally see the following [directory](https://github.com/SRGBmods/QMK-Binaries/tree/main/GPL), these are the files (with comments) for hand patching SignalRGB Protocol support into 3rd party QMK forks.
 
 ---
 
