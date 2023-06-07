@@ -4,7 +4,7 @@
 
 If you wish to compile your own yourself the directions can be found [here](https://docs.signalrgb.com/qmk/building-firmware-from-source).
 	
-**These binaries may include releases from different "playground(s)" and QMK repositories. stability is not guaranteedm**, but Naitoshedo will definitely attempt to help you as well as our other moderators & occasionaly staff.
+**These binaries may include releases from different "playground(s)" and QMK repositories. stability is not guaranteed**, but Naitoshedo will definitely attempt to help you as well as our other moderators & occasionaly staff.
 
 ---
 
