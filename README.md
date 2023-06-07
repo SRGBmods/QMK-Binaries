@@ -1,4 +1,7 @@
 ![SRGBmods QMK Builds,100%](https://srgbmods.net/img/srgbmods-qmk.png)
+
+Need help and cannot be bothered to read anything below this? Join this [**Discord**](https://discord.gg/jY2xrWXXRc) assign yourself the QMK role from the pull down. Then puruse the channels provided for QMK + SignalRGB users.
+
 # QMK Binaries #
 [QMK Firmware](https://qmk.fm/) that is supported by [SignalRGB](https://www.signalrgb.com) (includes protocol information for direct ARGB mode), compiled for your convenience and ready to install!
 
