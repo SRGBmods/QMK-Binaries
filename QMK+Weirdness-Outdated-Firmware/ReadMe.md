@@ -6,6 +6,8 @@ It is highly recommended that you have an original firmware for your keyboard + 
 
 If you accept this, feel free to try these firmware files. (Of course as always we recommend VIA builds first!)
 
+# _Make sure to click the download button for your specific firmware, do not save as or view raw!_ #
+
 ---
 
 **One thing of note if you are attempting to use VIA to configure your keyboard you _must_ quit SignalRGB before running either software**
