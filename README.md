@@ -39,7 +39,7 @@ If you notice something missing (keyboard or variation of a keyboard) or have an
 
 ---
 
-### Start here if you are new ***
+### Start here if you are new ###
 [QMK + VIA builds](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BVIA-Firmware) below this may help narrow things down, but there are several QMK forks not listed, meanwhile we still suggest using a VIA build.
 
 ---
