@@ -46,6 +46,7 @@ If you notice something missing (keyboard or variation of a keyboard) or have an
 
 ### QMK+VIA-Firmware (_We recommend these_): ###
 **Start Here when in doubt!** mainline is the most reliable!
+
 **One thing of note if you are attempting to use VIA or Vial to configure your keyboard you _must_ quit SignalRGB before running either software**
 #### QMK Mainline ####
 * **[0.21.1](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BVIA-Firmware/0.21.1)** is the new [QMK Mainline github](https://github.com/qmk/qmk_firmware), currently being pulled and fixes to boards are applied and uploaded.
