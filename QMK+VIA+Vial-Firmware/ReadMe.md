@@ -1,6 +1,6 @@
-# _Make sure to click the download button for your specific firmware, do not save as or view raw!_ #
+# _Make sure to click the download button for your specific firmware (if a bin file), otherwise view the firmware file then right click and choose "save link as" on the raw button!_ #
 
-**One thing of note if you are attempting to use Vial to configure your keyboard you _must_ quit SignalRGB before running either software**
+**One thing of note if you are attempting to use VIA to configure your keyboard you _must_ quit SignalRGB before running either software**
 
 To use these files you may find QMK Toolbox helpful:
 https://github.com/qmk/qmk_toolbox/releases/
