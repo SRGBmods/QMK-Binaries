@@ -69,7 +69,7 @@ If you notice something missing (keyboard or variation of a keyboard) or have an
 ---
 
 ### QMK+Default-Firmware: (_When all else fails_) ###
-**Please note:** _Default builds are soon to be deprecated, as VIA builds or XAP builds will replace all except for speciality builds._
+**Please note:** _Default builds will be deprecated, as VIA builds or XAP builds will replace all except for speciality builds._
 #### QMK Mainline ####
 * **[0.21.1](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BDefault-Firmware/0.21.1)** is the new [QMK Mainline github](https://github.com/qmk/qmk_firmware), currently being pulled and fixes to boards are applied and uploaded (This is default without VIA support).
 #### SonixQMK ####
