@@ -42,6 +42,13 @@ gmmk/gmmk2/p65/ansi:via                 0 0 7
 gmmk/gmmk2/p65/iso:via                  0 0 8
 gmmk/gmmk2/p96/ansi:via                 0 0 9
 gmmk/gmmk2/p96/iso:via                  0 0 10
+redragon/k530:via                       0 1 1
+redragon/k552/rev1:via                  0 1 2
+redragon/k552/rev2:via                  0 1 2
+redragon/k556:via                       0 1 3
+redragon/k580:via                       0 1 4
+redragon/k582:via                       0 1 3
+redragon/k630:via                       0 1 6
 */
 
 
