@@ -86,15 +86,16 @@ export function Render()
 	sendColors();
 }
 
-export function Shutdown()
-{
-	if (shutdownMode === "SignalRGB")
-	{
-		sendColors(true);
-	}
-	else
-	{
-		effectDisable();
+export function Shutdown(SystemSuspending) {
+
+	if(SystemSuspending) {
+		sendColors("#000000"); // Go Dark on System Sleep/Shutdown
+	} else {
+		if (shutdownMode === "SignalRGB") {
+			sendColors(shutdownColor);
+		} else {
+			effectDisable();
+		}
 	}
 
 }
