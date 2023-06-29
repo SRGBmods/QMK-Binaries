@@ -1,0 +1,1 @@
+Special Build of Keychon Q1v2 + VIA + Lowest Latency Scheduler (asym_eager_defer_pk) and Debounces (2 or 3ms) available + Capslock indictator enabled. (Will match the most recent mainline QMK build version)
