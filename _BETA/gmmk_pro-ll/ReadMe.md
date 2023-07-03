@@ -1,1 +1,0 @@
-Special Build of GMMK Pro + VIA + Lowest Latency Scheduler (asym_eager_defer_pk) and Debounces (2ms to 6ms increase ms if you have chatter when typing) available. (0.21.3 QMK mainline)
