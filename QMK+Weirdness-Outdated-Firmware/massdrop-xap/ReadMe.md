@@ -5,13 +5,11 @@ Source back port from <https://github.com/Massdrop/qmk_firmware/tree/feature/rio
 The directories here are the layouts provided by Massdrop. (Use VIA if you can of course)
 
 Now a bit of warning from QMK Mainline that still applies:
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-This MCU support package has a lack of support from the upstream provider (Massdrop).
+**This MCU support package has a lack of support from the upstream provider (Massdrop).
 There are currently questions about valid licensing, and at this stage it's likely
 their boards and supporting code will be removed from QMK in the near future. Please
 contact Massdrop for support, and encourage them to align their future board design
-choices to gain proper license compatibility with QMK.
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+choices to gain proper license compatibility with QMK.**
 
 ---
 
@@ -21,7 +19,7 @@ It is highly recommended that you have an original firmware for your keyboard + 
 
 If you accept this, feel free to try these firmware files. (Of course as always we recommend VIA builds first!)
 
-Feel free to review + use the patch in [this directory](https://github.com/SRGBmods/QMK-Binaries/tree/main/GPL/qmk_firmware) against [ab00a](https://github.com/ab00a/qmk_firmware)
+Feel free to review + use the patch in [this directory](https://github.com/SRGBmods/QMK-Binaries/tree/main/GPL/qmk_firmware) against [Massdrop]([https://github.com/ab00a/qmk_firmware](https://github.com/Massdrop/qmk_firmware/tree/feature/riot_xap))
 
 ---
 
