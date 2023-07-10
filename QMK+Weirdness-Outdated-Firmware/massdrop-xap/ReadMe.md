@@ -6,11 +6,11 @@ The directories here are the layouts provided by Massdrop. (Use VIA if you can o
 
 Now a bit of warning from QMK Mainline that still applies:
 
-This MCU support package has a lack of support from the upstream provider (Massdrop).
+**This MCU support package has a lack of support from the upstream provider (Massdrop).
 There are currently questions about valid licensing, and at this stage it's likely
 their boards and supporting code will be removed from QMK in the near future. Please
 contact Massdrop for support, and encourage them to align their future board design
-choices to gain proper license compatibility with QMK.
+choices to gain proper license compatibility with QMK.**
 
 ---
 
