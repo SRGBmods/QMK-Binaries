@@ -3,7 +3,9 @@
 **One thing of note if you are attempting to use VIA to configure your keyboard you _must_ quit SignalRGB before running either software**
 
 These firmware are built using the keychron keymap which includes some quality of life functions in the firmware directly from Keychron.
+
 See https://github.com/qmk/qmk_firmware/tree/master/keyboards/keychron/common for these. (Specifically adds Cortana, Siri, LaunchPad, File Explorer, Snapshot keycodes)
+
 These also provide VIA support so technically these may be more preferable in comparsion to the standard VIA builds included in mainline QMK release.
 
 To use these files you may find QMK Toolbox helpful:
