@@ -1,1 +1,1 @@
-Special Build of Keychon Q6 + VIA + Lowest Latency Scheduler (asym_eager_defer_pk) and Debounces (0 to 5ms (default debounce)) available + Capslock indictator enabled. (Will match the most recent mainline QMK build version)
+Special Build of Keychon Q6 + Keychron Keymap (Includes VIA support) + Lowest Latency Scheduler (asym_eager_defer_pk) and Debounces (0 to 5ms (default debounce)) available + Capslock indictator enabled. (Will match the most recent mainline QMK build version)
