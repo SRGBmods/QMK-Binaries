@@ -4,7 +4,7 @@ export function VendorId() { return 0x320F; }
 export function ProductId() { return 0x5088; }
 export function Publisher() { return "WhirlwindFX"; }
 export function Documentation(){ return "qmk/srgbmods-qmk-firmware"; }
-export function Size() { return [5, 5]; }
+export function Size() { return [6, 7]; }
 export function DefaultPosition(){return [10, 100]; }
 export function DefaultScale(){return 8.0;}
 /* global
@@ -26,54 +26,31 @@ export function ControllableParameters()
 //Plugin Version: Built for Protocol V1.0.4
 
 const vKeys = [
-	0,   1,   2,   3,    17,
-	4,   5,   6,   7,    18,
-	8,   9,   10,        19,
-	11,  12,  13,  14,   20,
-	15,            16,   21,
-	22,
-	23,
-	24,
-	25,
-	26,
-	27,
-	28,
-	29,
-	30
+	22, 0,   1,   2,   3,    17,
+	23, 4,   5,   6,   7,    18,
+	24, 8,   9,   10,        19,
+	25, 11,  12,  13,  14,   20,
+	26, 15,            16,   21,
 ];
 
 const vKeyNames = [
-	"Numlock", "/",  "*", "-", "Sidestrip 1",
-	"7",       "8",  "9", "+", "Sidestrip 2",
-	"4", "5", "6",             "Sidestrip 3",
-	"1", "2", "3",   "Enter",  "Sidestrip 4",
-	"0", ".",                  "Sidestrip 5",
-	                           "Sidestrip 6",
-	                           "Sidestrip 7",
-	                           "Sidestrip 8",
-	                           "Sidestrip 9",
-	                           "Sidestrip 10",
-	                           "Sidestrip 11",
-	                           "Sidestrip 12",
-	                           "Sidestrip 13",
-	                           "Sidestrip 14"
+	"Sidestrip 8", "Numlock", "/",  "*", "-",  "Sidestrip 1",
+	"Sidestrip 9", "7",       "8",  "9", "+",  "Sidestrip 2",
+	"Sidestrip 10", "4", "5", "6",             "Sidestrip 3",
+	"Sidestrip 11", "1", "2", "3",   "Enter",  "Sidestrip 4",
+	"Sidestrip 12", "0", ".",                  "Sidestrip 5",
+	"Sidestrip 13",                            "Sidestrip 6",
+	"Sidestrip 14",                            "Sidestrip 7",
 ];
 
 const vKeyPositions = [
-	[0, 0], [1, 0], [2, 0], [3, 0], [4, 0],
-	[0, 1], [1, 1], [2, 1], [3, 1], [4, 1],
-	[0, 2], [1, 2], [2, 2],         [4, 2],
-	[0, 3], [1, 3], [2, 3], [3, 3], [4, 3],
-	[0, 4], [1, 4],                 [4, 4],
-	                                [4, 5],
-	                                [4, 6],
-	                                [4, 7],
-	                                [4, 8],
-	                                [4, 9],
-	                               [4, 10],
-	                               [4, 11],
-	                               [4, 12],
-	                               [4, 13]
+	[5,0], [0, 0], [1, 0], [2, 0], [3, 0], [4, 0],
+	[5,1], [0, 1], [1, 1], [2, 1], [3, 1], [4, 1],
+	[5,2], [0, 2], [1, 2], [2, 2],         [4, 2],
+	[5,3], [0, 3], [1, 3], [2, 3], [3, 3], [4, 3],
+	[5,4], [0, 4], [1, 4],                 [4, 4],
+	[5,5],                                 [4, 5],
+	[5,6],                                 [4, 6]
 ];
 
 let LEDCount = 0;
