@@ -82,6 +82,7 @@ If you notice something missing (keyboard or variation of a keyboard) or have an
 **If you are using VIA or Vial currently, you should save your current mappings (layout) e.g. back it up before flashing that way you can restore it once the flash is complete!**
 
 To use these files you may find [QMK Toolbox](https://github.com/qmk/qmk_toolbox/releases/) helpful.
+**Make sure to go to the Tools menu -> and Install Drivers!**
 
 Or if a Sonix based firmware [these directions](https://sonixqmk.github.io//SonixDocs/install/#4-flashing-the-firmware) should help.
 
