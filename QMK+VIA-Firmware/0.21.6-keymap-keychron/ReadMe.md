@@ -10,6 +10,7 @@ These also provide VIA support so technically these may be more preferable in co
 
 To use these files you may find QMK Toolbox helpful:
 https://github.com/qmk/qmk_toolbox/releases/
+**Make sure to go to the Tools menu -> and Install Drivers!**
 
 You will also need to follow the directions from your Keyboard manufacturer to put it bootloader mode in order to use QMK Toolbox.
 (Check their website for directions, you should honestly check there anyways for firmware in case you to need to factory restore as well.)
