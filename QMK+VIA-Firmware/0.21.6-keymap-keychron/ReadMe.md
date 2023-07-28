@@ -1,16 +1,15 @@
 # _Make sure to click the download button for your specific firmware (if a bin file), otherwise view the firmware file then right click and choose "save link as" on the raw button!_ #
 
+These builds are the keychron keymap (which includes VIA support) and are using a 1000hz polling rate.
+
 **One thing of note if you are attempting to use VIA to configure your keyboard you _must_ quit SignalRGB before running either software**
-
-These firmware are built using the keychron keymap which includes some quality of life functions in the firmware directly from Keychron.
-
-See https://github.com/qmk/qmk_firmware/tree/master/keyboards/keychron/common for these. (Specifically adds Cortana, Siri, LaunchPad, File Explorer, Snapshot keycodes)
-
-These also provide VIA support so technically these may be more preferable in comparsion to the standard VIA builds included in mainline QMK release.
 
 To use these files you may find QMK Toolbox helpful:
 https://github.com/qmk/qmk_toolbox/releases/
 **Make sure to go to the Tools menu -> and Install Drivers!**
+
+Or if a sonix release:
+https://sonixqmk.github.io//SonixDocs/install/#4-flashing-the-firmware
 
 You will also need to follow the directions from your Keyboard manufacturer to put it bootloader mode in order to use QMK Toolbox.
 (Check their website for directions, you should honestly check there anyways for firmware in case you to need to factory restore as well.)
