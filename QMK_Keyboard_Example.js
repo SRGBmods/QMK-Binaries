@@ -1,5 +1,5 @@
 export function Name() { return "QMK Keyboard"; }
-export function Version() { return "1.1.4"; }
+export function Version() { return "1.1.5"; }
 export function VendorId() { return 0x0000; }
 export function ProductId() { return 0x0000; }
 export function Publisher() { return "WhirlwindFX"; }
@@ -70,6 +70,13 @@ export function LedPositions()
 	return vKeyPositions;
 }
 
+export function vKeysArrayCount()
+{
+	device.log('vKeys ' + vKeys.length);
+	device.log('vKeyNames ' + vKeyNames.length);
+	device.log('vKeyPositions ' + vKeyPositions.length);
+}
+
 export function Initialize()
 {
 	requestFirmwareType();
@@ -97,6 +104,7 @@ export function Shutdown(SystemSuspending) {
 			effectDisable();
 		}
 	}
+	vKeysArrayCount(); // For debugging array counts
 
 }
 
