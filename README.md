@@ -91,7 +91,11 @@ Or if a Sonix based firmware [these directions](https://sonixqmk.github.io//Soni
 You will also need to follow the directions from your Keyboard manufacturer to put your device in bootloader mode in order to use QMK Toolbox / Sonix Flasher. (Google is your friend!)
 (Check their website for directions, you should honestly check there anyways for firmware in case you to need to factory restore as well.)
 
-After flashing your firmware you will need a user plugin in SignalRGB in order for SignalRGB to talk to your keyboard. First see if your keyboard works immediately on launching SignalRGB, if that fails check our [user submitted plugins](https://github.com/SRGBmods/qmk-plugins) [![Click here to add this repo to SignalRGB](https://github.com/SRGBmods/qmk-plugins/blob/main/add-to-signalrgb.png)](https://srgbmods.net/s?p=addon/install?url=https://github.com/SRGBmods/qmk-plugins)
+After flashing your firmware you will need a user plugin in SignalRGB in order for SignalRGB to talk to your keyboard. First see if your keyboard works immediately on launching SignalRGB, if that fails check our [user submitted plugins](https://github.com/SRGBmods/qmk-plugins)
+
+[![Click here to add this repo to SignalRGB](https://github.com/SRGBmods/qmk-plugins/blob/main/add-to-signalrgb.png)](https://srgbmods.net/s?p=addon/install?url=https://github.com/SRGBmods/qmk-plugins)
+
+Using the above button will help keep your plugins up to date whenever any changes are made to them.
 
 And finally [here are the directions](https://docs.signalrgb.com/qmk/srgbmods-qmk-firmware#user-plugin-creation) for creating your own user plugin.
 
