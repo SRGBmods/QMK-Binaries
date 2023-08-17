@@ -93,7 +93,7 @@ You will also need to follow the directions from your Keyboard manufacturer to p
 
 After flashing your firmware you will need a user plugin in SignalRGB in order for SignalRGB to talk to your keyboard. First see if your keyboard works immediately on launching SignalRGB, if that fails check our [user submitted plugins](https://github.com/SRGBmods/qmk-plugins)
 
-[![Click here to add this repo to SignalRGB](https://github.com/SRGBmods/qmk-plugins/blob/main/add-to-signalrgb.png)](https://srgbmods.net/s?p=addon/install?url=https://github.com/SRGBmods/qmk-plugins)
+[![Click here to add this repo to SignalRGB](https://github.com/SRGBmods/qmk-plugins/blob/main/add-to-signalrgb.png "Click here to add this repo to SignalRGB")](https://srgbmods.net/s?p=addon/install?url=https://github.com/SRGBmods/qmk-plugins)
 
 Using the above button will help keep your plugins up to date whenever any changes are made to them.
 
