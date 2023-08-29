@@ -1,5 +1,12 @@
 /*
 This goes below
+#include "via.h"
+*/
+
+#include "qmk_version.h"
+
+/*
+This goes below
 // Called by QMK core to process VIA-specific keycodes.
 */
 uint8_t packet[32];

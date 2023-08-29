@@ -2,6 +2,7 @@
 #    error "RAW HID Communication is not enabled" //This should be impossible to run into afaik. Common_features ensures RAWHID is enabled.
 #endif
 
+#include "qmk_version.h"
 #include "version.h"
 #include "quantum.h"
 #include "signalrgb.h"

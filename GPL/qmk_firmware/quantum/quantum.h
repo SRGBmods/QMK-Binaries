@@ -1,11 +1,3 @@
-/*
-We add this right after 
-#pragma once
-
-*/
-
-#include "qmk_version.h"
-
 /* 
 We put this below:
 
