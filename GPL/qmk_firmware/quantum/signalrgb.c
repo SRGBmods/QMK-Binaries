@@ -3,6 +3,7 @@
 #endif
 
 #include "qmk_version.h"
+#include "protocol/host.h"
 #include "version.h"
 #include "quantum.h"
 #include "signalrgb.h"

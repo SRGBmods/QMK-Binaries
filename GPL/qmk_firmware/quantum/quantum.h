@@ -1,6 +1,5 @@
 /* 
 We put this below:
-
 #ifdef JOYSTICK_ENABLE
 #    include "process_joystick.h"
 #endif

@@ -4,6 +4,7 @@ This goes below
 */
 
 #include "qmk_version.h"
+#include "protocol/host.h"
 
 /*
 This goes below
