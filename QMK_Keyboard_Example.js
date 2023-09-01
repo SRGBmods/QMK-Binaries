@@ -1,5 +1,5 @@
 export function Name() { return "QMK Keyboard"; }
-export function Version() { return "1.1.5"; }
+export function Version() { return "1.1.6"; }
 export function VendorId() { return 0x0000; }
 export function ProductId() { return 0x0000; }
 export function Publisher() { return "WhirlwindFX"; }
@@ -93,17 +93,25 @@ export function Render()
 	sendColors();
 }
 
-export function Shutdown(SystemSuspending) {
+export function Shutdown(SystemSuspending)
+{
 
-	if(SystemSuspending) {
+	if(SystemSuspending)
+	{
 		sendColors("#000000"); // Go Dark on System Sleep/Shutdown
-	} else {
-		if (shutdownMode === "SignalRGB") {
+	}
+	else
+	{
+		if (shutdownMode === "SignalRGB")
+		{
 			sendColors(shutdownColor);
-		} else {
+		}
+		else
+		{
 			effectDisable();
 		}
 	}
+
 	vKeysArrayCount(); // For debugging array counts
 
 }
@@ -278,28 +286,39 @@ function effectDisable() //Revert to Hardware Mode
 	device.pause(30);
 }
 
-function grabColors(shutdown = false)
+function createSolidColorArray(color)
 {
-	const rgbdata = [];
+	const rgbdata = new Array(vKeys.length * 3).fill(0);
+
+	for(let iIdx = 0; iIdx < vKeys.length; iIdx++)
+	{
+		const iLedIdx = vKeys[iIdx] * 3;
+		rgbdata[iLedIdx] = color[0];
+		rgbdata[iLedIdx+1] = color[1];
+		rgbdata[iLedIdx+2] = color[2];
+	}
+
+	return rgbdata;
+}
+
+function grabColors(overrideColor)
+{
+	if(overrideColor)
+	{
+		return createSolidColorArray(hexToRgb(overrideColor));
+	}
+	else if (LightingMode === "Forced")
+	{
+		return createSolidColorArray(hexToRgb(forcedColor));
+	}
+
+	const rgbdata = new Array(vKeys.length * 3).fill(0);
 
 	for(let iIdx = 0; iIdx < vKeys.length; iIdx++)
 	{
 		const iPxX = vKeyPositions[iIdx][0];
 		const iPxY = vKeyPositions[iIdx][1];
-		let color;
-
-		if(shutdown)
-		{
-			color = hexToRgb(shutdownColor);
-		}
-		else if (LightingMode === "Forced")
-		{
-			color = hexToRgb(forcedColor);
-		}
-		else
-		{
-			color = device.color(iPxX, iPxY);
-		}
+		let color = device.color(iPxX, iPxY);
 
 		const iLedIdx = vKeys[iIdx] * 3;
 		rgbdata[iLedIdx] = color[0];
@@ -310,9 +329,9 @@ function grabColors(shutdown = false)
 	return rgbdata;
 }
 
-function sendColors(shutdown = false)
+function sendColors(overrideColor)
 {
-	let rgbdata = grabColors(shutdown);
+	const rgbdata = grabColors(overrideColor);
 
 	const LedsPerPacket = 9;
 	let BytesSent = 0;
@@ -330,9 +349,7 @@ function sendColors(shutdown = false)
 
 function StreamLightingData(StartLedIdx, RGBData)
 {
-	const packet = [0x00, 0x24, StartLedIdx, Math.floor(RGBData.length / 3)];
-
-	packet.push(...RGBData);
+	const packet = [0x00, 0x24, StartLedIdx, Math.floor(RGBData.length / 3)].concat(RGBData);
 	device.write(packet, 33);
 }
 
