@@ -4,7 +4,7 @@ export function VendorId() { return 0x0000; }
 export function ProductId() { return 0x0000; }
 export function Publisher() { return "WhirlwindFX"; }
 export function Documentation(){ return "qmk/srgbmods-qmk-firmware"; }
-export function Size() { return [1, 1]; }
+export function Size() { return [21, 6]; }
 export function DefaultPosition(){return [10, 100]; }
 export function DefaultScale(){return 8.0;}
 /* global
@@ -36,56 +36,25 @@ const vKeyPositions = [
 
 ];
 
-const Keyboard = {
-	Left : {
-		devicename: "Left Side",
-		ledids: [
-			0, 1, 2, 3,		//4
-			4, 5, 6, 7,		//4
-			8, 9, 10, 11, 	//4
-		],
-		lednames: [
-			"Left 1", "Left 2", "Left 3", "Left 4",		//4
-			"Left 5", "Left 6", "Left 7", "Left 8",		//4
-			"Left 9", "Left 10", "Left 11", "Left 12",	//4
-		],
-		ledpos:	[
-			[0, 0], [1, 0], [2, 0], [3, 0],	//4
-			[0, 1], [1, 1], [2, 1], [3, 1], //4
-			[0, 2], [1, 2], [2, 2], [3, 2], //4
-		],
-		width: 4,
-		height: 3,
-		image: Image()
-	},
-	Right : {
-		devicename: "Right Side",
-		ledids: [
-			12, 13, 14, 15, //4
-			16, 17, 18, 19, //4
-			20, 21, 22, 23, //4
-		],
-		lednames: [
-			"Left 1", "Left 2", "Left 3", "Left 4",		//4
-			"Left 5", "Left 6", "Left 7", "Left 8",		//4
-			"Left 9", "Left 10", "Left 11", "Left 12",	//4
-		],
-		ledpos:	[
-			[0, 0], [1, 0], [2, 0], [3, 0],	//4
-			[0, 1], [1, 1], [2, 1], [3, 1],	//4
-			[0, 2], [1, 2], [2, 2], [3, 2],	//4
-		],
-		width: 4,
-		height: 3,
-		image: Image()
-	}
-};
-
 let LEDCount = 0;
 let IsViaKeyboard = false;
 const MainlineQMKFirmware = 1;
 const VIAFirmware = 2;
 const PluginProtocolVersion = "1.0.4";
+
+export function LedNames() {
+	return vKeyNames;
+}
+
+export function LedPositions() {
+	return vKeyPositions;
+}
+
+export function vKeysArrayCount() {
+	device.log('vKeys ' + vKeys.length);
+	device.log('vKeyNames ' + vKeyNames.length);
+	device.log('vKeyPositions ' + vKeyPositions.length);
+}
 
 export function Initialize() {
 	requestFirmwareType();
@@ -94,18 +63,6 @@ export function Initialize() {
 	requestUniqueIdentifier();
 	requestTotalLeds();
 	effectEnable();
-
-	device.createSubdevice("LeftSide");
-	device.setSubdeviceName("LeftSide", `${Keyboard.Left.devicename}`);
-	device.setSubdeviceImage("LeftSide", Keyboard.Left.image);
-	device.setSubdeviceSize("LeftSide", Keyboard.Left.width, Keyboard.Left.height);
-	device.setSubdeviceLeds("LeftSide", Keyboard.Left.lednames, Keyboard.Left.ledpos);
-
-	device.createSubdevice("RightSide");
-	device.setSubdeviceName("RightSide", `${Keyboard.Right.devicename}`);
-	device.setSubdeviceImage("RightSide", Keyboard.Right.image);
-	device.setSubdeviceSize("RightSide", Keyboard.Right.width, Keyboard.Right.height);
-	device.setSubdeviceLeds("RightSide", Keyboard.Right.lednames, Keyboard.Right.ledpos);
 
 }
 
@@ -124,6 +81,8 @@ export function Shutdown(SystemSuspending) {
 			effectDisable();
 		}
 	}
+
+	vKeysArrayCount(); // For debugging array counts
 
 }
 

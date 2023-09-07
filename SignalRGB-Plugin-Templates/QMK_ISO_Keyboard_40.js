@@ -4,7 +4,7 @@ export function VendorId() { return 0x0000; }
 export function ProductId() { return 0x0000; }
 export function Publisher() { return "WhirlwindFX"; }
 export function Documentation(){ return "qmk/srgbmods-qmk-firmware"; }
-export function Size() { return [1, 1]; }
+export function Size() { return [12, 4]; }
 export function DefaultPosition(){return [10, 100]; }
 export function DefaultScale(){return 8.0;}
 /* global
@@ -25,67 +25,45 @@ export function ControllableParameters() {
 //Plugin Version: Built for Protocol V1.0.4
 
 const vKeys = [
-
+	 0,  1,  2,  3,  4,  5, 6, 7, 8, 9, 10, 11,		//12
+	12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, //12
+	24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, //12
+	36,	37,	38,			39, 			40, 41,		//6
 ];
 
 const vKeyNames = [
-
+	"Esc", "Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P", "Backspace",	//12
+	"Tab", "A", "S", "D", "F", "G", "H", "J", "K", "L", "#", "Enter",		//12
+	"Left Shift", "\|", "Z", "X", "C", "V", "B", "N", "M", ",", ".", "/",	//12
+	"Left Ctrl", "Left Win", "Left Alt", "Space", "Right Alt", "Menu",		//6
 ];
 
 const vKeyPositions = [
-
+	[0, 0], [1, 0], [2, 0], [3, 0], [4, 0], [5, 0], [6, 0], [7, 0], [8, 0], [9, 0], [10, 0], [11, 0], //12
+	[0, 1], [1, 1], [2, 1], [3, 1], [4, 1], [5, 1], [6, 1], [7, 1], [8, 1], [9, 1], [10, 1], [11, 1], //12
+	[0, 2], [1, 2],	[1, 2], [2, 2], [3, 2], [4, 2], [5, 2], [6, 2], [7, 2], [8, 2], [ 9, 2], [10, 2], //12
+	[0, 3], [1, 3], [2, 3], 						[3, 3], 						[ 4, 3], [ 5, 3], //6
 ];
-
-const Keyboard = {
-	Left : {
-		devicename: "Left Side",
-		ledids: [
-			0, 1, 2, 3,		//4
-			4, 5, 6, 7,		//4
-			8, 9, 10, 11, 	//4
-		],
-		lednames: [
-			"Left 1", "Left 2", "Left 3", "Left 4",		//4
-			"Left 5", "Left 6", "Left 7", "Left 8",		//4
-			"Left 9", "Left 10", "Left 11", "Left 12",	//4
-		],
-		ledpos:	[
-			[0, 0], [1, 0], [2, 0], [3, 0],	//4
-			[0, 1], [1, 1], [2, 1], [3, 1], //4
-			[0, 2], [1, 2], [2, 2], [3, 2], //4
-		],
-		width: 4,
-		height: 3,
-		image: Image()
-	},
-	Right : {
-		devicename: "Right Side",
-		ledids: [
-			12, 13, 14, 15, //4
-			16, 17, 18, 19, //4
-			20, 21, 22, 23, //4
-		],
-		lednames: [
-			"Left 1", "Left 2", "Left 3", "Left 4",		//4
-			"Left 5", "Left 6", "Left 7", "Left 8",		//4
-			"Left 9", "Left 10", "Left 11", "Left 12",	//4
-		],
-		ledpos:	[
-			[0, 0], [1, 0], [2, 0], [3, 0],	//4
-			[0, 1], [1, 1], [2, 1], [3, 1],	//4
-			[0, 2], [1, 2], [2, 2], [3, 2],	//4
-		],
-		width: 4,
-		height: 3,
-		image: Image()
-	}
-};
 
 let LEDCount = 0;
 let IsViaKeyboard = false;
 const MainlineQMKFirmware = 1;
 const VIAFirmware = 2;
 const PluginProtocolVersion = "1.0.4";
+
+export function LedNames() {
+	return vKeyNames;
+}
+
+export function LedPositions() {
+	return vKeyPositions;
+}
+
+export function vKeysArrayCount() {
+	device.log('vKeys ' + vKeys.length);
+	device.log('vKeyNames ' + vKeyNames.length);
+	device.log('vKeyPositions ' + vKeyPositions.length);
+}
 
 export function Initialize() {
 	requestFirmwareType();
@@ -94,18 +72,6 @@ export function Initialize() {
 	requestUniqueIdentifier();
 	requestTotalLeds();
 	effectEnable();
-
-	device.createSubdevice("LeftSide");
-	device.setSubdeviceName("LeftSide", `${Keyboard.Left.devicename}`);
-	device.setSubdeviceImage("LeftSide", Keyboard.Left.image);
-	device.setSubdeviceSize("LeftSide", Keyboard.Left.width, Keyboard.Left.height);
-	device.setSubdeviceLeds("LeftSide", Keyboard.Left.lednames, Keyboard.Left.ledpos);
-
-	device.createSubdevice("RightSide");
-	device.setSubdeviceName("RightSide", `${Keyboard.Right.devicename}`);
-	device.setSubdeviceImage("RightSide", Keyboard.Right.image);
-	device.setSubdeviceSize("RightSide", Keyboard.Right.width, Keyboard.Right.height);
-	device.setSubdeviceLeds("RightSide", Keyboard.Right.lednames, Keyboard.Right.ledpos);
 
 }
 
@@ -124,6 +90,8 @@ export function Shutdown(SystemSuspending) {
 			effectDisable();
 		}
 	}
+
+	vKeysArrayCount(); // For debugging array counts
 
 }
 
