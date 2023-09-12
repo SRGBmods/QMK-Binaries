@@ -12,16 +12,6 @@ For a guide on installing these: [please read the following](https://docs.signal
 
 ---
 
-**One thing of note if you are attempting to use VIA to configure your keyboard you _must_ quit SignalRGB before running either software**
-
-To use these files you may find QMK Toolbox helpful:
-https://github.com/qmk/qmk_toolbox/releases/
-
-Directions from Github repo can be found here:
-https://github.com/FrameworkComputer/qmk_firmware/tree/lotus/keyboards/framework
-
----
-
 ### Help with these binaries / user plugin creation ###
 
 [First please read directions below](https://github.com/SRGBmods/QMK-Binaries/#directions).
