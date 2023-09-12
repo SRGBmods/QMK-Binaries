@@ -6,6 +6,8 @@ It is highly recommended that you have an original firmware for your keyboard + 
 
 If you accept this, feel free to try these firmware files. (Of course as always we recommend VIA builds first!)
 
+For a guide on installing these: [please read the following](https://docs.signalrgb.com/qmk/framework-16-keyboard-and-macropad).
+
 # _Make sure to click the download button for your specific firmware, do not save as or view raw!_ #
 
 ---
