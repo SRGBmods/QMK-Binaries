@@ -1,6 +1,6 @@
 ## WARNING: These firmware files are massively unsupported / outdated use at your own risk ##
 
-These are alpha state firmware for the Framework 16 Laptop ARGB ANSI Keyboard and Macropad.
+These are alpha state firmware for the Framework ARGB ANSI Keyboard and Macropad.
 
 It is highly recommended that you have an original firmware for your keyboard + understand how to recover your keyboard from a possible brick (not working) state.
 
