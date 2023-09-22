@@ -1,0 +1,1 @@
+These are some beta firmware files where RGBLIGHT instead of RGB_MATRIX is being tested / experimented with.
