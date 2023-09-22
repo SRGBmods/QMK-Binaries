@@ -60,32 +60,53 @@ void led_streaming(uint8_t *data) //Stream data from HID Packets to Keyboard.
       uint8_t  r = data[offset];
       uint8_t  g = data[offset + 1];
       uint8_t  b = data[offset + 2];
-      
+
       //if ( ((index + i) == CAPS_LOCK_LED_INDEX && host_keyboard_led_state().caps_lock) || ((index + i) == NUM_LOCK_LED_INDEX && host_keyboard_led_state().num_lock) || ((index + i) == SCROLL_LOCK_LED_INDEX && host_keyboard_led_state().scroll_lock))   {
       //if ( ((index + i) == CAPS_LOCK_LED_INDEX && host_keyboard_led_state().caps_lock) || ((index + i) == NUM_LOCK_LED_INDEX && host_keyboard_led_state().num_lock))   {
+      //if ( (index + i) == CAPS_MAC_WIN_LED_INDEX && host_keyboard_led_state().caps_lock)   {
       //if ( (index + i) == CAPS_LOCK_LED_INDEX && host_keyboard_led_state().caps_lock)   {
       //if ( (index + i) == NUM_LOCK_LED_INDEX && host_keyboard_led_state().num_lock)  {
+      //#if defined(RGBLIGHT_ENABLE)
+      //rgblight_setrgb_at(255, 255, 255, index + i);
+      //#elif defined(RGB_MATRIX_ENABLE)
       //rgb_matrix_set_color(index + i, 255, 255, 255);
+      //#endif
+
       //} else {
+
+      #if defined(RGBLIGHT_ENABLE)
+      rgblight_setrgb_at(r, g, b, index + i);
+      #elif defined(RGB_MATRIX_ENABLE)
       rgb_matrix_set_color(index + i, r, g, b);
-      //}
+      #endif
+        }
      }
-}
+//}
 
 void signalrgb_mode_enable(void)
 {
+    #if defined(RGB_MATRIX_ENABLE)
     rgb_matrix_mode_noeeprom(RGB_MATRIX_SIGNALRGB); //Set RGB Matrix to SignalRGB Compatible Mode
+    #endif
 }
 
 void signalrgb_mode_disable(void)
 {
+    #if defined(RGBLIGHT_ENABLE)
+    rgblight_reload_from_eeprom();
+    #elif defined(RGB_MATRIX_ENABLE)
     rgb_matrix_reload_from_eeprom(); //Reloading last effect from eeprom
+    #endif
 }
 
 void signalrgb_total_leds(void)//Grab total number of leds that a board has.
 {
     packet[0] = id_signalrgb_total_leds;
+    #if defined(RGBLIGHT_ENABLE)
+    packet[1] = RGBLED_NUM;
+    #elif defined(RGB_MATRIX_ENABLE)
     packet[1] = RGB_MATRIX_LED_COUNT;
+    #endif
     raw_hid_send(packet,32);
 }
 
