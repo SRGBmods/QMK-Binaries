@@ -1,1 +1,4 @@
-The follow directories are provided to devices that I either personally own or can talk to owners on an almost daily basis to fix any issues + provide the lowest latency of inputs.
+## Highly Experimental ##
+
+These are beta firmware files where RGBLIGHT is being used instead of RGB_MATRIX to enable support for additional keyboards.
+Please continue to use standard builds if your keyboard has firmware available there: [VIA](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BVIA-Firmware), [Default](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BDefault-Firmware), [VIAL](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BVIA%2BVial-Firmware)
