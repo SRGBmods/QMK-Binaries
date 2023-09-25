@@ -11,4 +11,4 @@ Please continue to use standard builds if your keyboard has firmware available t
 
 universal rgb_matrix & rgblight builds can be found in [0.22.5-qmk-via](https://github.com/SRGBmods/QMK-Binaries/tree/main/_BETA/0.22.8-qmk-via) directory
 
-rgblight builds only in the [0.22.5-qmk-via-rgblight](https://github.com/SRGBmods/QMK-Binaries/tree/main/_BETA/0.22.5-qmk-via-rgblight) directory
+rgblight builds only in the [0.22.8-qmk-via-rgblight](https://github.com/SRGBmods/QMK-Binaries/tree/main/_BETA/0.22.8-qmk-via-rgblight) directory
