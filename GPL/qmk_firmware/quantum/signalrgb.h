@@ -16,7 +16,7 @@ enum signalrgb_responses //These are a bit clunky right now. Could use improveme
 {
     PROTOCOL_VERSION_BYTE_1 = 1,
     PROTOCOL_VERSION_BYTE_2 = 0,
-    PROTOCOL_VERSION_BYTE_3 = 5,
+    PROTOCOL_VERSION_BYTE_3 = 4,
     DEVICE_UNIQUE_IDENTIFIER_BYTE_1 = 0,
     DEVICE_UNIQUE_IDENTIFIER_BYTE_2 = 0,
     DEVICE_UNIQUE_IDENTIFIER_BYTE_3 = 0,
