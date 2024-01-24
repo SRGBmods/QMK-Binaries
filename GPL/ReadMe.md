@@ -14,6 +14,9 @@ Licenses include: [SonixQMK](https://github.com/SonixQMK/qmk_firmware/blob/sn32_
 
 To manually add the SignalRGB Protocol 1.0.4 to almost any qmk fork (the keyboard does require rgb_matrix support mind you!) please see the [following files](https://github.com/SRGBmods/QMK-Binaries/tree/main/GPL/qmk_firmware).
 
+To possibly patch directly against most forks, you can also try your luck with patch -p0 < patches/ (And patch file for your specific build default or via.diff files)
+**Yes I know this isn't the most GPL friendly but hand patching can be annoying or impossible for some users**
+
 The above code changes have been applied to vanilla / playground repos for each fork(s) for the binaries provided.
 
 ---
