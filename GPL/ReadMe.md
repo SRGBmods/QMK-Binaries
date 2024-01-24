@@ -20,15 +20,23 @@ The above code changes have been applied to vanilla / playground repos for each 
 
 ### Possibly a Fuzzy Solution ###
 To possibly patch directly against most forks, you can also try your luck with `patch -p0 < qmk-vanilla-default.diff or qmk-vanilla-via.diff` please keep in mind the diff is for which build you want to do (default or VIA).
+
 **Yes I know this isn't the most GPL friendly but hand patching can be annoying or impossible for some users**
 
 Directions: git clone (-b branch_name if needed) URL of the qmk repo
+
 Example of no branch: `git clone https://github.com/qmk/qmk_firmware.git`
+
 Example of a branch: `git clone -b xap https://github.com/qmk/qmk_firmware.git`
+
 `cd qmk_firmware`
+
 Drop the diff file from patches into where you downloaded the qmk_firmware to.
+
 `patch -p0 < qmk-vanilla-default.diff or qmk-vanilla-via.diff` to patch the SRGB protocol files in.
+
 `make git-submodule`
+
 You are now ready to make your keyboard's firmware e.g. `make keychron/q6/ansi_encoder:via`
 
 ---
