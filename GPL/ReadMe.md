@@ -14,10 +14,22 @@ Licenses include: [SonixQMK](https://github.com/SonixQMK/qmk_firmware/blob/sn32_
 
 To manually add the SignalRGB Protocol 1.0.4 to almost any qmk fork (the keyboard does require rgb_matrix support mind you!) please see the [following files](https://github.com/SRGBmods/QMK-Binaries/tree/main/GPL/qmk_firmware).
 
-To possibly patch directly against most forks, you can also try your luck with patch -p0 < patches/ (And patch file for your specific build default or via.diff files)
+The above code changes have been applied to vanilla / playground repos for each fork(s) for the binaries provided.
+
+---
+
+### Possibly a Fuzzy Solution ###
+To possibly patch directly against most forks, you can also try your luck with `patch -p0 < qmk-vanilla-default.diff or qmk-vanilla-via.diff` please keep in mind the diff is for which build you want to do (default or VIA).
 **Yes I know this isn't the most GPL friendly but hand patching can be annoying or impossible for some users**
 
-The above code changes have been applied to vanilla / playground repos for each fork(s) for the binaries provided.
+Directions: git clone (-b branch_name if needed) URL of the qmk repo
+Example of no branch: `git clone https://github.com/qmk/qmk_firmware.git`
+Example of a branch: `git clone -b xap https://github.com/qmk/qmk_firmware.git`
+`cd qmk_firmware`
+Drop the diff file from patches into where you downloaded the qmk_firmware to.
+`patch -p0 < qmk-vanilla-default.diff or qmk-vanilla-via.diff` to patch the SRGB protocol files in.
+`make git-submodule`
+You are now ready to make your keyboard's firmware e.g. `make keychron/q6/ansi_encoder:via`
 
 ---
 
