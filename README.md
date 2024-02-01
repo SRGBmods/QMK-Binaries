@@ -58,8 +58,8 @@ _Please explore here as there are many builds that you may find helpful!_
 #### SonixQMK ####
 * **[0.22.5-sonix_develop](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BVIA-Firmware/0.22.5-sonix_develop)** is for **Sonix based keyboards _only_** and is currently under construction from SonixQMK's sn32_develop branch.
 * **[0.15.12-sonix](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BVIA-Firmware/0.15.12-sonix)** is for **Sonix based keyboards _only_** and comes from an older SonixQMK repo.
-* **[0.7.101-sonix](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BVIA-Firmware/0.7.101-sonix)** is for **Sonix based keyboards _only_** and comes from [SonixQMK](https://github.com/SonixQMK/qmk_firmware/).
-* **[0.7.101-sonix-develop](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BVIA-Firmware/0.7.101-sonix_develop)** is for **Sonix based keyboards _only_** and comes from the bleeding edge develop branch of [SonixQMK](https://github.com/SonixQMK/qmk_firmware/) not entirely recommended as this should be considered _beta_ or possibly even _alpha_ state firmware.
+* **[0.7.101-sonix](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BVIA-Firmware/0.7.101-sonix)** is for **Sonix based keyboards _only_** and comes from an older SonixQMK repo.
+* **[0.7.101-sonix-develop](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BVIA-Firmware/0.7.101-sonix_develop)** is for **Sonix based keyboards _only_** and comes from an older SonixQMK repo.
 
 ---
 
