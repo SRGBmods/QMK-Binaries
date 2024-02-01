@@ -65,7 +65,7 @@ _Please explore here as there are many builds that you may find helpful!_
 
 ### QMK+VIA-Vial-Firmware: ###
 **One thing of note if you are attempting to use VIA or Vial to configure your keyboard you _must_ quit SignalRGB before running either software**
-* **[0.22.4](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BVIA%2BVial-Firmware/0.22.4)** is the latest dev [Vial QMK Branch](https://github.com/vial-kb/vial-qmk), currently being pulled and fixes to boards are applied and uploaded.
+* **[01_21_2024](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BVIA%2BVial-Firmware)** is the latest dev [Vial QMK Branch](https://github.com/vial-kb/vial-qmk), currently being pulled and fixes to boards are applied and uploaded.
 
 ---
 
