@@ -14,7 +14,7 @@ If you wish to compile your own yourself the directions can be found [here](http
 ---
 
 # For GPL Compliance (Full Source code): #
-[QMK Mainline + SignalRGB Merged Source](https://github.com/SRGBmods/QMK), [SonixQMK + SignalRGB Merged Source](https://github.com/SRGBmods/SonixQMK) & [Keychron + SignalRGB Merged Source](https://github.com/SRGBmods/KeychronQMK).
+[QMK Mainline + SignalRGB Protocol](https://github.com/SRGBmods/QMK), [SonixQMK + SignalRGB Protocol](https://github.com/SRGBmods/SonixQMK) & [Keychron + SignalRGB Protocol](https://github.com/SRGBmods/KeychronQMK).
 
 Additionally see the following [directory](https://github.com/SRGBmods/QMK-Binaries/tree/main/GPL), these are the files (with comments) for hand patching SignalRGB Protocol support into 3rd party QMK forks.
 
