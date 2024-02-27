@@ -58,7 +58,7 @@ void led_streaming(uint8_t *data) //Stream data from HID Packets to Keyboard.
 
     if(numberofleds >= 10)
     {
-        packet[1] = DEVICE_ERROR_LED_COUNT;
+        packet[1] = DEVICE_ERROR_LED_BOUNDS;
         raw_hid_send(packet,32);
         return; 
     } 
