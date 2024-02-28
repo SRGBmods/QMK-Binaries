@@ -54,7 +54,7 @@ _Please explore here as there are many builds that you may find helpful!_
 #### Jonylee1986 Fork ####
 * **[0.20.7](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BVIA-Firmware/0.20.7-jonylee1986)** These are specifically hfdkb based boards (monsgeek, top40, acr87, akko) if you cannot find these in mainline first then use these.
 #### Keychron ####
-* **[0.14.29](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BVIA-Firmware/0.14.29-keychron)** is Keychron's [bluetooth_playground / wireless](https://github.com/Keychron/qmk_firmware/tree/bluetooth_playground) so at least when charging a K2 Pro to K8 Pro the ARGB is controllable. (Bluetooth is not supported by SignalRGB currently).
+* **[0.14.29](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BVIA-Firmware/0.14.29-keychron)** is Keychron's [bluetooth_playground / wireless / playground](https://github.com/Keychron/qmk_firmware/tree/bluetooth_playground) when connected to USB (wired mode) ARGB is controllable. (Bluetooth is not supported by SignalRGB currently).
 #### SonixQMK ####
 * **[0.22.5-sonix_develop](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BVIA-Firmware/0.22.5-sonix_develop)** is for **Sonix based keyboards _only_** and is currently under construction from SonixQMK's sn32_develop branch.
 * **[0.15.12-sonix](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BVIA-Firmware/0.15.12-sonix)** is for **Sonix based keyboards _only_** and comes from an older SonixQMK repo.
