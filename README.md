@@ -21,7 +21,7 @@ Additionally see the following [directory](https://github.com/SRGBmods/QMK-Binar
 ---
 
 # Credits #
-Thanks to the [SonixQMK](https://github.com/SonixQMK/qmk_firmware) , [QMK](https://github.com/qmk/qmk_firmware) , [VIA](https://www.caniusevia.com/) , [GloriousThrall](https://github.com/GloriousThrall/qmk_firmware/) , [jonylee1986](https://github.com/jonylee1986/qmk_firmware_master) , [Keychron](https://github.com/Keychron/qmk_firmware) and [Vial](https://github.com/vial-kb/vial-qmk) communities for providing source code, all original code is completely theirs and thanks to them for providing the code for us and everyone else!
+Thanks to the [SonixQMK](https://github.com/SonixQMK/qmk_firmware) , [QMK](https://github.com/qmk/qmk_firmware) , [VIA](https://www.caniusevia.com/) , [GloriousThrall](https://github.com/GloriousThrall/qmk_firmware/) , [jonylee1986](https://github.com/jonylee1986/qmk_firmware_master) , [Keychron](https://github.com/Keychron/qmk_firmware) , [Vial](https://github.com/vial-kb/vial-qmk) and many more communities for providing source code, all original code is completely theirs and thanks to them for providing the code for us and everyone else!
 
 Licenses include: [SonixQMK](https://github.com/SonixQMK/qmk_firmware/blob/sn32_master/LICENSE) , [QMK](https://github.com/qmk/qmk_firmware/blob/master/LICENSE) , [VIA](https://github.com/the-via/firmware/blob/master/LICENSE) , [GloriousThrall](https://github.com/GloriousThrall/qmk_firmware/blob/master/license_GPLv3.md) , [jonylee1986](https://github.com/jonylee1986/qmk_firmware_master/blob/master/LICENSE) , [Keychron](https://github.com/Keychron/qmk_firmware/blob/master/LICENSE) , and  [Vial](https://github.com/vial-kb/vial-qmk/blob/vial/LICENSE).
 
@@ -37,8 +37,8 @@ If you notice something missing (keyboard or variation of a keyboard) or have an
 
 ---
 
-### Start here if you are new ###
-[QMK + VIA builds](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BVIA-Firmware) these are the most recommended builds and may help narrow things down, but there are several QMK builds listed, always start with the most recent version VIA builds listed and then work your way down the links from here. Issues? Please contact Naitoshedo on the [**Plugin Discord Server**](https://discord.gg/jY2xrWXXRc) server. (If you are using a Keychron keyboard I suggest you try the keychron suffix first, if it fails use the via suffix instead... for example: start with keychron_v6_ansi_keychron.bin and if that fails try keychron_v6_ansi_via.bin as it may be more stable or actually work)
+# Start here if you are new #
+[QMK + VIA builds](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BVIA-Firmware) these are the most recommended builds and may help narrow things down (don't skip directly but keep reading please), but there are several QMK builds listed, always start with the most recent version VIA builds listed and then work your way down the links from here. Issues? Please contact Naitoshedo on the [**Plugin Discord Server**](https://discord.gg/jY2xrWXXRc) server. (If you are using a Keychron keyboard I suggest you try the keychron suffix first, if it fails use the via suffix instead... for example: start with keychron_v6_ansi_keychron.bin and if that fails try keychron_v6_ansi_via.bin as it may be more stable or actually work)
 
 [VIA JSON Definitions](https://github.com/SRGBmods/QMK-Binaries/tree/main/VIA_JSON) these files are for loading into VIA if the definition file is reported missing (newer keyboards than what are included in VIA).
 
