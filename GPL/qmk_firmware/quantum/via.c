@@ -95,7 +95,7 @@ void led_streaming(uint8_t *data) //Stream data from HID Packets to Keyboard.
 void signalrgb_mode_enable(void)
 {
     #if defined(RGB_MATRIX_ENABLE)
-    rgb_matrix_mode_noeeprom(RGB_MATRIX_NONE); //Set RGB Matrix to SignalRGB Compatible Mode
+    rgb_matrix_mode_noeeprom(RGB_MATRIX_NONE); //Set RGB Matrix to none to allow a re-init.
     rgb_matrix_disable_noeeprom();
     rgb_matrix_enable_noeeprom();
     rgb_matrix_mode_noeeprom(RGB_MATRIX_SIGNALRGB); //Set RGB Matrix to SignalRGB Compatible Mode
