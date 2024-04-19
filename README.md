@@ -110,7 +110,7 @@ And finally [here are the directions](https://docs.signalrgb.com/qmk/srgbmods-qm
 
 ### Manually add Protocol support files ###
 
-To manually add the SignalRGB Protocol 1.0.4 to almost any qmk fork please see the [following files](https://github.com/SRGBmods/QMK-Binaries/tree/main/GPL/qmk_firmware).
+To manually add the SignalRGB Protocol 1.0.5 to almost any qmk fork please see the [following files](https://github.com/SRGBmods/QMK-Binaries/tree/main/GPL/qmk_firmware).
 
 The above code changes have been applied to vanilla / playground repos for each fork(s) for the binaries provided.
 
