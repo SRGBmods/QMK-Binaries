@@ -58,7 +58,7 @@ _Please explore here as there are many builds that you may find helpful!_
 * **[0.23.9](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BVIA-Firmware/0.23.9)** is the "stable" [QMK Mainline github](https://github.com/qmk/qmk_firmware), currently being pulled and fixes to boards are applied and uploaded. (SRGBP¹ 1.0.4)
 * **[0.20.8](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BVIA-Firmware/0.20.8)** is the oldest release [QMK Mainline github](https://github.com/qmk/qmk_firmware), if you have issues with the above try this next. (SRGBP¹ 1.0.4)
 
-** ¹SRGBP refers to SignalRGB Protocol Version **
+**¹SRGBP refers to SignalRGB Protocol Version**
 
 #### Jonylee1986 Fork ####
 * **[0.20.7](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BVIA-Firmware/0.20.7-jonylee1986)** These are specifically hfdkb based boards (monsgeek, top40, acr87, akko) if you cannot find these in mainline first then use these. (SRGBP* 1.0.4)
