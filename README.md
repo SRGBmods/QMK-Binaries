@@ -60,7 +60,7 @@ _Please explore here as there are many builds that you may find helpful!_
 #### Jonylee1986 Fork ####
 * **[0.20.7](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BVIA-Firmware/0.20.7-jonylee1986)** These are specifically hfdkb based boards (monsgeek, top40, acr87, akko) if you cannot find these in mainline first then use these. (SRGBP* 1.0.4)
 
-**SRGBP refers to SignalRGB Protocol Version**
+***SRGBP refers to SignalRGB Protocol Version**
 #### Keychron ####
 * **[0.14.29](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BVIA-Firmware/0.14.29-keychron)** is Keychron's [bluetooth_playground](https://github.com/Keychron/qmk_firmware/tree/bluetooth_playground), [wireless_playground](https://github.com/Keychron/qmk_firmware/tree/wireless_playground) and [playground](https://github.com/Keychron/qmk_firmware/tree/playground). When connected to USB (wired mode) ARGB is controllable. (Bluetooth is not supported by SignalRGB currently).
 #### SonixQMK ####
