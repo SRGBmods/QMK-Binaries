@@ -52,7 +52,7 @@ If you notice something missing (keyboard or variation of a keyboard) or have an
 _Please explore here as there are many builds that you may find helpful!_
 
 **One thing of note if you are attempting to use VIA or Vial to configure your keyboard you _must_ quit SignalRGB before running either software**
-#### QMK Mainline (VIA Builds) - You Should Start with these.####
+#### QMK Mainline (VIA Builds) - You Should Start with these. ####
 * **[0.24.7](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BVIA-Firmware/0.24.7)** is the new [QMK Mainline github development branch](https://github.com/qmk/qmk_firmware), currently being pulled and fixes to boards are applied and uploaded. (SRGBP* 1.0.5)
 * **[0.24.4](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BVIA-Firmware/0.24.4)** is the previous [QMK Mainline github development branch](https://github.com/qmk/qmk_firmware), currently being pulled and fixes to boards are applied and uploaded. (SRGBP* 1.0.5)
 * **[0.23.9](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BVIA-Firmware/0.23.9)** is the "stable" [QMK Mainline github](https://github.com/qmk/qmk_firmware), currently being pulled and fixes to boards are applied and uploaded. (SRGBP* 1.0.4)
