@@ -35,7 +35,7 @@ Licenses include: [SonixQMK](https://github.com/SonixQMK/qmk_firmware/blob/sn32_
 
 **Please keep support requests to either of those locations only, thanks!**
 
-If you notice something missing (keyboard or variation of a keyboard) or have any issues with these binaries please contact Naitoshedo on the above Discord server.
+If you notice something missing (keyboard or variation of a keyboard) or have any issues with these binaries please contact Naitoshedo on the above Discord server, or with ([**Issues**](https://github.com/SRGBmods/QMK-Binaries/issues)) of course.
 
 ---
 
