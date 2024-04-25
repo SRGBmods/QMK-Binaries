@@ -1,6 +1,6 @@
 ![SRGBmods QMK Builds,100%](https://srgbmods.net/img/srgbmods-qmk.png)
 
-# PLEASE __READ ALL OF THIS__, IT WILL HELP YOU. SERIOUSLY IT WILL! #
+# PLEASE __READ ALL OF THIS... SERIOUSLY__, IT WILL HELP YOU. #
 
 Need help and cannot be bothered to read anything below this? Join this [**Discord**](https://discord.gg/jY2xrWXXRc) assign yourself the QMK role from the pull down. Then puruse the channels provided for QMK + SignalRGB users. No support for any of these files will be provided by official email tech support. Only Discord & Github issues.
 
