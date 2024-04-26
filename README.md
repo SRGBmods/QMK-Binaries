@@ -126,5 +126,5 @@ The above code changes have been applied to vanilla / playground repos for each 
 
 _(The above may include backporting RGB_Matrix to that specific board and the source is available in the QMK mainline and can be provided upon request keeping track of all these gets a bit tricky but I will definitely **try**.)_
 
-### Wish to partner with SignalRGB and have QMK source? ###
+### Wish to partner with SignalRGB and have QMK source to contribute? ###
 We're happy to help, please either create an ([**Issue**](https://github.com/SRGBmods/QMK-Binaries/issues)), reach out on our [**Discord**](https://discord.gg/jY2xrWXXRc) or email us [directly](mailto:qmk@signalrgb.com).
