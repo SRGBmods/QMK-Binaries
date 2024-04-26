@@ -125,3 +125,6 @@ The above code changes have been applied to vanilla / playground repos for each 
 **If and when possible specific forks for supporting specific keyboards will be merged to QMK mainline release (cp -rp specificfork/keyboards/<keyboard_brand/maybe_a_child> ~/qmk/mainline/keyboards) and compiled against it.**
 
 _(The above may include backporting RGB_Matrix to that specific board and the source is available in the QMK mainline and can be provided upon request keeping track of all these gets a bit tricky but I will definitely **try**.)_
+
+### Wish to partner with SignalRGB and have QMK source? ###
+We're happy to help with, please either create an ([**Issue**](https://github.com/SRGBmods/QMK-Binaries/issues)) or email us [directly](mailto:qmk@signalrgb.com).
