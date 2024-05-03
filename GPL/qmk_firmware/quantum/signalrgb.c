@@ -48,7 +48,7 @@ void led_streaming(uint8_t *data) //Stream data from HID Packets to Keyboard.
     uint8_t index = data[1];
     uint8_t numberofleds = data[2]; 
     #if defined(RGBLIGHT_ENABLE)
-        if(index + numberofleds > RGBLED_NUM) {
+        if(index + numberofleds > RGBLIGHT_LED_COUNT) {
     #elif defined(RGB_MATRIX_ENABLE)
         if(index + numberofleds > RGB_MATRIX_LED_COUNT) {
     #endif
@@ -113,7 +113,7 @@ void get_total_leds(void)//Grab total number of leds that a board has.
 {
     packet[0] = GET_TOTAL_LEDS;
     #if defined(RGBLIGHT_ENABLE)
-    packet[1] = RGBLED_NUM;
+    packet[1] = RGBLIGHT_LED_COUNT;
     #elif defined(RGB_MATRIX_ENABLE)
     packet[1] = RGB_MATRIX_LED_COUNT;
     #endif
