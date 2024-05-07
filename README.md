@@ -1,5 +1,8 @@
 ![SRGBmods QMK Builds,100%](https://srgbmods.net/img/srgbmods-qmk.png)
 
+### Wish to partner with SignalRGB and have QMK source to contribute? ###
+We're happy to help, please either create an ([**Issue**](https://github.com/SRGBmods/QMK-Binaries/issues)), reach out on our [**Discord**](https://discord.gg/jY2xrWXXRc) or email us [directly](mailto:qmk@signalrgb.com).
+
 # PLEASE __READ ALL OF THIS... SERIOUSLY__, IT WILL HELP YOU. #
 
 Need help and cannot be bothered to read anything below this? Join this [**Discord**](https://discord.gg/jY2xrWXXRc) assign yourself the QMK role from the pull down. Then puruse the channels provided for QMK + SignalRGB users. No support for any of these files will be provided by official email tech support. Only Discord & Github issues.
