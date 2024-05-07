@@ -9,7 +9,7 @@ We're happy to help, please either create an ([**Issue**](https://github.com/SRG
 
 Need help and cannot be bothered to read anything below this? Join this [**Discord**](https://discord.gg/jY2xrWXXRc) assign yourself the QMK role from the pull down. Then puruse the channels provided for QMK + SignalRGB users. No support for any of these files will be provided by official email tech support. Only Discord & Github issues.
 
-# _Make sure to click the download button for your specific firmware (if a bin file), otherwise view the firmware file then right click and choose "save link as" on the raw button!_ #
+# _Make sure to click the "Download raw content" button for your specific firmware!_ #
 
 # QMK Binaries #
 [QMK Firmware](https://qmk.fm/) that is supported by [SignalRGB](https://www.signalrgb.com) (includes protocol information for direct ARGB mode), compiled for your convenience and ready to install!
