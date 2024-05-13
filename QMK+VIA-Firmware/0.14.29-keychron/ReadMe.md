@@ -1,4 +1,4 @@
-# _Make sure to click the download button for your specific firmware (if a bin file), otherwise view the firmware file then right click and choose "save link as" on the raw button!_ #
+# _Make sure to click the "Download raw content" button for your specific firmware!_ #
 
 **One thing of note if you are attempting to use VIA to configure your keyboard you _must_ quit SignalRGB before running either software**
 
