@@ -1,7 +1,5 @@
 # _Make sure to click the "Download raw content" button for your specific firmware!_ #
 
-**One thing of note if you are attempting to use VIA to configure your keyboard you _must_ quit SignalRGB before running either software**
-
 To use these files you may find QMK Toolbox helpful:
 https://github.com/qmk/qmk_toolbox/releases/
 **Make sure to go to the Tools menu -> and Install Drivers!**
