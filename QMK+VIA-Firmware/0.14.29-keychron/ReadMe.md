@@ -1,8 +1,8 @@
 # _Make sure to click the "Download raw content" button for your specific firmware!_ #
 
-**One thing of note if you are attempting to use VIA to configure your keyboard you _must_ quit SignalRGB before running either software**
-
 [wireless_playground](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BVIA-Firmware/0.14.29-keychron/wireless_playground) is the more recent build but if upon flashing you don't have any luck try the [bluetooth_playground](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BVIA-Firmware/0.14.29-keychron/bluetooth_playground) build.
+
+**One thing of note if you are attempting to use VIA to configure your keyboard you _must_ quit SignalRGB before running either software**
 
 To use these files you may find QMK Toolbox helpful:
 https://github.com/qmk/qmk_toolbox/releases/
