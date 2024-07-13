@@ -1,7 +1,7 @@
 ![SRGBmods QMK Builds,100%](https://srgbmods.net/img/srgbmods-qmk.png)
 
 ### Wish to partner with SignalRGB and have QMK source to contribute? ###
-We're happy to help, please either create an ([**Issue**](https://github.com/SRGBmods/QMK-Binaries/issues)), reach out on our [**Discord**](https://discord.gg/jY2xrWXXRc) or email us **[directly](mailto:qmk@signalrgb.com)**.
+We're happy to help, please either create an ([**Issue**](https://github.com/SRGBmods/QMK-Binaries/issues)), reach out on our [**Discord**](https://discord.gg/jY2xrWXXRc) or email us [directly - QMK @ Signalrgb.com](mailto:qmk@signalrgb.com).
 
 ---
 
@@ -133,4 +133,4 @@ _(The above may include backporting RGB_Matrix to that specific board and the so
 ---
 
 ### Wish to partner with SignalRGB and have QMK source to contribute? ###
-We're happy to help, please either create an ([**Issue**](https://github.com/SRGBmods/QMK-Binaries/issues)), reach out on our [**Discord**](https://discord.gg/jY2xrWXXRc) or email us [directly](mailto:qmk@signalrgb.com).
+We're happy to help, please either create an ([**Issue**](https://github.com/SRGBmods/QMK-Binaries/issues)), reach out on our [**Discord**](https://discord.gg/jY2xrWXXRc) or email us [directly - QMK @ Signalrgb.com](mailto:qmk@signalrgb.com).
