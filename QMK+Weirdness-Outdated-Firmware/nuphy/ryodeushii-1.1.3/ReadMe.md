@@ -1,6 +1,6 @@
 ## Ryodeushii Nuphy + SRGBP Firmware files ##
 
-These firmware files are from the custom firmware source provided by [Ryodeushii](https://github.com/ryodeushii/qmk-firmware) + SignalRGB Protocol support added to them.
+These firmware files are from the custom firmware source provided by [Ryodeushii](https://github.com/ryodeushii/qmk-firmware) + [SignalRGB Protocol](https://github.com/SRGBmods/Ryodeushii-QMK) support added to them.
 
 Feel free to try these firmware files. (Of course as always we recommend VIA builds first!)
 
