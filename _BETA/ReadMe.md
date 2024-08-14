@@ -1,3 +1,3 @@
-## Highly Experimental ##
+## SOCD Cleaner Experimental Builds ##
 
-Use at your own risk.
+Implements [socd_cleaner](https://getreuer.info/posts/keyboards/socd-cleaner/index.html)
