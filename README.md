@@ -58,7 +58,7 @@ _Please explore here as there are many builds that you may find helpful!_
 
 **One thing of note if you are attempting to use VIA or Vial to configure your keyboard you _must_ quit SignalRGB before running either software this is a limitation of the raw_hid_send that both VIA & SignalRGB use to talk to your keyboard!**
 #### QMK Mainline (VIA Builds) - You Should Start with these. ####
-* **[0.25.9](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BVIA-Firmware/0.25.9)** is the new [QMK Mainline github development branch](https://github.com/qmk/qmk_firmware), currently being pulled and fixes to boards are applied and uploaded. (SRGBP¹ 1.0.5)
+* **[0.26.0](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BVIA-Firmware/0.26.0)** is the new [QMK Mainline github development branch](https://github.com/qmk/qmk_firmware), currently being pulled and fixes to boards are applied and uploaded. (SRGBP¹ 1.0.5)
 
 **¹SRGBP refers to SignalRGB Protocol Version**
 
@@ -85,7 +85,7 @@ _Please explore here as there are many builds that you may find helpful!_
 ### QMK+Default-Firmware: (_When all else fails_) ###
 **Please note:** _Default builds are now deprecated, as VIA, VIAL, or XAP builds will replace all except for speciality builds._
 #### QMK Mainline ####
-* **[0.25.9](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BDefault-Firmware/0.25.9)** is from [QMK Mainline github](https://github.com/qmk/qmk_firmware), last default version to be compiled (This is default without VIA support). (SRGBP¹ 1.0.5)
+* **[0.26.0](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BDefault-Firmware/0.26.0)** is from [QMK Mainline github](https://github.com/qmk/qmk_firmware), last default version to be compiled (This is default without VIA support). (SRGBP¹ 1.0.5)
 * **[0.20.8](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BDefault-Firmware/0.20.8)** is the previous release [QMK Mainline github](https://github.com/qmk/qmk_firmware), if you have issues with the above try this next (This is default without VIA support). (SRGBP¹ 1.0.4)
 #### SonixQMK ####
 * **[0.15.12-sonix](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BDefault-Firmware/0.15.12-sonix)** is for **Sonix based keyboards _only_** and comes from an older SonixQMK repo.
