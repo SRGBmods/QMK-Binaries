@@ -1,7 +1,7 @@
 {
-    "name": "NuPhy Halo75 V2",
+    "name": "NuPhy Air75 V2",
     "vendorId": "0x19F5",
-    "productId": "0x32F5",
+    "productId": "0x3246",
     "matrix": {
         "rows": 6,
         "cols": 17
@@ -22,9 +22,9 @@
                 "0,10",
                 "0,11",
                 "0,12",
-                "0,13",
-                "0,14",
-                "0,15"
+                "2,14",
+                "0,15",
+                "0,14"
             ],
             [
                 "1,0",
@@ -44,7 +44,7 @@
                     "w": 2
                 },
                 "1,13",
-                "1,15"
+                "1,16"
             ],
             [
                 {
@@ -67,7 +67,7 @@
                     "w": 1.5
                 },
                 "2,13",
-                "2,15"
+                "2,16"
             ],
             [
                 {
@@ -89,7 +89,7 @@
                     "w": 2.25
                 },
                 "3,13",
-                "3,15"
+                "1,15"
             ],
             [
                 {
@@ -111,7 +111,7 @@
                 },
                 "4,13",
                 "4,14",
-                "4,15"
+                "2,15"
             ],
             [
                 {
@@ -130,17 +130,9 @@
                     "w": 6.25
                 },
                 "5,6",
-                {
-                    "w": 1.25
-                },
                 "5,9",
-                {
-                    "w": 1.25
-                },
                 "5,10",
-                {
-                    "x": 0.5
-                },
+                "3,14",
                 "5,13",
                 "5,14",
                 "5,15"
@@ -216,9 +208,7 @@
                                 "Splash",
                                 "MultiSplash",
                                 "Solid Splash",
-                                "Solid MultiSplash",
-                                "game_mode",
-                                "position_mode"
+                                "Solid MultiSplash"
                             ]
                         },
                         {
@@ -248,50 +238,32 @@
                     ]
                 },
                 {
-                    "label": "Halo Light",
+                    "label": "Side Light",
                     "content": [
                         {
-                            "label": "Mode A",
+                            "label": "Mode",
                             "type": "dropdown",
                             "content": [
-                                "id_side_light_mode_a",
+                                "id_side_light_mode",
                                 0,
                                 10
                             ],
                             "options": [
                                 "Wawe",
                                 "Mix",
-                                "New",
+                                "Static",
                                 "Breath",
-                                "Static"
-                            ]
-                        },
-                        {
-                            "label": "Mode B",
-                            "type": "dropdown",
-                            "content": [
-                                "id_side_light_mode_b",
-                                0,
-                                11
-                            ],
-                            "options": [
-                                "1",
-                                "2",
-                                "3",
-                                "4",
-                                "5",
-                                "6",
-                                "7"
+                                "Off"
                             ]
                         },
                         {
                             "label": "Speed (higher is slower)",
-                            "showIf": "{id_side_light_mode_a} != 4",
+                            "showIf": "{id_side_light_mode} != 4 && {id_side_light_mode} != 2",
                             "type": "dropdown",
                             "content": [
                                 "id_side_light_speed",
                                 0,
-                                12
+                                11
                             ],
                             "options": [
                                 "1",
@@ -302,13 +274,33 @@
                             ]
                         },
                         {
+                            "label": "Use custom color",
+                            "showIf": "{id_side_light_mode} == 2",
+                            "type": "toggle",
+                            "content": [
+                                "id_side_light_use_custom_color",
+                                0,
+                                14
+                            ]
+                        },
+                        {
+                            "label": "Custom Color",
+                            "showIf": "{id_side_light_mode} == 2 && {id_side_light_use_custom_color} == 1",
+                            "type": "color",
+                            "content": [
+                                "id_side_light_custom_color",
+                                0,
+                                15
+                            ]
+                        },
+                        {
                             "label": "Color",
-                            "showIf": "{id_side_light_mode_a} != 2",
+                            "showIf": "{id_side_light_mode} != 4 && {id_side_light_use_custom_color} == 0",
                             "type": "dropdown",
                             "content": [
                                 "id_side_light_color",
                                 0,
-                                13
+                                12
                             ],
                             "options": [
                                 "Red",
@@ -322,51 +314,109 @@
                             ]
                         },
                         {
-                            "label": "Color",
-                            "showIf": "{id_side_light_mode_a} == 2",
-                            "type": "dropdown",
-                            "content": [
-                                "id_side_light_color",
-                                0,
-                                13
-                            ],
-                            "options": [
-                                "One",
-                                "Two",
-                                "Three"
-                            ]
-                        },
-                        {
-                            "label": "Use custom color",
-                            "showIf": "{id_side_light_mode_a} != 2",
-                            "type": "toggle",
-                            "content": [
-                                "id_side_use_custom_color",
-                                0,
-                                15
-                            ]
-                        },
-                        {
-                            "label": "Custom Color",
-                            "showIf": "{id_side_light_mode_a} != 2 && {id_side_use_custom_color} == 1",
-                            "type": "color",
-                            "content": [
-                                "id_side_custom_color",
-                                0,
-                                16
-                            ]
-                        },
-                        {
                             "label": "Brightness",
+                            "showIf": "{id_side_light_mode} != 4",
                             "type": "range",
                             "content": [
                                 "id_side_light_brightness",
                                 0,
-                                14
+                                13
                             ],
                             "options": [
                                 0,
-                                4
+                                5
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "label": "Right Side Light",
+                    "content": [
+                        {
+                            "label": "Mode",
+                            "type": "dropdown",
+                            "content": [
+                                "id_right_side_light_mode",
+                                0,
+                                20
+                            ],
+                            "options": [
+                                "Wawe",
+                                "Mix",
+                                "Static",
+                                "Breath",
+                                "Off"
+                            ]
+                        },
+                        {
+                            "label": "Speed (higher is slower)",
+                            "showIf": "{id_right_side_light_mode} != 4 && {id_right_side_light_mode} != 2",
+                            "type": "dropdown",
+                            "content": [
+                                "id_right_side_light_speed",
+                                0,
+                                21
+                            ],
+                            "options": [
+                                "1",
+                                "2",
+                                "3",
+                                "4",
+                                "5"
+                            ]
+                        },
+                        {
+                            "label": "Use custom color",
+                            "showIf": "{id_right_side_light_mode} == 2",
+                            "type": "toggle",
+                            "content": [
+                                "id_right_side_light_use_custom_color",
+                                0,
+                                24
+                            ]
+                        },
+                        {
+                            "label": "Custom Color",
+                            "showIf": "{id_right_side_light_mode} == 2 && {id_right_side_light_use_custom_color} == 1",
+                            "type": "color",
+                            "content": [
+                                "id_right_side_light_custom_color",
+                                0,
+                                25
+                            ]
+                        },
+                        {
+                            "label": "Color",
+                            "showIf": "{id_right_side_light_mode} != 4 && {id_right_side_light_use_custom_color} == 0",
+                            "type": "dropdown",
+                            "content": [
+                                "id_right_side_light_color",
+                                0,
+                                22
+                            ],
+                            "options": [
+                                "Red",
+                                "Orange",
+                                "Yellow",
+                                "Green",
+                                "Cyan",
+                                "Blue",
+                                "Purple",
+                                "Light-Purple"
+                            ]
+                        },
+                        {
+                            "label": "Brightness",
+                            "showIf": "{id_right_side_light_mode} != 4",
+                            "type": "range",
+                            "content": [
+                                "id_right_side_light_brightness",
+                                0,
+                                23
+                            ],
+                            "options": [
+                                0,
+                                5
                             ]
                         }
                     ]
@@ -580,7 +630,7 @@
                             "content": [
                                 "id_battery_indicator_brightness",
                                 0,
-                                21
+                                31
                             ],
                             "options": [
                                 0,
@@ -593,7 +643,7 @@
                             "content": [
                                 "id_battery_indicator_numeric",
                                 0,
-                                24
+                                34
                             ]
                         },
                         {
@@ -602,16 +652,7 @@
                             "content": [
                                 "id_toggle_socd_indicator",
                                 0,
-                                25
-                            ]
-                        },
-                        {
-                            "label": "Power On Animation",
-                            "type": "toggle",
-                            "content": [
-                                "id_power_on_animation",
-                                0,
-                                20
+                                35
                             ]
                         },
                         {
@@ -635,7 +676,7 @@
                             "content": [
                                 "id_toggle_custom_keys_highlight",
                                 0,
-                                22
+                                32
                             ]
                         },
                         {
@@ -644,7 +685,7 @@
                             "content": [
                                 "id_toggle_detect_numlock_state",
                                 0,
-                                23
+                                33
                             ]
                         }
                     ]
@@ -733,12 +774,8 @@
             "title": "Side Light -"
         },
         {
-            "name": "Side\nMode_A",
-            "title": "Side A Next Mode"
-        },
-        {
-            "name": "Side\nMode_B",
-            "title": "Side B Next Mode"
+            "name": "Side\nMode",
+            "title": "Side Next Mode"
         },
         {
             "name": "Side\nColor",
@@ -751,6 +788,30 @@
         {
             "name": "Side\nSlow",
             "title": "Side Speed -"
+        },
+        {
+            "name": "Right\nSide\nLight+",
+            "title": "Right Side Light +"
+        },
+        {
+            "name": "Right\nSide\nLight-",
+            "title": "Right Side Light -"
+        },
+        {
+            "name": "Right\nSide\nMode",
+            "title": "Right Side Next Mode"
+        },
+        {
+            "name": "Right\nSide\nColor",
+            "title": "Right Side Next Color"
+        },
+        {
+            "name": "Right\nSide\nFast",
+            "title": "Right Side Speed +"
+        },
+        {
+            "name": "Right\nSide\nSlow",
+            "title": "Right Side Speed -"
         },
         {
             "name": "TOG USB\nSleep",
@@ -803,10 +864,6 @@
         {
             "name": "TOG DEEP\nSLEEP",
             "title": "Toggle Deep Sleep"
-        },
-        {
-            "name": "TOG POWERON\nANIM",
-            "title": "Toggle Power On Animation"
         },
         {
             "name": "TOG BAT\nIND\nNUMERIC",

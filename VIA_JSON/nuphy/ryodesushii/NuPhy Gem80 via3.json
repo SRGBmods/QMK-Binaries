@@ -322,8 +322,28 @@
                             ]
                         },
                         {
+                            "label": "Use custom color",
+                            "showIf": "{id_side_light_mode} == 2",
+                            "type": "toggle",
+                            "content": [
+                                "id_side_light_use_custom_color",
+                                0,
+                                14
+                            ]
+                        },
+                        {
+                            "label": "Custom Color",
+                            "showIf": "{id_side_light_mode} == 2 && {id_side_light_use_custom_color} == 1",
+                            "type": "color",
+                            "content": [
+                                "id_side_light_custom_color",
+                                0,
+                                15
+                            ]
+                        },
+                        {
                             "label": "Color",
-                            "showIf": "{id_side_light_mode} != 4",
+                            "showIf": "{id_side_light_mode} != 4 && {id_side_light_use_custom_color} == 0",
                             "type": "dropdown",
                             "content": [
                                 "id_side_light_color",
@@ -394,8 +414,28 @@
                             ]
                         },
                         {
-                            "label": "Color",
+                            "label": "Use custom color",
                             "showIf": "{id_logo_light_mode} != 4",
+                            "type": "toggle",
+                            "content": [
+                                "id_logo_light_use_custom_color",
+                                0,
+                                24
+                            ]
+                        },
+                        {
+                            "label": "Custom Color",
+                            "showIf": "{id_logo_light_mode} == 2 && {id_logo_light_use_custom_color} == 1",
+                            "type": "color",
+                            "content": [
+                                "id_logo_light_custom_color",
+                                0,
+                                25
+                            ]
+                        },
+                        {
+                            "label": "Color",
+                            "showIf": "{id_logo_light_mode} != 4 && {id_logo_light_use_custom_color} == 0",
                             "type": "dropdown",
                             "content": [
                                 "id_logo_light_color",
@@ -644,7 +684,24 @@
                                 0,
                                 100
                             ]
-
+                        },
+                        {
+                            "label": "Battery indicator show numeric value",
+                            "type": "toggle",
+                            "content": [
+                                "id_battery_indicator_numeric",
+                                0,
+                                34
+                            ]
+                        },
+                        {
+                            "label": "Show SOCD feature indicators (WASD position)",
+                            "type": "toggle",
+                            "content": [
+                                "id_toggle_socd_indicator",
+                                0,
+                                35
+                            ]
                         },
                         {
                             "label": "Caps Lock Indicator",
@@ -668,6 +725,15 @@
                                 "id_toggle_custom_keys_highlight",
                                 0,
                                 32
+                            ]
+                        },
+                        {
+                            "label": "Detect Numlock State (indicator will be off when numlock is off)",
+                            "type": "toggle",
+                            "content": [
+                                "id_toggle_detect_numlock_state",
+                                0,
+                                33
                             ]
                         }
                     ]
@@ -846,6 +912,26 @@
         {
             "name": "TOG DEEP\nSLEEP",
             "title": "Toggle Deep Sleep"
+        },
+        {
+            "name": "TOG BAT\nIND\nNUMERIC",
+            "title": "Toggle indicator numeric visual"
+        },
+        {
+            "name": "SOCD\nON",
+            "title": "Turn SOCD On"
+        },
+        {
+            "name": "SOCD\nOFF",
+            "title": "Turn SOCD Off"
+        },
+        {
+            "name": "SOCD\nTOGGLE",
+            "title": "Toggle SOCD"
+        },
+        {
+            "name": "PRNT\nCFW\nVERSION",
+            "title": "Print Custom Firmware Version"
         }
     ]
 }
