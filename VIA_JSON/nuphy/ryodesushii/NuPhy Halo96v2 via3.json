@@ -1,10 +1,10 @@
 {
-    "name": "NuPhy Halo75 V2",
+    "name": "NuPhy Halo96 V2",
     "vendorId": "0x19F5",
-    "productId": "0x32F5",
+    "productId": "0x3302",
     "matrix": {
         "rows": 6,
-        "cols": 17
+        "cols": 21
     },
     "layouts": {
         "keymap": [
@@ -24,7 +24,10 @@
                 "0,12",
                 "0,13",
                 "0,14",
-                "0,15"
+                "0,15",
+                "0,16",
+                "0,17",
+                "0,18"
             ],
             [
                 "1,0",
@@ -44,7 +47,10 @@
                     "w": 2
                 },
                 "1,13",
-                "1,15"
+                "1,15",
+                "1,16",
+                "1,17",
+                "1,18"
             ],
             [
                 {
@@ -67,7 +73,13 @@
                     "w": 1.5
                 },
                 "2,13",
-                "2,15"
+                "2,15",
+                "2,16",
+                "2,17",
+                {
+                    "h": 2
+                },
+                "2,18"
             ],
             [
                 {
@@ -89,7 +101,9 @@
                     "w": 2.25
                 },
                 "3,13",
-                "3,15"
+                "3,15",
+                "3,16",
+                "3,17"
             ],
             [
                 {
@@ -111,7 +125,13 @@
                 },
                 "4,13",
                 "4,14",
-                "4,15"
+                "4,15",
+                "4,16",
+                "4,17",
+                {
+                    "h": 2
+                },
+                "4,18"
             ],
             [
                 {
@@ -143,7 +163,9 @@
                 },
                 "5,13",
                 "5,14",
-                "5,15"
+                "5,15",
+                "5,16",
+                "5,17"
             ]
         ]
     },
@@ -677,12 +699,16 @@
             "title": "Mac Console"
         },
         {
-            "name": "Mac\nDND",
-            "title": "Mac DND"
+            "name": "Mac\nDnt",
+            "title": "Mac Dnt"
         },
         {
-            "name": "Win\nlock",
-            "title": "Win lock"
+            "name": "Print\nWhole",
+            "title": "PrintWhole"
+        },
+        {
+            "name": "Print\nArea",
+            "title": "PrintArea"
         },
         {
             "name": "Dev\nReset",
@@ -697,14 +723,6 @@
             "title": "Battery Show"
         },
         {
-            "name": "RGB\nTest",
-            "title": "Hold for 3 seconds for RGB color test"
-        },
-        {
-            "name": "Tilde",
-            "title": "SHIFT+` = ~"
-        },
-        {
             "name": "Side\nLight+",
             "title": "Side Light +"
         },
@@ -714,11 +732,11 @@
         },
         {
             "name": "Side\nMode_A",
-            "title": "Side A Next Mode"
+            "title": "Side Next Mode"
         },
         {
             "name": "Side\nMode_B",
-            "title": "Side B Next Mode"
+            "title": "Side Next Mode"
         },
         {
             "name": "Side\nColor",
