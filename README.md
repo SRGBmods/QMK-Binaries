@@ -1,3 +1,5 @@
+# QMK + SRGB Support - [reddit post found here](https://www.reddit.com/r/SignalRGB/comments/1gg4s1z/qmk_support_madness_partnerships_were_willing_to/) #
+
 ![SRGBmods QMK Builds,100%](https://srgbmods.net/img/srgbmods-qmk.png)
 
 ### Wish to partner with SignalRGB and have QMK source to contribute? ###
