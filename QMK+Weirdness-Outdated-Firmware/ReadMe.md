@@ -1,5 +1,7 @@
 ## WARNING: These firmware files are massively unsupported / outdated use at your own risk ##
 
+**One thing of note if you are attempting to use VIA or Vial to configure your keyboard you _must_ quit SignalRGB before running either software this is a limitation of the raw_hid_send that both VIA & SignalRGB use to talk to your keyboard!**
+
 The reason being as they are based upon very old releases of QMK for specific keyboards and may have been abandoned by the original developer.
 
 It is highly recommended that you have an original firmware for your keyboard + understand how to recover your keyboard from a possible brick (not working) state.
