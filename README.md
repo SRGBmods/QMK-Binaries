@@ -56,7 +56,7 @@ If you notice something missing (keyboard or variation of a keyboard) or have an
 ---
 
 ### QMK+VIA-Firmware (_We recommend these_): ###
-**Start Here when in doubt mainline is the most reliable! in fact _default_ builds are being deprecated (retired, unreliable etc)**
+**Start Here when in doubt mainline is the most reliable! (Not to mention the customization provided by VIA is helpful.)**
 
 _Please explore here as there are many builds that you may find helpful!_
 
