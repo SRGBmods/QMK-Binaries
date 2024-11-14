@@ -103,7 +103,8 @@ _Please explore here as there are many builds that you may find helpful!_
 To use these files you may find [QMK Toolbox](https://github.com/qmk/qmk_toolbox/releases/) helpful.
 **Make sure to go to the Tools menu -> and Install Drivers!**
 
-Or if a Sonix based firmware [these directions](https://sonixqmk.github.io/SonixDocs/install/#4-flashing-the-firmware) should help.
+If a Sonix based firmware [these directions](https://sonixqmk.github.io/SonixDocs/install/#4-flashing-the-firmware) should help.
+Or if a Massdrop keyboard [these directions](https://docs.signalrgb.com/qmk/massdrop-loader) should help.
 
 You will also need to follow the directions from your Keyboard manufacturer to put your device in bootloader mode in order to use QMK Toolbox / Sonix Flasher. (Google is your friend!)
 (Check their website for directions, you should honestly check there anyways for firmware in case you to need to factory restore as well.)
