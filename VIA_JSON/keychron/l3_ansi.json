@@ -2,6 +2,7 @@
   "name": "Lemokey L3",
   "vendorId": "0x362D",
   "productId": "0x0130",
+  "firmwareVersion": 1,
   "keycodes": ["qmk_lighting"],
   "menus": [
     {
