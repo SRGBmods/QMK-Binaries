@@ -16,7 +16,7 @@ enum signalrgb_responses
 {
     PROTOCOL_VERSION_BYTE_1 = 1,
     PROTOCOL_VERSION_BYTE_2 = 0,
-    PROTOCOL_VERSION_BYTE_3 = 5,
+    PROTOCOL_VERSION_BYTE_3 = 6,
     DEVICE_UNIQUE_IDENTIFIER_BYTE_1 = 0,
     DEVICE_UNIQUE_IDENTIFIER_BYTE_2 = 0,
     DEVICE_UNIQUE_IDENTIFIER_BYTE_3 = 0,
@@ -39,8 +39,9 @@ void get_total_leds(void);
 //V1.0.3 unifies the command IDs between Mainline, Sonix, and VIA. All commands have a 0x20 offset now.
 //V1.0.4 improves detection handling, and has a complete rewrite of the plugins. Also merges Mainline and VIA branches. VIA Branch is deprecated.
 //V1.0.5 adds support for RGBLight and adds proper bounds checking for leds to ensure we don't crash the firmware.
+//V1.0.6 fixes conflict with VIA running at the same time.
 
-/*
+/* keymap default:
 DEVICE, DEVICE_UNIQUE_IDENTIFIER_BYTE_1,DEVICE_UNIQUE_IDENTIFIER_BYTE_2,DEVICE_UNIQUE_IDENTIFIER_BYTE_3
 gmmk/pro/rev1/ansi:default                  0 0 5
 gmmk/pro/rev2/ansi:default                  0 0 5
@@ -59,4 +60,23 @@ redragon/k556:default                       0 1 3
 redragon/k580:default                       0 1 4
 redragon/k582:default                       0 1 3
 redragon/k630:default                       0 1 5
+*/
+
+
+/* keymap via:
+DEVICE, DEVICE_UNIQUE_IDENTIFIER_BYTE_1,DEVICE_UNIQUE_IDENTIFIER_BYTE_2,DEVICE_UNIQUE_IDENTIFIER_BYTE_3
+gmmk/pro/rev1/ansi:via                  0 0 5
+gmmk/pro/rev2/ansi:via                  0 0 5
+gmmk/pro/rev1/iso:via                   0 0 6
+gmmk/pro/rev2/iso:via                   0 0 6
+gmmk/gmmk2/p65/ansi:via                 0 0 7
+gmmk/gmmk2/p65/iso:via                  0 0 8
+gmmk/gmmk2/p96/ansi:via                 0 0 9
+gmmk/gmmk2/p96/iso:via                  0 0 10
+gmmk/gmmk3/p65/ansi:via                 0 0 11
+gmmk/gmmk3/p65/iso:via                  0 0 12
+gmmk/gmmk3/p75/ansi:via                 0 0 13
+gmmk/gmmk3/p75/iso:via                  0 0 14
+gmmk/gmmk3/p100/ansi:via                0 0 15
+gmmk/gmmk3/p100/iso:via                 0 0 16
 */
