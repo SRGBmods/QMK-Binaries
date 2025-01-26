@@ -51,6 +51,8 @@ If you notice something missing (keyboard or variation of a keyboard) or have an
 # Start here if you are new #
 [QMK + VIA builds](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BVIA-Firmware) these are the most recommended builds and may help narrow things down (don't skip directly but keep reading please), but there are several QMK builds listed, always start with the most recent version VIA builds listed and then work your way down the links from here. Issues? Please contact Naitoshedo on the [**Plugin Discord Server**](https://discord.gg/jY2xrWXXRc) server or with ([**Issues**](https://github.com/SRGBmods/QMK-Binaries/issues)) of course. (If you are using a Keychron keyboard I suggest you try the keychron suffix first, if it fails use the via suffix instead... for example: start with keychron_v6_ansi_keychron.bin and if that fails try keychron_v6_ansi_via.bin as it may be more stable or actually work)
 
+If you cannot find your keep above it might be found in the Default builds and failing that check the SonixQMK builds.
+
 [VIA JSON Definitions](https://github.com/SRGBmods/QMK-Binaries/tree/main/VIA_JSON) these files are for loading into VIA if the definition file is reported missing (newer keyboards than what are included in VIA).
 
 ---
@@ -71,6 +73,8 @@ _Please explore here as there are many builds that you may find helpful!_
 
 #### Keychron (Bluetooth & Wireless & Wired models) ####
 * **[0.14.29](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BVIA-Firmware/0.14.29-keychron)** is Keychron's [wireless_playground](https://github.com/Keychron/qmk_firmware/tree/wireless_playground), [playground](https://github.com/SRGBmods/KeychronQMK/tree/playground) and [bluetooth_playground](https://github.com/Keychron/qmk_firmware/tree/bluetooth_playground). When connected to USB (wired mode) ARGB is controllable. (Bluetooth & Wireless is not supported by SignalRGB currently).
+
+If you cannot find your keep above it might be found in the Default builds and failing that check the SonixQMK builds.
 
 #### SonixQMK ####
 * **[sn32_develop](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BVIA-Firmware/sn32_develop)** is for **Sonix based keyboards _only_** and is currently under construction from SonixQMK's sn32_develop branch.
