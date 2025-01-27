@@ -95,6 +95,7 @@ If you cannot find your keep above it might be found in the Default builds and f
 #### QMK Mainline ####
 * **[0.27.9](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BDefault-Firmware/0.27.9)** is from [QMK Mainline github](https://github.com/qmk/qmk_firmware), last default version to be compiled (This is default without VIA support). (SRGBP¹ 1.0.6)
 #### SonixQMK ####
+* **[0.26.4](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BDefault-Firmware/sn32_develop)** is for **Sonix based keyboards _only_** and is currently under construction from SonixQMK's sn32_develop branch.
 * **[0.15.12-sonix](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BDefault-Firmware/0.15.12-sonix)** is for **Sonix based keyboards _only_** and comes from an older SonixQMK repo.
 
 **¹SRGBP refers to SignalRGB Protocol Version**
