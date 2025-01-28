@@ -188,8 +188,9 @@ bool srgb_raw_hid_rx(uint8_t *data, uint8_t length) {
 */
 #if defined(VIA_ENABLE)
 bool via_command_kb(uint8_t *data, uint8_t length) {
-//void raw_hid_receive_kb(uint8_t *data, uint8_t length) {
     return srgb_raw_hid_rx(data, length);
+//void raw_hid_receive_kb(uint8_t *data, uint8_t length) {
+//srgb_raw_hid_rx(data, length);
 }
 #else
 void raw_hid_receive(uint8_t *data, uint8_t length) {
