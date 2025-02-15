@@ -64,7 +64,7 @@ _Please explore here as there are many builds that you may find helpful!_
 
 **One thing of note if you are attempting to use VIA or Vial to configure your keyboard you _must_ quit SignalRGB before running either software this is a limitation of the raw_hid_send that both VIA & SignalRGB use to talk to your keyboard!**
 #### QMK Mainline (VIA Builds) - You Should Start with these. ####
-* **[0.27.9](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BVIA-Firmware/0.27.9)** is the new [QMK Mainline github development branch](https://github.com/qmk/qmk_firmware), currently being pulled and fixes to boards are applied and uploaded. (SRGBP¹ 1.0.6)
+* **[0.27.13](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BVIA-Firmware/0.27.13)** is the new [QMK Mainline github development branch](https://github.com/qmk/qmk_firmware), currently being pulled and fixes to boards are applied and uploaded. (SRGBP¹ 1.0.6)
 
 **¹SRGBP refers to SignalRGB Protocol Version**
 
@@ -93,7 +93,7 @@ If you cannot find your keep above it might be found in the Default builds and f
 ### QMK+Default-Firmware: (_When all else fails_) ###
 **Please note:** _Default builds are now deprecated, as VIA, VIAL, or XAP builds will replace all except for speciality builds._
 #### QMK Mainline ####
-* **[0.27.9](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BDefault-Firmware/0.27.9)** is from [QMK Mainline github](https://github.com/qmk/qmk_firmware), last default version to be compiled (This is default without VIA support). (SRGBP¹ 1.0.6)
+* **[0.27.12](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BDefault-Firmware/0.27.12)** is from [QMK Mainline github](https://github.com/qmk/qmk_firmware), last default version to be compiled (This is default without VIA support). (SRGBP¹ 1.0.6)
 #### SonixQMK ####
 * **[sn32_develop](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BDefault-Firmware/sn32_develop)** is for **Sonix based keyboards _only_** and is currently under construction from SonixQMK's sn32_develop branch. (This is default without VIA support). (SRGBP¹ 1.0.6)
 * **[0.15.12-sonix](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BDefault-Firmware/0.15.12-sonix)** is for **Sonix based keyboards _only_** and comes from an older SonixQMK repo.
