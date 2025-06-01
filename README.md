@@ -104,6 +104,13 @@ If you cannot find your keep above it might be found in the Default builds and f
 
 ---
 
+### Folks whom wish to compile on their own and use a Community Module ###
+We now provide a [userspace community module](https://github.com/SRGBmods/QMK_Community_Module) for folks that wish to compile their own firmware without having to move files around and edit pre-existing quantum/ files.
+
+Keep in mind this is a Work In Progress (WIP) and will get updated as we continute to update it (make sure to git pull frequently)!
+
+---
+
 ### Directions ###
 **If you are using VIA or Vial currently, you should save your current mappings (layout) e.g. back it up before flashing that way you can restore it once the flash is complete!**
 
