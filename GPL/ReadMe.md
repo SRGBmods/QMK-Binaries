@@ -1,4 +1,7 @@
-# For GPL Compliance (Full Source code): #
+# We recommend looking at the WIP Community Module #
+More development is occuring on the [Community Module](https://github.com/SRGBmods/QMK_Community_Module) in comparison to the source found here.
+
+## For GPL Compliance (Full Source code): ##
 [QMK Mainline + SignalRGB Merged Source](https://gitlab.com/signalrgb/qmk_firmware/-/tree/QMKRelease_1.0) & [SonixQMK + SignalRGB Merged Source](https://gitlab.com/signalrgb/qmk_firmware/-/tree/Sonix_QMKRelease_1.0).
 
 ---
