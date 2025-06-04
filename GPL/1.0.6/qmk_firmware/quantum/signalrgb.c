@@ -1,3 +1,6 @@
+/* SignalRGB.c for SignalRGB Protocol */
+#include QMK_KEYBOARD_H
+
 #ifndef RAW_ENABLE
 #    error "RAW HID Communication is not enabled" //This should be impossible to run into afaik. Common_features ensures RAWHID is enabled.
 #endif
@@ -10,8 +13,20 @@
 #include "color.h"
 #include "raw_hid.h"
 
+#if defined(RGBLIGHT_ENABLE) && defined(RGB_MATRIX_ENABLE)
+    #define TOTAL_LEDS (RGBLIGHT_LED_COUNT + RGB_MATRIX_LED_COUNT)
+    static const uint8_t RGBMATRIX_END = RGB_MATRIX_LED_COUNT;
+#elif defined(RGBLIGHT_ENABLE)
+    #define TOTAL_LEDS RGBLIGHT_LED_COUNT
+    #define RGBMATRIX_END 0
+#elif defined(RGB_MATRIX_ENABLE)
+    #define TOTAL_LEDS RGB_MATRIX_LED_COUNT
+    #define RGBMATRIX_END RGB_MATRIX_LED_COUNT
+#else
+    #error "At least one of RGBLIGHT_ENABLE or RGB_MATRIX_ENABLE must be defined!"
+#endif
 
- uint8_t packet[32];
+uint8_t packet[32];
 
 void get_qmk_version(void) //Grab the QMK Version the board's firmware is built off of
 {
