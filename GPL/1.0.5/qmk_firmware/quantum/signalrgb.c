@@ -1,3 +1,6 @@
+/* SignalRGB.c for SignalRGB Protocol */
+#include QMK_KEYBOARD_H
+
 #ifndef RAW_ENABLE
 #    error "RAW HID Communication is not enabled" //This should be impossible to run into afaik. Common_features ensures RAWHID is enabled.
 #endif
@@ -10,8 +13,20 @@
 #include "color.h"
 #include "raw_hid.h"
 
+#if defined(RGBLIGHT_ENABLE) && defined(RGB_MATRIX_ENABLE)
+    #define TOTAL_LEDS (RGBLIGHT_LED_COUNT + RGB_MATRIX_LED_COUNT)
+    static const uint8_t RGBMATRIX_END = RGB_MATRIX_LED_COUNT;
+#elif defined(RGBLIGHT_ENABLE)
+    #define TOTAL_LEDS RGBLIGHT_LED_COUNT
+    #define RGBMATRIX_END 0
+#elif defined(RGB_MATRIX_ENABLE)
+    #define TOTAL_LEDS RGB_MATRIX_LED_COUNT
+    #define RGBMATRIX_END RGB_MATRIX_LED_COUNT
+#else
+    #error "At least one of RGBLIGHT_ENABLE or RGB_MATRIX_ENABLE must be defined!"
+#endif
 
- uint8_t packet[32];
+uint8_t packet[32];
 
 void get_qmk_version(void) //Grab the QMK Version the board's firmware is built off of
 {
@@ -71,18 +86,41 @@ void led_streaming(uint8_t *data) //Stream data from HID Packets to Keyboard.
       uint8_t  g = data[offset + 1];
       uint8_t  b = data[offset + 2];
 
-      //if ( ((index + i) == CAPS_LOCK_LED_INDEX && host_keyboard_led_state().caps_lock) || ((index + i) == NUM_LOCK_LED_INDEX && host_keyboard_led_state().num_lock) || ((index + i) == SCROLL_LOCK_LED_INDEX && host_keyboard_led_state().scroll_lock))   {
-      //if ( ((index + i) == CAPS_LOCK_LED_INDEX && host_keyboard_led_state().caps_lock) || ((index + i) == NUM_LOCK_LED_INDEX && host_keyboard_led_state().num_lock))   {
-      //if ( (index + i) == CAPS_MAC_WIN_LED_INDEX && host_keyboard_led_state().caps_lock)   {
-      //if ( (index + i) == CAPS_LOCK_LED_INDEX && host_keyboard_led_state().caps_lock)   {
-      //if ( (index + i) == NUM_LOCK_LED_INDEX && host_keyboard_led_state().num_lock)  {
-      //#if defined(RGBLIGHT_ENABLE)
-      //rgblight_setrgb_at(255, 255, 255, index + i);
-      //#elif defined(RGB_MATRIX_ENABLE)
-      //rgb_matrix_set_color(index + i, 255, 255, 255);
-      //#endif
+      bool isIndicator = false;
 
-      //} else {
+      #if defined(NUM_LOCK_LED_INDEX)
+      if ( (index + i) == NUM_LOCK_LED_INDEX && host_keyboard_led_state().num_lock ) isIndicator = true;
+      #endif
+
+      #if defined(NUM_LOCK_INDEX)
+      if ( (index + i) == NUM_LOCK_INDEX && host_keyboard_led_state().num_lock ) isIndicator = true;
+      #endif
+
+      #if defined(CAPS_LOCK_LED_INDEX)
+      if ( (index + i) == CAPS_LOCK_LED_INDEX && host_keyboard_led_state().caps_lock ) isIndicator = true;
+      #endif
+
+      #if defined(CAPS_MAC_WIN_LED_INDEX)
+      if ( (index + i) == CAPS_MAC_WIN_LED_INDEX && host_keyboard_led_state().caps_lock ) isIndicator = true;
+      #endif
+
+      #if defined(CAPS_LOCK_INDEX)
+      if ( (index + i) == CAPS_LOCK_INDEX && host_keyboard_led_state().caps_lock ) isIndicator = true;
+      #endif
+
+      #if defined(SCROLL_LOCK_INDEX)
+      if ( (index + i) == SCROLL_LOCK_INDEX && host_keyboard_led_state().scroll_lock ) isIndicator = true;
+      #endif
+
+      if (isIndicator) {
+
+      #if defined(RGBLIGHT_ENABLE)
+      rgblight_setrgb_at(255, 255, 255, index + i);
+      #elif defined(RGB_MATRIX_ENABLE)
+      rgb_matrix_set_color(index + i, 255, 255, 255);
+      #endif
+
+      } else {
 
       #if defined(RGBLIGHT_ENABLE)
       rgblight_setrgb_at(r, g, b, index + i);
@@ -91,7 +129,7 @@ void led_streaming(uint8_t *data) //Stream data from HID Packets to Keyboard.
       #endif
         }
      }
-//}
+}
 
 void signalrgb_mode_enable(void)
 {
@@ -129,8 +167,7 @@ void get_firmware_type(void) //Grab which fork of qmk a board is running.
     raw_hid_send(packet, 32);
 }
 
-void raw_hid_receive(uint8_t *data, uint8_t length) 
-{
+bool srgb_raw_hid_rx(uint8_t *data, uint8_t length) {
         switch (data[0]) {
         case GET_QMK_VERSION:
            
@@ -178,6 +215,23 @@ void raw_hid_receive(uint8_t *data, uint8_t length)
         break;
 
         default:
-        break;
+        return false;
     }
+    return true;
 }
+
+
+// This is always fun as different forks call either raw_hid_receive or via_command_kb 
+// So this will probably always need to be massaged to work. When in doubt try raw_hid_receive_kb.
+
+#if defined(VIA_ENABLE)
+bool via_command_kb(uint8_t *data, uint8_t length) {
+    return srgb_raw_hid_rx(data, length);
+//void raw_hid_receive_kb(uint8_t *data, uint8_t length) {
+//srgb_raw_hid_rx(data, length);
+}
+#else
+void raw_hid_receive(uint8_t *data, uint8_t length) {
+    srgb_raw_hid_rx(data, length);
+}
+#endif
