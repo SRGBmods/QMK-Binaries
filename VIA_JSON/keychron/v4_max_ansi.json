@@ -69,8 +69,8 @@
     {"name": "Right Option", "title": "Right Option", "shortName": "ROpt"},
     {"name": "Left Cmd", "title": "Left Command", "shortName": "LCmd"},
     {"name": "Right Cmd", "title": "Right Command", "shortName": "RCmd"},
-    {"name": "Misson Control", "title": "Misson Control in Mac", "shortName": "MCtl"},
-    {"name": "Lanuch Pad", "title": "Lanuch Pad in Windows", "shortName": "LPad"},
+    {"name": "Misson Control", "title": "Misson Control in macOS", "shortName": "MCtl"},
+    {"name": "Lanuch Pad", "title": "Lanuch Pad in macOS", "shortName": "LPad"},
     {"name": "Task View", "title": "Task View in Windows", "shortName": "Task"},
     {"name": "File Explorer", "title": "File Explorer in Windows", "shortName": "File"},
     {"name": "Screen shot", "title": "Screenshot in macOS", "shortName": "SShot"},
@@ -107,8 +107,8 @@
         "0,11",
         "0,12",
         {
-          "c": "#aaaaaa",
-          "w": 2
+          "w": 2,
+          "c": "#aaaaaa"
         },
         "0,13"
       ],
@@ -134,7 +134,7 @@
         "1,12",
         {
           "w": 1.5,
-          "c":"#aaaaaa"
+          "c": "#aaaaaa"
         },
         "1,13"
       ],
@@ -158,15 +158,15 @@
         "2,10",
         "2,11",
         {
-          "c": "#777777",
-          "w": 2.25
+          "w": 2.25,
+          "c": "#777777"
         },
         "2,13"
       ],
       [
         {
-          "c": "#aaaaaa",
-          "w": 2.25
+          "w": 2.25,
+          "c": "#aaaaaa"
         },
         "3,0",
         {
@@ -183,8 +183,8 @@
         "3,10",
         "3,11",
         {
-          "c": "#aaaaaa",
-          "w": 2.75
+          "w": 2.75,
+          "c": "#aaaaaa"
         },
         "3,13"
       ],
@@ -202,13 +202,13 @@
         },
         "4,2",
         {
-          "c": "#cccccc",
-          "w": 6.25
+          "w": 6.25,
+          "c": "#cccccc"
         },
         "4,6",
         {
-          "c": "#aaaaaa",
-          "w": 1.25
+          "w": 1.25,
+          "c": "#aaaaaa"
         },
         "4,10",
         {

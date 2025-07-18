@@ -64,69 +64,68 @@
       ]
     }
   ],
-    "customKeycodes": [
-      {"name": "Left Option", "title": "Left Option", "shortName": "LOpt"},
-      {"name": "Right Option", "title": "Right Option", "shortName": "ROpt"},
-      {"name": "Left Cmd", "title": "Left Command", "shortName": "LCmd"},
-      {"name": "Right Cmd", "title": "Right Command", "shortName": "RCmd"},
-      {"name": "Misson Control", "title": "Misson Control in Mac", "shortName": "MCtl"},
-      {"name": "Lanuch Pad", "title": "Lanuch Pad in Windows", "shortName": "LPad"},
-      {"name": "Task View", "title": "Task View in Windows", "shortName": "Task"},
-      {"name": "File Explorer", "title": "File Explorer in Windows", "shortName": "File"},
-      {"name": "Screen shot", "title": "Screenshot in macOS", "shortName": "SShot"},
-      {"name": "Cortana", "title": "Cortana in Windows", "shortName": "Cortana"},
-      {"name": "Siri", "title": "Siri in macOS", "shortName": "Siri"},
-      {"name": "Bluetooth Host 1", "title": "Bluetooth Host 1", "shortName": "BTH1"},
-      {"name": "Bluetooth Host 2", "title": "Bluetooth Host 2", "shortName": "BTH2"},
-      {"name": "Bluetooth Host 3", "title": "Bluetooth Host 3", "shortName": "BTH3"},
-      {"name": "2.4G", "title": "2.4G", "shortName": "2.4G"},
-      {"name": "Battery Level", "title": "Show battery level", "shortName": "Batt"}
-    ],
-  "matrix": {"rows": 5, "cols": 15},
+  "customKeycodes": [
+    {"name": "Left Option", "title": "Left Option", "shortName": "LOpt"},
+    {"name": "Right Option", "title": "Right Option", "shortName": "ROpt"},
+    {"name": "Left Cmd", "title": "Left Command", "shortName": "LCmd"},
+    {"name": "Right Cmd", "title": "Right Command", "shortName": "RCmd"},
+    {"name": "Misson Control", "title": "Misson Control in macOS", "shortName": "MCtl"},
+    {"name": "Lanuch Pad", "title": "Lanuch Pad in macOS", "shortName": "LPad"},
+    {"name": "Task View", "title": "Task View in Windows", "shortName": "Task"},
+    {"name": "File Explorer", "title": "File Explorer in Windows", "shortName": "File"},
+    {"name": "Screen shot", "title": "Screenshot in macOS", "shortName": "SShot"},
+    {"name": "Cortana", "title": "Cortana in Windows", "shortName": "Cortana"},
+    {"name": "Siri", "title": "Siri in macOS", "shortName": "Siri"},
+    {"name": "Bluetooth Host 1", "title": "Bluetooth Host 1", "shortName": "BTH1"},
+    {"name": "Bluetooth Host 2", "title": "Bluetooth Host 2", "shortName": "BTH2"},
+    {"name": "Bluetooth Host 3", "title": "Bluetooth Host 3", "shortName": "BTH3"},
+    {"name": "2.4G", "title": "2.4G", "shortName": "2.4G"},
+    {"name": "Battery Level", "title": "Show battery level", "shortName": "Batt"}
+  ],
+  "matrix": {"rows": 6, "cols": 16},
   "layouts": {
     "keymap": [
       [
         {
-          "x": 2.75
+          "x": 2.75,
+          "y": 0.6,
+          "c": "#cccccc"
         },
         "0,2",
         {
-          "x": 8.85
+          "x": 8.6
         },
         "0,11",
         {
-          "x": 3.5,
+          "x": 3.55,
           "c": "#aaaaaa"
         },
         "0,14\n\n\n\n\n\n\n\n\ne0"
       ],
       [
         {
-          "y": -0.85,
           "x": 0.75,
+          "y": -0.9,
           "c": "#777777"
         },
         "0,0\nESC",
         {
           "c": "#cccccc"
         },
-        "0,1"
-      ],
-      [
+        "0,1",
         {
-          "y": -0.85,
-          "x": 13.6
+          "x": 10.6
         },
         "0,12",
         {
-          "c": "#aaaaaa",
-          "w": 2
+          "w": 2,
+          "c": "#aaaaaa"
         },
         "0,13"
       ],
       [
         {
-          "x": 0.5,
+          "x": 0.55,
           "w": 1.5
         },
         "1,0",
@@ -135,7 +134,7 @@
         },
         "1,1",
         {
-          "x": 10.3
+          "x": 10.05
         },
         "1,11",
         "1,12",
@@ -143,19 +142,17 @@
           "w": 1.5,
           "c": "#aaaaaa"
         },
-        "1,13"
-      ],
-      [
+        "1,13",
         {
-          "y": -0.9,
-          "x": 17.3
+          "x": 0.45,
+          "y": 0.1
         },
         "1,14"
       ],
       [
         {
+          "x": 0.35,
           "y": -0.1,
-          "x": 0.25,
           "w": 1.75
         },
         "2,0",
@@ -164,26 +161,25 @@
         },
         "2,1",
         {
-          "x": 9.75
+          "x": 9.45
         },
         "2,11",
         "2,12",
         {
-          "c": "#777777",
-          "w": 2.25
+          "w": 2.25,
+          "c": "#777777"
         },
-        "2,13"
-      ],
-      [
+        "2,13",
         {
-          "y": -0.9,
-          "x": 17.5,
+          "x": 0.45,
+          "y": 0.1,
           "c": "#aaaaaa"
         },
         "2,14"
       ],
       [
         {
+          "x": 0.1,
           "y": -0.1,
           "w": 2.25
         },
@@ -193,40 +189,37 @@
         },
         "3,2",
         {
-          "x": 10.15
+          "x": 9.7
         },
         "3,12",
         {
-          "c": "#aaaaaa",
-          "w": 1.75
+          "w": 1.75,
+          "c": "#aaaaaa"
         },
-        "3,13"
-      ],
-      [
+        "3,13",
         {
-          "y": -0.75,
-          "x": 16.4,
-          "c": "#777777"
+          "x": 0.25,
+          "y": 0.3,
+          "c": "#cccccc"
         },
         "3,14"
       ],
       [
         {
-          "y": -0.25,
-          "c": "#aaaaaa",
-          "w": 1.25
+          "x": 0.1,
+          "y": -0.3,
+          "w": 1.25,
+          "c": "#aaaaaa"
         },
         "4,0",
         {
           "w": 1.25
         },
-        "4,1"
-      ],
-      [
+        "4,1",
         {
-          "y": -0.75,
-          "x": 15.4,
-          "c": "#777777"
+          "x": 12.45,
+          "y": 0.3,
+          "c": "#cccccc"
         },
         "4,12",
         "4,13",
@@ -234,10 +227,9 @@
       ],
       [
         {
-          "r": 6,
-          "y": -5.7,
-          "x": 3.85,
-          "c": "#cccccc"
+          "r": 12,
+          "x": 4.05,
+          "y": -6.1
         },
         "0,3",
         "0,4",
@@ -246,7 +238,7 @@
       ],
       [
         {
-          "x": 3.35
+          "x": 3.55
         },
         "1,2",
         "1,3",
@@ -255,7 +247,7 @@
       ],
       [
         {
-          "x": 3.55
+          "x": 3.8
         },
         "2,2",
         "2,3",
@@ -264,7 +256,7 @@
       ],
       [
         {
-          "x": 3.9
+          "x": 4.3
         },
         "3,3",
         "3,4",
@@ -273,38 +265,32 @@
       ],
       [
         {
-          "x": 4,
-          "c": "#aaaaaa",
-          "w": 1.25
+          "x": 4.35,
+          "w": 1.25,
+          "c": "#aaaaaa"
         },
         "4,2",
         {
           "w": 2.25
         },
         "4,3",
-        {
-          "c": "#aaaaaa"
-        },
         "4,6"
       ],
       [
         {
-          "r": -6,
-          "y": -3.2,
-          "x": 8.35,
+          "r": -12,
+          "x": 7.7,
+          "y": -1.73,
           "c": "#cccccc"
         },
         "0,7",
         "0,8",
-      {
-        "c": "#cccccc"
-      },
         "0,9",
         "0,10"
       ],
       [
         {
-          "x": 7.9
+          "x": 7.25
         },
         "1,6",
         "1,7",
@@ -314,7 +300,7 @@
       ],
       [
         {
-          "x": 8.25
+          "x": 7.5
         },
         "2,7",
         "2,8",
@@ -323,7 +309,7 @@
       ],
       [
         {
-          "x": 7.8
+          "x": 6.75
         },
         "3,7",
         "3,8",
@@ -333,7 +319,7 @@
       ],
       [
         {
-          "x": 7.8,
+          "x": 6.75,
           "c": "#aaaaaa"
         },
         "4,7",
@@ -341,9 +327,6 @@
           "w": 2.75
         },
         "4,8",
-        {
-          "c": "#aaaaaa"
-        },
         "4,9"
       ]
     ]

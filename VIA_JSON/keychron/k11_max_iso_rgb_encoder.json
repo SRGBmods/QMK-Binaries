@@ -69,8 +69,8 @@
     {"name": "Right Option", "title": "Right Option", "shortName": "ROpt"},
     {"name": "Left Cmd", "title": "Left Command", "shortName": "LCmd"},
     {"name": "Right Cmd", "title": "Right Command", "shortName": "RCmd"},
-    {"name": "Misson Control", "title": "Misson Control in Mac", "shortName": "MCtl"},
-    {"name": "Lanuch Pad", "title": "Lanuch Pad in Windows", "shortName": "LPad"},
+    {"name": "Misson Control", "title": "Misson Control in macOS", "shortName": "MCtl"},
+    {"name": "Lanuch Pad", "title": "Lanuch Pad in macOS", "shortName": "LPad"},
     {"name": "Task View", "title": "Task View in Windows", "shortName": "Task"},
     {"name": "File Explorer", "title": "File Explorer in Windows", "shortName": "File"},
     {"name": "Screen shot", "title": "Screenshot in macOS", "shortName": "SShot"},
@@ -97,8 +97,8 @@
       ],
       [
         {
-          "y": -0.85,
           "x": 0.75,
+          "y": -0.85,
           "c": "#777777"
         },
         "0,0\nESC",
@@ -109,10 +109,10 @@
       ],
       [
         {
-          "y": -0.85,
           "x": 14.6,
-          "c": "#aaaaaa",
-          "w": 2
+          "y": -0.85,
+          "w": 2,
+          "c": "#aaaaaa"
         },
         "0,13",
         {
@@ -122,18 +122,18 @@
       ],
       [
         {
-          "y": -1,
           "x": 13.6,
+          "y": -1,
           "c": "#cccccc"
         },
         "0,12"
       ],
       [
         {
-          "y": -0.15,
           "x": 0.5,
-          "c": "#aaaaaa",
-          "w": 1.5
+          "y": -0.15,
+          "w": 1.5,
+          "c": "#aaaaaa"
         },
         "1,0",
         {
@@ -143,19 +143,19 @@
       ],
       [
         {
-          "y": -0.85,
-          "x": 13.5
+          "x": 13.5,
+          "y": -0.85
         },
         "1,11",
         "1,12",
         {
           "x": 0.25,
-          "c": "#777777",
           "w": 1.5,
           "h": 2,
+          "x2": -0.25,
           "w2": 1.75,
           "h2": 1,
-          "x2": -0.25
+          "c": "#777777"
         },
         "1,13",
         {
@@ -166,8 +166,8 @@
       ],
       [
         {
-          "y": -0.15,
           "x": 0.25,
+          "y": -0.15,
           "w": 1.75
         },
         "2,0",
@@ -178,8 +178,8 @@
       ],
       [
         {
-          "y": -0.85,
-          "x": 12.75
+          "x": 12.75,
+          "y": -0.85
         },
         "2,10",
         "2,11",
@@ -206,20 +206,20 @@
       ],
       [
         {
-          "y": -0.85,
-          "x": 13.4
+          "x": 13.4,
+          "y": -0.85
         },
         "3,13",
         {
-          "c": "#aaaaaa",
-          "w": 1.75
+          "w": 1.75,
+          "c": "#aaaaaa"
         },
         "3,14"
       ],
       [
         {
-          "y": -0.75,
           "x": 16.4,
+          "y": -0.75,
           "c": "#cccccc"
         },
         "3,15"
@@ -227,8 +227,8 @@
       [
         {
           "y": -0.4,
-          "c": "#aaaaaa",
-          "w": 1.25
+          "w": 1.25,
+          "c": "#aaaaaa"
         },
         "4,0",
         {
@@ -238,8 +238,8 @@
       ],
       [
         {
-          "y": -0.6,
           "x": 15.4,
+          "y": -0.6,
           "c": "#cccccc"
         },
         "4,13",
@@ -249,8 +249,8 @@
       [
         {
           "r": 6,
-          "y": -5.7,
           "x": 3.85,
+          "y": -5.7,
           "c": "#cccccc"
         },
         "0,3",
@@ -288,8 +288,8 @@
       [
         {
           "x": 3.9,
-          "c": "#aaaaaa",
-          "w": 1.25
+          "w": 1.25,
+          "c": "#aaaaaa"
         },
         "4,2",
         {
@@ -301,8 +301,8 @@
       [
         {
           "r": -6,
-          "y": -3.3,
           "x": 8.35,
+          "y": -3.3,
           "c": "#cccccc"
         },
         "0,7",

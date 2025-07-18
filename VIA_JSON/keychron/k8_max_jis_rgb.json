@@ -69,8 +69,8 @@
     {"name": "Right Option", "title": "Right Option", "shortName": "ROpt"},
     {"name": "Left Cmd", "title": "Left Command", "shortName": "LCmd"},
     {"name": "Right Cmd", "title": "Right Command", "shortName": "RCmd"},
-    {"name": "Misson Control", "title": "Misson Control in Mac", "shortName": "MCtl"},
-    {"name": "Lanuch Pad", "title": "Lanuch Pad in Windows", "shortName": "LPad"},
+    {"name": "Misson Control", "title": "Misson Control in macOS", "shortName": "MCtl"},
+    {"name": "Lanuch Pad", "title": "Lanuch Pad in macOS", "shortName": "LPad"},
     {"name": "Task View", "title": "Task View in Windows", "shortName": "Task"},
     {"name": "File Explorer", "title": "File Explorer in Windows", "shortName": "File"},
     {"name": "Screen shot", "title": "Screenshot in macOS", "shortName": "SShot"},
@@ -145,8 +145,8 @@
         "0,1",
         "1,13",
         {
-          "c": "#aaaaaa",
-          "x": 0.25
+          "x": 0.25,
+          "c": "#aaaaaa"
         },
         "1,14",
         "1,15",
@@ -174,16 +174,17 @@
         "2,12",
         {
           "x": 0.25,
-          "c": "#aaaaaa",
           "w": 1.25,
           "h": 2,
+          "x2": -0.25,
           "w2": 1.5,
           "h2": 1,
-          "x2": -0.25
+          "c": "#777777"
         },
         "2,13",
         {
-          "x": 0.25
+          "x": 0.25,
+          "c": "#aaaaaa"
         },
         "2,14",
         "2,15",
@@ -212,8 +213,8 @@
       ],
       [
         {
-          "c": "#aaaaaa",
-          "w": 2.25
+          "w": 2.25,
+          "c": "#aaaaaa"
         },
         "4,0",
         {
@@ -231,8 +232,8 @@
         "4,11",
         "4,12",
         {
-          "c": "#aaaaaa",
-          "w": 1.75
+          "w": 1.75,
+          "c": "#aaaaaa"
         },
         "4,13",
         {
@@ -243,8 +244,8 @@
       ],
       [
         {
-          "c": "#aaaaaa",
-          "w": 1.25
+          "w": 1.25,
+          "c": "#aaaaaa"
         },
         "5,0",
         "5,1",
@@ -254,8 +255,8 @@
         "5,2",
         "5,3",
         {
-          "c": "#cccccc",
-          "w": 4.5
+          "w": 4.5,
+          "c": "#cccccc"
         },
         "5,6",
         {
