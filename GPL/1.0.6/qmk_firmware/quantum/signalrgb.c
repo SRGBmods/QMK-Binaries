@@ -1,6 +1,4 @@
 /* SignalRGB.c for SignalRGB Protocol */
-#include QMK_KEYBOARD_H
-
 #ifndef RAW_ENABLE
 #    error "RAW HID Communication is not enabled" //This should be impossible to run into afaik. Common_features ensures RAWHID is enabled.
 #endif
@@ -88,6 +86,10 @@ void led_streaming(uint8_t *data) //Stream data from HID Packets to Keyboard.
 
       bool isIndicator = false;
 
+      #if defined(CAPS_MAC_WIN_LED_INDEX)
+      if ( (index + i) == CAPS_MAC_WIN_LED_INDEX && host_keyboard_led_state().caps_lock ) isIndicator = true;
+      #endif
+
       #if defined(NUM_LOCK_LED_INDEX)
       if ( (index + i) == NUM_LOCK_LED_INDEX && host_keyboard_led_state().num_lock ) isIndicator = true;
       #endif
@@ -100,12 +102,12 @@ void led_streaming(uint8_t *data) //Stream data from HID Packets to Keyboard.
       if ( (index + i) == CAPS_LOCK_LED_INDEX && host_keyboard_led_state().caps_lock ) isIndicator = true;
       #endif
 
-      #if defined(CAPS_MAC_WIN_LED_INDEX)
-      if ( (index + i) == CAPS_MAC_WIN_LED_INDEX && host_keyboard_led_state().caps_lock ) isIndicator = true;
-      #endif
-
       #if defined(CAPS_LOCK_INDEX)
       if ( (index + i) == CAPS_LOCK_INDEX && host_keyboard_led_state().caps_lock ) isIndicator = true;
+      #endif
+
+      #if defined(SCROLL_LOCK_LED_INDEX)
+      if ( (index + i) == SCROLL_LOCK_LED_INDEX && host_keyboard_led_state().scroll_lock ) isIndicator = true;
       #endif
 
       #if defined(SCROLL_LOCK_INDEX)
