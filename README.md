@@ -98,7 +98,7 @@ If you cannot find your keep above it might be found in the Default builds and f
 #### QMK Mainline ####
 * **[GMMK Users](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BWeirdness-Outdated-Firmware/glorious/gmmk-stable-builds-0.29.2)** due to recent changes after QMK Mainline 0.29.2, the most recent builds for the majority of usesrs can be found here, please check the link below as some GMMK builds continue to work, if not available there use these builds!
 
-* **[0.30.0](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BDefault-Firmware/0.30.0)** is from [QMK Mainline github](https://github.com/qmk/qmk_firmware), last default version to be compiled (This is default without VIA support). (SRGBP¹ 1.0.6)
+* **[0.30.3](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BDefault-Firmware/0.30.3)** is from [QMK Mainline github](https://github.com/qmk/qmk_firmware), last default version to be compiled (This is default without VIA support). (SRGBP¹ 1.0.6)
 * **[Archived](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BDefault-Firmware/_Archived)** feel free to check the archived builds as they may be outdated but could include support for your keyboard.
 #### SonixQMK ####
 * **[sn32_develop](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BDefault-Firmware/sn32_develop)** is for **Sonix based keyboards _only_** and is currently under construction from SonixQMK's sn32_develop branch. (This is default without VIA support). (SRGBP¹ 1.0.6)
