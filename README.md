@@ -55,7 +55,7 @@ If you cannot find your keyboard above in VIA it might be found in the Default b
 
 [VIA JSON Definitions](https://github.com/SRGBmods/QMK-Binaries/tree/main/VIA_JSON) these files are for loading into VIA if the definition file is reported missing (newer keyboards than what are included in VIA).
 
-Issues? Please contact Naitoshedo on the [**Plugin Discord Server**](https://discord.gg/jY2xrWXXRc) server or with ([**Issues**](https://github.com/SRGBmods/QMK-Binaries/issues)) of course. (If you are using a Keychron keyboard I suggest you try the keychron suffix first, if it fails use the via suffix instead... for example: start with keychron_v6_ansi_keychron.bin and if that fails try keychron_v6_ansi_via.bin as it may be more stable or actually work)
+Issues? Please contact Naitoshedo on the [**Plugin Discord Server**](https://discord.gg/jY2xrWXXRc) server or with ([**Issues**](https://github.com/SRGBmods/QMK-Binaries/issues)) of course.
 
 ---
 
