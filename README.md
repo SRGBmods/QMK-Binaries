@@ -3,13 +3,13 @@
 ![SRGBmods QMK Builds,100%](https://srgbmods.net/img/srgbmods-qmk.png)
 
 ### Wish to partner with SignalRGB and have QMK source to contribute? ###
-We're happy to help, please either create an ([**Issue**](https://github.com/SRGBmods/QMK-Binaries/issues)), or reach out on our [**Discord**](https://discord.gg/jY2xrWXXRc).
+We're happy to help, please either create an ([**Issue**](https://github.com/SRGBmods/QMK-Binaries/issues)), or reach out on our [**Discord**](https://discord.gg/signalrgb).
 
 ---
 
 # PLEASE __READ ALL OF THIS... SERIOUSLY__, IT WILL HELP YOU. #
 
-Need help and cannot be bothered to read anything below this? Join this [**Discord**](https://discord.gg/jY2xrWXXRc) assign yourself the QMK role from the pull down. Then puruse the channels provided for QMK + SignalRGB users. No support for any of these files will be provided by official email tech support. Only Discord & Github issues.
+Need help and cannot be bothered to read anything below this? Join this [**Discord**](https://discord.gg/signalrgb) then puruse the channels provided for QMK. No support for any of these files will be provided by official email tech support. Only Discord & Github issues.
 
 # _Make sure to click the "Download raw content" button for your specific firmware!_ #
 
@@ -40,7 +40,7 @@ Licenses include: [SonixQMK](https://github.com/SonixQMK/qmk_firmware/blob/sn32_
 
 # Help with these binaries / user plugin creation #
 
-**This firmware is not "officially" supported by SignalRGB, QMK or any other software development team but by the moderator team of SignalRGB. Support can be provided either on the Github repository ([**Issues**](https://github.com/SRGBmods/QMK-Binaries/issues)) here or the QMK channels of this** [**Discord**](https://discord.com/invite/J5dwtcNhqC) **(Discord will be faster in most cases)**, after joining this specific Discord go to the #roles channel and assign yourself the QMK role. This will allow you to interact with the QMK group / support mods of the server.
+**This firmware is not "officially" supported by SignalRGB, QMK or any other software development team but by the moderator team of SignalRGB. Support can be provided either on the Github repository ([**Issues**](https://github.com/SRGBmods/QMK-Binaries/issues)) here or the QMK channels of this** [**Discord**](https://discord.gg/signalrgb) **(Discord will be faster in most cases)**, after joining this specific Discord go #QMK channels, This will allow you to interact with the QMK group / support mods of the server.
 
 **Please keep support requests to either of those locations only, thanks!**
 
@@ -55,7 +55,7 @@ If you cannot find your keyboard above in VIA it might be found in the Default b
 
 [VIA JSON Definitions](https://github.com/SRGBmods/QMK-Binaries/tree/main/VIA_JSON) these files are for loading into VIA if the definition file is reported missing (newer keyboards than what are included in VIA).
 
-Issues? Please contact Naitoshedo on the [**Plugin Discord Server**](https://discord.gg/jY2xrWXXRc) server or with ([**Issues**](https://github.com/SRGBmods/QMK-Binaries/issues)) of course.
+Issues? Please contact Naitoshedo on the [**Discord**](https://discord.gg/signalrgb) server in the #QMK channel(s) or with ([**Issues**](https://github.com/SRGBmods/QMK-Binaries/issues)) of course.
 
 ---
 
@@ -110,13 +110,6 @@ If you cannot find your keep above it might be found in the Default builds and f
 
 ---
 
-## Folks whom wish to compile on their own and use a Community Module ##
-We now provide a [userspace community module](https://github.com/SRGBmods/QMK_Community_Module) for folks that wish to compile their own firmware without having to move files around and edit pre-existing quantum/ files.
-
-Keep in mind this is a Work In Progress (WIP) and will get updated as we continute to update it (make sure to git pull frequently)!
-
----
-
 ### Directions ###
 **If you are using VIA or Vial currently, you should save your current mappings (layout) e.g. back it up before flashing that way you can restore it once the flash is complete!**
 
@@ -143,9 +136,17 @@ And finally [here are the directions](https://docs.signalrgb.com/qmk/srgbmods-qm
 
 ---
 
+## Folks whom wish to compile on their own and use a Community Module ##
+We now provide a [userspace community module](https://github.com/SRGBmods/QMK_Community_Module) for folks that wish to compile their own firmware without having to move files around and edit pre-existing quantum/ files.
+
+Keep in mind this is a Work In Progress (WIP) and will get updated as we continute to update it (make sure to git pull frequently)!
+
+---
+
 ### Manually add Protocol support files ###
 
-To manually add the SignalRGB Protocol 1.0.5 to almost any qmk fork please see the [following files](https://github.com/SRGBmods/QMK-Binaries/tree/main/GPL/qmk_firmware).
+To manually add the SignalRGB Protocol 1.0.6 to almost any qmk fork please see the [following files](https://github.com/SRGBmods/QMK-Binaries/tree/main/GPL/1.0.6/qmk_firmware).
+To manually add the SignalRGB Protocol 1.0.5 to almost any qmk fork please see the [following files](https://github.com/SRGBmods/QMK-Binaries/tree/main/GPL/1.0.5/qmk_firmware).
 
 The above code changes have been applied to vanilla / playground repos for each fork(s) for the binaries provided.
 
@@ -158,4 +159,4 @@ _(The above may include backporting RGB_Matrix to that specific board and the so
 ---
 
 ### Wish to partner with SignalRGB and have QMK source to contribute? ###
-We're happy to help, please either create an ([**Issue**](https://github.com/SRGBmods/QMK-Binaries/issues)), reach out on our [**Discord**](https://discord.gg/jY2xrWXXRc) or email us [directly](mailto:qmk@signalrgb.com).
+We're happy to help, please either create an ([**Issue**](https://github.com/SRGBmods/QMK-Binaries/issues)), reach out on our [**Discord**](https://discord.gg/signalrgb) or email us [directly](mailto:qmk@signalrgb.com).
