@@ -67,7 +67,7 @@ _Please explore here as there are many builds that you may find helpful!_
 **One thing of note if you are attempting to use VIA or Vial to configure your keyboard you _may need to **quit**_ SignalRGB before running either software this is a limitation of the raw_hid_send that both VIA & SignalRGB use to talk to your keyboard!**
 #### QMK Mainline (VIA Builds) - You Should Start with these. ####
 * **[0.30.11](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BVIA-Firmware/0.30.11)** is the new [QMK Mainline github development branch](https://github.com/qmk/qmk_firmware), currently being pulled and fixes to boards are applied and uploaded. (SRGBP¹ 1.0.6)
-* **[GMMK Users](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BWeirdness-Outdated-Firmware/glorious/gmmk-stable-builds-0.29.2)** due to recent changes after QMK Mainline 0.29.2, some GMMK users may have issues with the latest builds and if so use these builds instead.
+* **[GMMK Users](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BWeirdness-Outdated-Firmware/glorious/_Archive)** due to recent changes after QMK Mainline 0.29.2, some GMMK users may have issues with the latest builds and if so use these builds instead.
 
 * **[Archived](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BVIA-Firmware/_Archived)** feel free to check the archived builds as they may be outdated but could include support for your keyboard.
 
@@ -98,10 +98,10 @@ If you cannot find your keep above it might be found in the Default builds and f
 ### QMK+Default-Firmware: (_When all else fails_) ###
 **Please note:** _Default builds are now deprecated, as VIA, VIAL, or XAP builds will replace all except for speciality builds._
 #### QMK Mainline ####
-* **[GMMK Users](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BWeirdness-Outdated-Firmware/glorious/gmmk-stable-builds-0.29.2)** due to recent changes after QMK Mainline 0.29.2, the most recent builds for the majority of usesrs can be found here, please check the link below as some GMMK builds continue to work, if not available there use these builds!
-
 * **[0.30.11](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BDefault-Firmware/0.30.11)** is from [QMK Mainline github](https://github.com/qmk/qmk_firmware), last default version to be compiled (This is default without VIA support). (SRGBP¹ 1.0.6)
 * **[Archived](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BDefault-Firmware/_Archived)** feel free to check the archived builds as they may be outdated but could include support for your keyboard.
+* **[GMMK Users](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BWeirdness-Outdated-Firmware/glorious/_Archive)** due to recent changes after QMK Mainline 0.29.2, the most recent builds for the majority of usesrs can be found here, please check the link below as some GMMK builds continue to work, if not available there use these builds!
+
 #### SonixQMK ####
 * **[sn32_develop](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BDefault-Firmware/sn32_develop)** is for **Sonix based keyboards _only_** and is currently under construction from SonixQMK's sn32_develop branch. (This is default without VIA support). (SRGBP¹ 1.0.6)
 * **[0.15.12-sonix](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BDefault-Firmware/0.15.12-sonix)** is for **Sonix based keyboards _only_** and comes from an older SonixQMK repo.
