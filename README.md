@@ -98,7 +98,7 @@ If you cannot find your keep above it might be found in the Default builds and f
 ### QMK+Default-Firmware: (_When all else fails_) ###
 **Please note:** _Default builds are now deprecated, as VIA, VIAL, or XAP builds will replace all except for speciality builds._
 #### QMK Mainline ####
-* **[0.30.11](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BDefault-Firmware/0.30.11)** is from [QMK Mainline github](https://github.com/qmk/qmk_firmware), last default version to be compiled (This is default without VIA support). (SRGBP¹ 1.0.6)
+* **[0.31.0](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BDefault-Firmware/0.31.0)** is from [QMK Mainline github](https://github.com/qmk/qmk_firmware), last default version to be compiled (This is default without VIA support). (SRGBP¹ 1.0.6)
 * **[Archived](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BDefault-Firmware/_Archived)** feel free to check the archived builds as they may be outdated but could include support for your keyboard.
 * **[GMMK Users](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BWeirdness-Outdated-Firmware/glorious/_Archive)** due to recent changes after QMK Mainline 0.29.2, the most recent builds for the majority of usesrs can be found here, please check the link below as some GMMK builds continue to work, if not available there use these builds!
 
