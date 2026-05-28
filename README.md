@@ -79,7 +79,7 @@ _Please explore here as there are many builds that you may find helpful!_
 #### Keychron (Bluetooth & Wireless & Wired models) ####
 * **[0.14.29](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BVIA-Firmware/0.14.29-keychron)** is Keychron's [2025q3](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BVIA-Firmware/0.14.29-keychron/2025q3), [wireless_playground](https://github.com/Keychron/qmk_firmware/tree/wireless_playground), [playground](https://github.com/SRGBmods/KeychronQMK/tree/playground) and [bluetooth_playground](https://github.com/Keychron/qmk_firmware/tree/bluetooth_playground). When connected to USB (wired mode) ARGB is controllable. (Bluetooth & Wireless is not supported by SignalRGB currently). **- Please start with the 2025q3 link as that is the most up to date for Keychron models!**
 
-If you cannot find your keep above it might be found in the Default builds and failing that check the SonixQMK builds.
+If you cannot find your keyboard above it might be found in the Default builds and failing that check the SonixQMK builds.
 
 #### SonixQMK ####
 * **[sn32_develop](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BVIA-Firmware/sn32_develop)** is for **Sonix based keyboards _only_** and is currently under construction from SonixQMK's sn32_develop branch.
