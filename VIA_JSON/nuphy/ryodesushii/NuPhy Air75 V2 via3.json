@@ -258,7 +258,7 @@
                         },
                         {
                             "label": "Speed (higher is slower)",
-                            "showIf": "{id_side_light_mode} != 4 && {id_side_light_mode} != 2",
+                            "showIf": "{id_side_light_mode} != 4",
                             "type": "dropdown",
                             "content": [
                                 "id_side_light_speed",
@@ -274,23 +274,13 @@
                             ]
                         },
                         {
-                            "label": "Color",
-                            "showIf": "{id_side_light_mode} != 4",
-                            "type": "dropdown",
+                            "label": "Static Color",
+                            "showIf": "{id_side_light_mode} == 0 || {id_side_light_mode} == 2 || {id_side_light_mode} == 3",
+                            "type": "color",
                             "content": [
-                                "id_side_light_color",
+                                "id_side_light_static_color",
                                 0,
-                                12
-                            ],
-                            "options": [
-                                "Red",
-                                "Orange",
-                                "Yellow",
-                                "Green",
-                                "Cyan",
-                                "Blue",
-                                "Purple",
-                                "Light-Purple"
+                                14
                             ]
                         },
                         {
@@ -310,13 +300,13 @@
                     ]
                 },
                 {
-                    "label": "Right Side Light",
+                    "label": "Ambient Light",
                     "content": [
                         {
                             "label": "Mode",
                             "type": "dropdown",
                             "content": [
-                                "id_right_side_light_mode",
+                                "id_ambient_light_mode",
                                 0,
                                 20
                             ],
@@ -330,10 +320,10 @@
                         },
                         {
                             "label": "Speed (higher is slower)",
-                            "showIf": "{id_right_side_light_mode} != 4 && {id_right_side_light_mode} != 2",
+                            "showIf": "{id_ambient_light_mode} != 4",
                             "type": "dropdown",
                             "content": [
-                                "id_right_side_light_speed",
+                                "id_ambient_light_speed",
                                 0,
                                 21
                             ],
@@ -346,31 +336,21 @@
                             ]
                         },
                         {
-                            "label": "Color",
-                            "showIf": "{id_right_side_light_mode} != 4",
-                            "type": "dropdown",
+                            "label": "Static Color",
+                            "showIf": "{id_ambient_light_mode} == 0 || {id_ambient_light_mode} == 2 || {id_ambient_light_mode} == 3",
+                            "type": "color",
                             "content": [
-                                "id_right_side_light_color",
+                                "id_ambient_light_static_color",
                                 0,
-                                22
-                            ],
-                            "options": [
-                                "Red",
-                                "Orange",
-                                "Yellow",
-                                "Green",
-                                "Cyan",
-                                "Blue",
-                                "Purple",
-                                "Light-Purple"
+                                24
                             ]
                         },
                         {
                             "label": "Brightness",
-                            "showIf": "{id_right_side_light_mode} != 4",
+                            "showIf": "{id_ambient_light_mode} != 4",
                             "type": "range",
                             "content": [
-                                "id_right_side_light_brightness",
+                                "id_ambient_light_brightness",
                                 0,
                                 23
                             ],
@@ -607,15 +587,6 @@
                             ]
                         },
                         {
-                            "label": "Show SOCD feature indicators (WASD position)",
-                            "type": "toggle",
-                            "content": [
-                                "id_toggle_socd_indicator",
-                                0,
-                                35
-                            ]
-                        },
-                        {
                             "label": "Caps Lock Indicator",
                             "type": "dropdown",
                             "content": [
@@ -750,28 +721,28 @@
             "title": "Side Speed -"
         },
         {
-            "name": "Right\nSide\nLight+",
-            "title": "Right Side Light +"
+            "name": "Ambient\nLight+",
+            "title": "Ambient Light +"
         },
         {
-            "name": "Right\nSide\nLight-",
-            "title": "Right Side Light -"
+            "name": "Ambient\nLight-",
+            "title": "Ambient Light -"
         },
         {
-            "name": "Right\nSide\nMode",
-            "title": "Right Side Next Mode"
+            "name": "Ambient\nMode",
+            "title": "Ambient Next Mode"
         },
         {
-            "name": "Right\nSide\nColor",
-            "title": "Right Side Next Color"
+            "name": "Ambient\nColor",
+            "title": "Ambient Next Color"
         },
         {
-            "name": "Right\nSide\nFast",
-            "title": "Right Side Speed +"
+            "name": "Ambient\nFast",
+            "title": "Ambient Speed +"
         },
         {
-            "name": "Right\nSide\nSlow",
-            "title": "Right Side Speed -"
+            "name": "Ambient\nSlow",
+            "title": "Ambient Speed -"
         },
         {
             "name": "TOG USB\nSleep",
@@ -828,18 +799,6 @@
         {
             "name": "TOG BAT\nIND\nNUMERIC",
             "title": "Toggle indicator numeric visual"
-        },
-        {
-            "name": "SOCD\nON",
-            "title": "Turn SOCD On"
-        },
-        {
-            "name": "SOCD\nOFF",
-            "title": "Turn SOCD Off"
-        },
-        {
-            "name": "SOCD\nTOGGLE",
-            "title": "Toggle SOCD"
         },
         {
             "name": "PRNT\nCFW\nVERSION",

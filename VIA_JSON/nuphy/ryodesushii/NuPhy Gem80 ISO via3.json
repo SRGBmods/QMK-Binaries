@@ -1,35 +1,51 @@
 {
-    "name": "NuPhy Halo96 V2",
+    "name": "NuPhy Gem80",
     "vendorId": "0x19F5",
-    "productId": "0x3302",
+    "productId": "0x3275",
     "matrix": {
         "rows": 6,
-        "cols": 21
+        "cols": 17
     },
     "layouts": {
         "keymap": [
             [
                 "0,0",
+                {
+                    "x": 0.25
+                },
                 "0,1",
                 "0,2",
                 "0,3",
                 "0,4",
+                {
+                    "x": 0.25
+                },
                 "0,5",
                 "0,6",
                 "0,7",
                 "0,8",
+                {
+                    "x": 0.25
+                },
                 "0,9",
                 "0,10",
                 "0,11",
                 "0,12",
+                {
+                    "x": 0.25
+                },
                 "0,13",
+                {
+                    "x": 0.25
+                },
                 "0,14",
                 "0,15",
-                "0,16",
-                "0,17",
-                "0,18"
+                "0,16"
             ],
             [
+                {
+                    "y": 0.25
+                },
                 "1,0",
                 "1,1",
                 "1,2",
@@ -47,10 +63,12 @@
                     "w": 2
                 },
                 "1,13",
+                {
+                    "x": 0.25
+                },
+                "1,14",
                 "1,15",
-                "1,16",
-                "1,17",
-                "1,18"
+                "1,16"
             ],
             [
                 {
@@ -70,16 +88,19 @@
                 "2,11",
                 "2,12",
                 {
-                    "w": 1.5
+          "x": 0.25,
+          "w": 1.25,
+          "h": 2,
+          "w2": 1.5,
+          "h2": 1,
+          "x2": -0.25
                 },
-                "2,13",
+                "3,13",
+        {
+          "x": 0.25},
+                "2,14",
                 "2,15",
-                "2,16",
-                "2,17",
-                {
-                    "h": 2
-                },
-                "2,18"
+                "2,16"
             ],
             [
                 {
@@ -97,19 +118,14 @@
                 "3,9",
                 "3,10",
                 "3,11",
-                {
-                    "w": 2.25
-                },
-                "3,13",
-                "3,15",
-                "3,16",
-                "3,17"
+                "2,13"
             ],
             [
                 {
-                    "w": 2.25
+                    "w": 1.25
                 },
                 "4,0",
+        "4,1",
                 "4,2",
                 "4,3",
                 "4,4",
@@ -121,17 +137,13 @@
                 "4,10",
                 "4,11",
                 {
-                    "w": 1.75
+                    "w": 2.75
                 },
                 "4,13",
-                "4,14",
-                "4,15",
-                "4,16",
-                "4,17",
                 {
-                    "h": 2
+                    "x": 1.25
                 },
-                "4,18"
+                "4,14"
             ],
             [
                 {
@@ -157,15 +169,21 @@
                 {
                     "w": 1.25
                 },
+                "5,11",
+                {
+                    "w": 1.25
+                },
                 "5,10",
                 {
-                    "x": 0.5
+                    "w": 1.25
+                },
+                "5,12",
+                {
+                    "x": 0.25
                 },
                 "5,13",
                 "5,14",
-                "5,15",
-                "5,16",
-                "5,17"
+                "5,15"
             ]
         ]
     },
@@ -270,10 +288,10 @@
                     ]
                 },
                 {
-                    "label": "Halo Light",
+                    "label": "Side Light",
                     "content": [
                         {
-                            "label": "Side Mode",
+                            "label": "Mode",
                             "type": "dropdown",
                             "content": [
                                 "id_side_light_mode",
@@ -281,29 +299,11 @@
                                 10
                             ],
                             "options": [
-                                "Wave",
+                                "Wawe",
                                 "Mix",
-                                "New",
+                                "Static",
                                 "Breath",
-                                "Static"
-                            ]
-                        },
-                        {
-                            "label": "Ambient Mode",
-                            "type": "dropdown",
-                            "content": [
-                                "id_ambient_light_mode",
-                                0,
-                                20
-                            ],
-                            "options": [
-                                "1",
-                                "2",
-                                "3",
-                                "4",
-                                "5",
-                                "6",
-                                "7"
+                                "Off"
                             ]
                         },
                         {
@@ -313,7 +313,7 @@
                             "content": [
                                 "id_side_light_speed",
                                 0,
-                                12
+                                11
                             ],
                             "options": [
                                 "1",
@@ -324,28 +324,8 @@
                             ]
                         },
                         {
-                            "label": "Palette Color",
-                            "showIf": "{id_side_light_mode} == 2",
-                            "type": "dropdown",
-                            "content": [
-                                "id_side_light_color",
-                                0,
-                                13
-                            ],
-                            "options": [
-                                "Red",
-                                "Orange",
-                                "Yellow",
-                                "Green",
-                                "Cyan",
-                                "Blue",
-                                "Purple",
-                                "Light-Purple"
-                            ]
-                        },
-                        {
                             "label": "Static Color",
-                            "showIf": "{id_side_light_mode} == 0 || {id_side_light_mode} == 3 || {id_side_light_mode} == 4",
+                            "showIf": "{id_side_light_mode} == 0 || {id_side_light_mode} == 2 || {id_side_light_mode} == 3",
                             "type": "color",
                             "content": [
                                 "id_side_light_static_color",
@@ -355,11 +335,74 @@
                         },
                         {
                             "label": "Brightness",
+                            "showIf": "{id_side_light_mode} != 4",
                             "type": "range",
                             "content": [
                                 "id_side_light_brightness",
                                 0,
                                 13
+                            ],
+                            "options": [
+                                0,
+                                5
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "label": "Ambient Light",
+                    "content": [
+                        {
+                            "label": "Mode",
+                            "type": "dropdown",
+                            "content": [
+                                "id_logo_light_mode",
+                                0,
+                                20
+                            ],
+                            "options": [
+                                "Wawe",
+                                "Mix",
+                                "Static",
+                                "Breath",
+                                "Off"
+                            ]
+                        },
+                        {
+                            "label": "Speed (higher is slower)",
+                            "showIf": "{id_logo_light_mode} != 4",
+                            "type": "dropdown",
+                            "content": [
+                                "id_logo_light_speed",
+                                0,
+                                21
+                            ],
+                            "options": [
+                                "1",
+                                "2",
+                                "3",
+                                "4",
+                                "5"
+                            ]
+                        },
+                        {
+                            "label": "Static Color",
+                            "showIf": "{id_logo_light_mode} == 0 || {id_logo_light_mode} == 2 || {id_logo_light_mode} == 3",
+                            "type": "color",
+                            "content": [
+                                "id_ambient_light_static_color",
+                                0,
+                                24
+                            ]
+                        },
+                        {
+                            "label": "Brightness",
+                            "showIf": "{id_logo_light_mode} != 4",
+                            "type": "range",
+                            "content": [
+                                "id_logo_light_brightness",
+                                0,
+                                23
                             ],
                             "options": [
                                 0,
@@ -594,15 +637,6 @@
                             ]
                         },
                         {
-                            "label": "Power On Animation",
-                            "type": "toggle",
-                            "content": [
-                                "id_power_on_animation",
-                                0,
-                                7
-                            ]
-                        },
-                        {
                             "label": "Caps Lock Indicator",
                             "type": "dropdown",
                             "content": [
@@ -685,16 +719,12 @@
             "title": "Mac Console"
         },
         {
-            "name": "Mac\nDnt",
-            "title": "Mac Dnt"
+            "name": "Mac\nDND",
+            "title": "Mac DND"
         },
         {
-            "name": "Print\nWhole",
-            "title": "PrintWhole"
-        },
-        {
-            "name": "Print\nArea",
-            "title": "PrintArea"
+            "name": "Win\nlock",
+            "title": "Win lock"
         },
         {
             "name": "Dev\nReset",
@@ -709,6 +739,14 @@
             "title": "Battery Show"
         },
         {
+            "name": "RGB\nTest",
+            "title": "Hold for 3 seconds for RGB color test"
+        },
+        {
+            "name": "Tilde",
+            "title": "SHIFT+` = ~"
+        },
+        {
             "name": "Side\nLight+",
             "title": "Side Light +"
         },
@@ -721,10 +759,6 @@
             "title": "Side Next Mode"
         },
         {
-            "name": "Ambient\nMode",
-            "title": "Ambient Next Mode"
-        },
-        {
             "name": "Side\nColor",
             "title": "Side Next Color"
         },
@@ -735,6 +769,30 @@
         {
             "name": "Side\nSlow",
             "title": "Side Speed -"
+        },
+        {
+            "name": "Logo\nLight+",
+            "title": "Ambient Light +"
+        },
+        {
+            "name": "Logo\nLight-",
+            "title": "Ambient Light -"
+        },
+        {
+            "name": "Logo\nMode",
+            "title": "Logo Next Mode"
+        },
+        {
+            "name": "Logo\nColor",
+            "title": "Logo Next Color"
+        },
+        {
+            "name": "Logo\nFast",
+            "title": "Logo Speed +"
+        },
+        {
+            "name": "Logo\nSlow",
+            "title": "Logo Speed -"
         },
         {
             "name": "TOG USB\nSleep",
@@ -787,10 +845,6 @@
         {
             "name": "TOG DEEP\nSLEEP",
             "title": "Toggle Deep Sleep"
-        },
-        {
-            "name": "TOG POWERON\nANIM",
-            "title": "Toggle Power On Animation"
         },
         {
             "name": "TOG BAT\nIND\nNUMERIC",
