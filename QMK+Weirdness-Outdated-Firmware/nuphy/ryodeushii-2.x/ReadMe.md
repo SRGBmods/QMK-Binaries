@@ -2,7 +2,7 @@
 
 These firmware files are from the custom firmware source provided by [Ryodeushii](https://github.com/ryodeushii/qmk-firmware) + [SignalRGB Protocol](https://github.com/SRGBmods/QMK_Community_Module) support added to them.
 
-** Please use the selector in SignalRGB's settings under QMK addon to select nuphy-srgb to take full advantage of these firmware files! **
+**Please use the selector in SignalRGB's settings under QMK addon to select nuphy-srgb to take full advantage of these firmware files!**
 
 ### _Make sure to click the download button for your specific firmware, do not save as or view raw!_ ###
 
