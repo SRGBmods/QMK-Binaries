@@ -4,6 +4,8 @@ These firmware files are from the custom firmware source provided by [Ryodeushii
 
 **Please use the selector in SignalRGB's settings under QMK addon to select nuphy-srgb to take full advantage of these firmware files!**
 
+## Make sure you update your [Dongle and RF Firmware](https://nuphy.com/pages/qmk-firmwares) so the firmware in this directory will work correctly ##
+
 ### _Make sure to click the download button for your specific firmware, do not save as or view raw!_ ###
 
 #### Thanks again to Ryodeushii for providing the source code we build on! ####
