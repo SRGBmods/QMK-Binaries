@@ -1,5 +1,7 @@
 # _Make sure to click the "Download raw content" button for your specific firmware!_ #
 
+[2025q3](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BVIA-Firmware/0.14.29-keychron/2025q3) the most recent source and for the most part while match what Keychron provides on the launcher.
+
 [wls_2025q1](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BVIA-Firmware/0.14.29-keychron/wls_2025q1) is bleeding edge firmware and may have issues and should be considered as alpha/beta builds. The below builds are suggested for production usage before using these builds.
 
 [wireless_playground](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BVIA-Firmware/0.14.29-keychron/wireless_playground) is the more recent build but if upon flashing you don't have any luck try the [bluetooth_playground](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BVIA-Firmware/0.14.29-keychron/bluetooth_playground) build. [playground](https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BVIA-Firmware/0.14.29-keychron/playground) is for more recent wired keyboards that haven't reached mainline yet.
