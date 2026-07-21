@@ -70,7 +70,7 @@
     {"name": "Task View", "title": "Task View in Windows", "shortName": "Task"},
     {"name": "File Explorer", "title": "File Explorer in Windows", "shortName": "File"},
     {"name": "Lock Screen", "title": "Lock Screenin Windows", "shortName": "Lock"},
-    {"name": "Misson Control", "title": "Misson Control in macOS", "shortName": "MCtl"},
+    {"name": "Mission Control", "title": "Mission Control in macOS", "shortName": "MCtl"},
     {"name": "Launch Pad", "title": "Launch Pad in macOS", "shortName": "LPad"},
     {"name": "Left Option", "title": "Left Option", "shortName": "LOpt"},
     {"name": "Right Option", "title": "Right Option", "shortName": "ROpt"},
@@ -85,7 +85,7 @@
     {"name": "Profile 2", "title": "Profile 2", "shortName": "PROF2"},
     {"name": "Profile 3", "title": "Profile 3", "shortName": "PROF3"}
   ],
-  "matrix": {"rows": 6, "cols" : 15},
+  "matrix": {"rows": 6, "cols": 15},
   "layouts": {
     "keymap": [
       [

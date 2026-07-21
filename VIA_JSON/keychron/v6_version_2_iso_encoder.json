@@ -66,8 +66,8 @@
   ],
   "matrix": {"rows": 6, "cols": 20},
   "customKeycodes": [
-   {"name": "Misson Control", "title": "Misson Control on macOS", "shortName": "MCtl"},
-    {"name": "Launch pad", "title": "Launch pad on macOS", "shortName": "LPad"},
+   {"name": "Mission Control", "title": "Mission Control on macOS", "shortName": "MCtl"},
+    {"name": "Launchpad", "title": "Launchpad on macOS", "shortName": "LPad"},
     {"name": "Left Option", "title": "Left Option", "shortName": "LOpt"},
     {"name": "Right Option", "title": "Right Option", "shortName": "ROpt"},
     {"name": "Left Cmd", "title": "Left Command", "shortName": "LCmd"},

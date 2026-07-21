@@ -71,8 +71,8 @@
     {"name": "Right Option", "title": "Right Option", "shortName": "ROpt"},
     {"name": "Left Cmd", "title": "Left Command", "shortName": "LCmd"},
     {"name": "Right Cmd", "title": "Right Command", "shortName": "RCmd"},
-    {"name": "Misson Control", "title": "Misson Control on macOS", "shortName": "MCtl"},
-    {"name": "Launch pad", "title": "Launch pad on macOS", "shortName": "LPad"},
+    {"name": "Mission Control", "title": "Mission Control on macOS", "shortName": "MCtl"},
+    {"name": "Launchpad", "title": "Launchpad on macOS", "shortName": "LPad"},
     {"name": "Task View", "title": "Task View on Windows", "shortName": "Task"},
     {"name": "File Explorer", "title": "File Explorer on Windows", "shortName": "File"},
     {"name": "Screen shot", "title": "Screenshot on macOS", "shortName": "SShot"},
@@ -84,7 +84,7 @@
     {"name": "2.4G", "title": "2.4G", "shortName": "2.4G"},
     {"name": "Battery Level", "title": "Show battery level", "shortName": "Batt"}
   ],
-  "matrix": {"rows": 5, "cols" : 15},
+  "matrix": {"rows": 5, "cols": 15},
   "layouts": {
     "keymap": [
        [

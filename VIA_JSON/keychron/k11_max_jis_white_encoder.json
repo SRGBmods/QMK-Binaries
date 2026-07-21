@@ -8,82 +8,71 @@
     {"name": "Right Option", "title": "Right Option", "shortName": "ROpt"},
     {"name": "Left Cmd", "title": "Left Command", "shortName": "LCmd"},
     {"name": "Right Cmd", "title": "Right Command", "shortName": "RCmd"},
-    {"name": "Misson Control", "title": "Misson Control in macOS", "shortName": "MCtl"},
-    {"name": "Lanuch Pad", "title": "Lanuch Pad in macOS", "shortName": "LPad"},
-    {"name": "Task View", "title": "Task View in Windows", "shortName": "Task"},
-    {"name": "File Explorer", "title": "File Explorer in Windows", "shortName": "File"},
-    {"name": "Screen shot", "title": "Screenshot in macOS", "shortName": "SShot"},
-    {"name": "Cortana", "title": "Cortana in Windows", "shortName": "Cortana"},
-    {"name": "Siri", "title": "Siri in macOS", "shortName": "Siri"},
+    {"name": "Mission Control", "title": "Mission Control on macOS", "shortName": "MCtl"},
+    {"name": "Launchpad", "title": "Launchpad on macOS", "shortName": "LPad"},
+    {"name": "Task View", "title": "Task View on Windows", "shortName": "Task"},
+    {"name": "File Explorer", "title": "File Explorer on Windows", "shortName": "File"},
+    {"name": "Screen shot", "title": "Screenshot on macOS", "shortName": "SShot"},
+    {"name": "Cortana", "title": "Cortana on Windows 10", "shortName": "Cortana"},
+    {"name": "Siri", "title": "Siri on macOS", "shortName": "Siri"},
     {"name": "Bluetooth Host 1", "title": "Bluetooth Host 1", "shortName": "BTH1"},
     {"name": "Bluetooth Host 2", "title": "Bluetooth Host 2", "shortName": "BTH2"},
     {"name": "Bluetooth Host 3", "title": "Bluetooth Host 3", "shortName": "BTH3"},
     {"name": "2.4G", "title": "2.4G", "shortName": "2.4G"},
-    {"name": "Battery Level", "title": "Show battery level", "shortName": "Batt"}
+    {"name": "Battery Level", "title": "Show battery level", "shortName": "Batt"},
+    {"name": "Effect Speed+", "title": "BL_SPI", "shortName": "BL_SPI"},
+    {"name": "Effect Speed-", "title": "BL_SPD", "shortName": "BL_SPD"}
   ],
   "matrix": {"rows": 5, "cols": 16},
   "layouts": {
     "keymap": [
       [
         {
-          "x": 2.75
-        },
-        "0,2",
-        {
-          "x": 8.85
-        },
-        "0,11"
-      ],
-      [
-        {
           "x": 0.75,
-          "y": -0.95,
+          "y": 0.1,
           "c": "#777777"
         },
         "0,0\nESC",
         {
           "c": "#cccccc"
         },
-        "0,1"
-      ],
-      [
+        "0,1",
         {
-          "x": 14.6,
-          "y": -0.85,
+          "y": -0.1,
+          "c": "#cccccc"
+        },
+        "0,2",
+        {
+          "x": 8.6
+        },
+        "0,11",
+        {
+          "y": 0.1
+        },
+        "0,12",
+        "0,13",
+        {
           "c": "#aaaaaa"
         },
-        "0,13",
         "0,14",
         {
-          "x": 0.5
+          "x": 0.6,
+          "c": "#aaaaaa"
         },
         "0,15\n\n\n\n\n\n\n\n\ne0"
       ],
       [
         {
-          "x": 13.6,
-          "y": -1,
-          "c": "#cccccc"
-        },
-        "0,12"
-      ],
-      [
-        {
-          "x": 0.5,
-          "y": -0.15,
-          "w": 1.5,
-          "c": "#aaaaaa"
+          "x": 0.55,
+          "w": 1.5
         },
         "1,0",
         {
           "c": "#cccccc"
         },
-        "1,1"
-      ],
-      [
+        "1,1",
         {
-          "x": 13.6,
-          "y": -0.85
+          "x": 10.25
         },
         "1,11",
         "1,12",
@@ -94,94 +83,80 @@
           "x2": -0.25,
           "w2": 1.5,
           "h2": 1,
-          "c": "#aaaaaa"
+          "c": "#777777"
         },
         "1,13",
         {
-          "x": 0.25
+          "x": 0.45,
+          "c": "#aaaaaa"
         },
         "1,15"
       ],
       [
         {
-          "x": 0.25,
-          "y": -0.15,
+          "x": 0.35,
           "w": 1.75
         },
         "2,0",
         {
           "c": "#cccccc"
         },
-        "2,1"
-      ],
-      [
+        "2,1",
         {
-          "x": 12.85,
-          "y": -0.85
+          "x": 9.45
         },
         "2,10",
         "2,11",
-        {
-          "c": "#aaaaaa"
-        },
         "2,13",
         {
-          "x": 1.75
+          "x": 1.8,
+          "c": "#aaaaaa"
         },
         "2,15"
       ],
       [
         {
-          "y": -0.15,
+          "x": 0.1,
           "w": 2.25
         },
         "3,0",
         {
           "c": "#cccccc"
         },
-        "3,2"
-      ],
-      [
+        "3,2",
         {
-          "x": 13.3,
-          "y": -0.85
+          "x": 9.7
         },
         "3,12",
+        "3,13",
         {
           "c": "#aaaaaa"
         },
-        "3,13",
-        "3,14"
-      ],
-      [
+        "3,14",
         {
-          "x": 16.3,
-          "y": -0.75,
+          "x": 0.1,
+          "y": 0.3,
           "c": "#cccccc"
         },
         "3,15"
       ],
       [
         {
-          "y": -0.4,
+          "x": 0.1,
+          "y": -0.3,
           "w": 1.25,
           "c": "#aaaaaa"
         },
         "4,0",
         "4,1",
-        "4,2"
-      ],
-      [
+        "4,2",
         {
-          "x": 13.3,
-          "y": -0.85
+          "x": 9.7
         },
-        "4,12"
-      ],
-      [
+        "4,12",
         {
-          "x": 15.3,
-          "y": -0.76,
+          "x": 1.1,
+          "y": 0.3,
           "c": "#cccccc"
         },
         "4,13",
@@ -190,10 +165,9 @@
       ],
       [
         {
-          "r": 6,
-          "x": 3.85,
-          "y": -5.7,
-          "c": "#cccccc"
+          "r": 12,
+          "x": 3.9,
+          "y": -6.1
         },
         "0,3",
         "0,4",
@@ -202,7 +176,7 @@
       ],
       [
         {
-          "x": 3.3
+          "x": 3.4
         },
         "1,2",
         "1,3",
@@ -211,7 +185,7 @@
       ],
       [
         {
-          "x": 3.55
+          "x": 3.65
         },
         "2,2",
         "2,3",
@@ -220,7 +194,7 @@
       ],
       [
         {
-          "x": 3.9
+          "x": 4.15
         },
         "3,3",
         "3,4",
@@ -229,7 +203,7 @@
       ],
       [
         {
-          "x": 4.2,
+          "x": 4.4,
           "c": "#aaaaaa"
         },
         "4,3",
@@ -241,9 +215,9 @@
       ],
       [
         {
-          "r": -6,
-          "x": 8.45,
-          "y": -3.3,
+          "r": -12,
+          "x": 7.8,
+          "y": -1.73,
           "c": "#cccccc"
         },
         "0,7",
@@ -253,7 +227,7 @@
       ],
       [
         {
-          "x": 8.0
+          "x": 7.45
         },
         "1,6",
         "1,7",
@@ -263,7 +237,7 @@
       ],
       [
         {
-          "x": 8.35
+          "x": 7.6
         },
         "2,6",
         "2,7",
@@ -272,7 +246,7 @@
       ],
       [
         {
-          "x": 7.65
+          "x": 6.85
         },
         "3,7",
         "3,8",
@@ -282,7 +256,7 @@
       ],
       [
         {
-          "x": 7.65,
+          "x": 6.85,
           "c": "#aaaaaa"
         },
         "4,7",

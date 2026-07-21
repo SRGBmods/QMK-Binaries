@@ -3,7 +3,7 @@
   "vendorId": "0x3434",
   "productId": "0x0F10",
   "firmwareVersion": 1,
-  "keycodes" : ["qmk_lighting"],
+  "keycodes": ["qmk_lighting"],
   "menus": [
     {
       "label": "Lighting",
@@ -69,7 +69,7 @@
   ],
   "customKeycodes": [
     {"name": "Mission Control", "title": "Mission Control on macOS", "shortName": "MCtrl"},
-    {"name": "Launch Pad", "title": "Launch Pad on macOS", "shortName": "LPad"},
+    {"name": "Launchpad", "title": "Launchpad on macOS", "shortName": "LPad"},
     {"name": "Left Option", "title": "Left Option on macOS", "shortName": "LOpt"},
     {"name": "Right Option", "title": "Right Option on macOS", "shortName": "ROpt"},
     {"name": "Left Cmd", "title": "Left Command on macOS", "shortName": "LCmd"},

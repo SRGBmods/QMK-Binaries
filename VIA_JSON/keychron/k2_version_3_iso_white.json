@@ -8,13 +8,13 @@
     {"name": "Right Option", "title": "Right Option", "shortName": "ROpt"},
     {"name": "Left Cmd", "title": "Left Command", "shortName": "LCmd"},
     {"name": "Right Cmd", "title": "Right Command", "shortName": "RCmd"},
-    {"name": "Misson Control", "title": "Misson Control in macOS", "shortName": "MCtl"},
-    {"name": "Lanuch Pad", "title": "Lanuch Pad in macOS", "shortName": "LPad"},
-    {"name": "Task View", "title": "Task View in Windows", "shortName": "Task"},
-    {"name": "File Explorer", "title": "File Explorer in Windows", "shortName": "File"},
-    {"name": "Screen shot", "title": "Screenshot in macOS", "shortName": "SShot"},
-    {"name": "Cortana", "title": "Cortana in Windows", "shortName": "Cortana"},
-    {"name": "Siri", "title": "Siri in macOS", "shortName": "Siri"},
+    {"name": "Mission Control", "title": "Mission Control on macOS", "shortName": "MCtl"},
+    {"name": "Launchpad", "title": "Launchpad on macOS", "shortName": "LPad"},
+    {"name": "Task View", "title": "Task View on Windows", "shortName": "Task"},
+    {"name": "File Explorer", "title": "File Explorer on Windows", "shortName": "File"},
+    {"name": "Screen shot", "title": "Screenshot on macOS", "shortName": "SShot"},
+    {"name": "Cortana", "title": "Cortana on Windows 10", "shortName": "Cortana"},
+    {"name": "Siri", "title": "Siri on macOS", "shortName": "Siri"},
     {"name": "Bluetooth Host 1", "title": "Bluetooth Host 1", "shortName": "BTH1"},
     {"name": "Bluetooth Host 2", "title": "Bluetooth Host 2", "shortName": "BTH2"},
     {"name": "Bluetooth Host 3", "title": "Bluetooth Host 3", "shortName": "BTH3"},
@@ -22,8 +22,8 @@
     {"name": "Effect Speed+", "title": "BL_SPI", "shortName": "BL_SPI"},
     {"name": "Effect Speed-", "title": "BL_SPD", "shortName": "BL_SPD"}
   ],
-    "matrix": {"rows": 6, "cols" : 16},
-    "layouts": {
+  "matrix": {"rows": 6, "cols": 16},
+  "layouts": {
     "keymap": [
       [
         {
@@ -215,4 +215,4 @@
       ]
     ]
   }
-  }
+}

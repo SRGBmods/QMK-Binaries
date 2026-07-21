@@ -71,8 +71,8 @@
     {"name": "Right Option", "title": "Right Option", "shortName": "ROpt"},
     {"name": "Left Cmd", "title": "Left Command", "shortName": "LCmd"},
     {"name": "Right Cmd", "title": "Right Command", "shortName": "RCmd"},
-    {"name": "Misson Control", "title": "Misson Control on macOS", "shortName": "MCtl"},
-    {"name": "Launch Pad", "title": "Launch Pad on macOS", "shortName": "LPad"},
+    {"name": "Mission Control", "title": "Mission Control on macOS", "shortName": "MCtl"},
+    {"name": "Launchpad", "title": "Launchpad on macOS", "shortName": "LPad"},
     {"name": "Task View", "title": "Task View on Windows", "shortName": "Task"},
     {"name": "File Explorer", "title": "File Explorer on Windows", "shortName": "File"},
     {"name": "Screen shot", "title": "Screenshot on macOS", "shortName": "SShot"},
@@ -87,7 +87,7 @@
     {"name": "Profile 2", "title": "Profile 2", "shortName": "PROF2"},
     {"name": "Profile 3", "title": "Profile 3", "shortName": "PROF3"}
   ],
-  "matrix": {"rows": 6, "cols" : 21},
+  "matrix": {"rows": 6, "cols": 21},
   "layouts": {
     "keymap": [
        [
