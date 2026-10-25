@@ -9,6 +9,13 @@ We're happy to help, please either create an ([**Issue**](https://github.com/SRG
 
 # PLEASE __READ ALL OF THIS... SERIOUSLY__, IT WILL HELP YOU. #
 
+Wired connections + SignalRGB is what is supported.
+Bluetooth connections will probably **never** be supported due to limited bandwidth of Bluetooth.
+
+2.4GHz wireless connections, we (SignalRGB developers and Moderators) need dongle captures that specifically provide and address unique USB Vendor & Product IDs. Generic 2.4Ghz controllers are basically impossible to support when it comes to QMK (we really do need the identification of your manufacturer and model of keyboard!)
+
+---
+
 Need help and cannot be bothered to read anything below this? Join this [**Discord**](https://discord.gg/signalrgb) then puruse the channels provided for QMK. No support for any of these files will be provided by official email tech support. Only Discord & Github issues.
 
 # _Make sure to click the "Download raw content" button for your specific firmware!_ #
