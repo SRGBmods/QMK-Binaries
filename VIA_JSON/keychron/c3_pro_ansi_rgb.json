@@ -65,18 +65,18 @@
     }
   ],
   "customKeycodes": [
-    {"name": "Mission Control", "title": "Mission Control in macOS", "shortName": "MCtrl"},
-    {"name": "Launch Pad", "title": "Launch Pad in macOS", "shortName": "LPad"},
-    {"name": "Left Option", "title": "Left Option in macOS", "shortName": "LOpt"},
-    {"name": "Right Option", "title": "Right Option in macOS", "shortName": "ROpt"},
-    {"name": "Left Cmd", "title": "Left Command in macOS", "shortName": "LCmd"},
-    {"name": "Right Cmd", "title": "Right Command in macOS", "shortName": "RCmd"},
-    {"name": "Siri", "title": "Siri in macOS", "shortName": "Siri"},
-    {"name": "Task View", "title": "Task View in windows", "shortName": "Task"},
-    {"name": "File Explorer", "title": "File Explorer in windows", "shortName": "File"},
-    {"name": "Screen Shot", "title": "Screenshot in macOS", "shortName": "SShot"},
-    {"name": "Cortana", "title": "Cortana in windows", "shortName": "Cortana"},
-    {"name": "Mac/Win", "title": "Switch between Windows and mac OS", "shortName": "Mac/Win"}
+    {"name": "Mission Control", "title": "Mission Control on macOS", "shortName": "MCtrl"},
+    {"name": "Launchpad", "title": "Launchpad on macOS", "shortName": "LPad"},
+    {"name": "Left Option", "title": "Left Option on macOS", "shortName": "LOpt"},
+    {"name": "Right Option", "title": "Right Option on macOS", "shortName": "ROpt"},
+    {"name": "Left Cmd", "title": "Left Command on macOS", "shortName": "LCmd"},
+    {"name": "Right Cmd", "title": "Right Command on macOS", "shortName": "RCmd"},
+    {"name": "Siri", "title": "Siri on macOS", "shortName": "Siri"},
+    {"name": "Task View", "title": "Task View on Windows", "shortName": "Task"},
+    {"name": "File Explorer", "title": "File Explorer on Windows", "shortName": "File"},
+    {"name": "Screen Shot", "title": "Screenshot on macOS", "shortName": "SShot"},
+    {"name": "Cortana", "title": "Cortana on Windows 11", "shortName": "Cortana"},
+    {"name": "OS Switch", "title": "Switch between windows and macOS", "shortName": "OSSW"}
   ],
   "matrix": {"rows": 6, "cols": 17},
   "layouts": {
@@ -139,8 +139,8 @@
         "1,11",
         "1,12",
         {
-          "c": "#aaaaaa",
-          "w": 2
+          "w": 2,
+          "c": "#aaaaaa"
         },
         "1,13",
         {
@@ -171,8 +171,8 @@
         "2,11",
         "2,12",
         {
-          "c": "#aaaaaa",
-          "w": 1.5
+          "w": 1.5,
+          "c": "#aaaaaa"
         },
         "2,13",
         {
@@ -202,15 +202,15 @@
         "3,10",
         "3,11",
         {
-          "c": "#777777",
-          "w": 2.25
+          "w": 2.25,
+          "c": "#777777"
         },
         "3,13"
       ],
       [
         {
-          "c": "#aaaaaa",
-          "w": 2.25
+          "w": 2.25,
+          "c": "#aaaaaa"
         },
         "4,0",
         {
@@ -233,7 +233,7 @@
         "4,13",
         {
           "x": 1.25,
-          "c": "#cccccc"
+          "c": "#777777"
         },
         "4,15"
       ],
@@ -252,7 +252,7 @@
         },
         "5,2",
         {
-          "c": "#777777",
+          "c": "#cccccc",
           "w": 6.25
         },
         "5,6",
@@ -275,7 +275,7 @@
         "5,13",
         {
           "x": 0.25,
-          "c": "#cccccc"
+          "c": "#777777"
         },
         "5,14",
         "5,15",
